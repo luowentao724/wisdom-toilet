@@ -1,0 +1,86 @@
+ 
+<svg version='1.1'
+    xmlns='http://www.w3.org/2000/svg'
+    xmlns:xlink='http://www.w3.org/1999/xlink'		preserveAspectRatio="none"
+    x='0px'
+    y='0px'
+    width='109.862px'
+    height='103.874px'
+    viewBox='0 0 109.862 103.874'
+    xmlns:agg='http://www.example.com'
+    xml:space='preserve'>
+<agg:params>
+	<agg:param  type="C" name="Color" classes="boundary" description="Color" cssAttributes="fill"></agg:param>
+	<agg:param  type="C" name="strokeColor" classes="contours,dashed,thick" description="Stroke Color" cssAttributes="stroke"></agg:param>
+</agg:params>
+
+<style type="text/css" >
+<![CDATA[
+
+	.contours,.dashed,.thick{
+		stroke-linecap:round;
+		stroke-linejoin:round;
+		stroke: #000000;
+		fill:none;
+	}
+	
+	.contours,dashed {
+		stroke-width:0.5;
+	}
+	
+	.thick {
+		stroke-width:1.5;
+	}
+	
+	.boundary {
+		fill:   #A1BFE2;
+		stroke:none;
+	}
+	
+	.dashed {
+		stroke-dasharray:1.5,1.5;
+	}
+]]>
+</style>
+ <g id='boundary'
+     class='boundary'>
+  <polygon points='16.027,72.891 16.027,81.871 16.027,90.851 84.857,90.851 93.838,90.851 93.838,81.871 93.838,72.891    25.008,72.891  ' />
+  <polygon points='16.027,42.961 16.027,51.941 16.027,60.921 25.008,60.921 93.838,60.921 93.838,51.941 93.838,42.961    84.857,42.961  ' />
+  <polygon points='16.027,13.031 16.027,22.011 16.027,30.981 84.857,30.981 93.838,30.981 93.838,22.011 93.838,13.031    25.008,13.031  ' />
+ </g>
+ <g id='contours'
+     class='contours'>
+  <line x1='84.862'
+      y1='90.849'
+      x2='84.862'
+      y2='102.818' />
+  <line x1='25.003'
+      y1='72.889'
+      x2='25.003'
+      y2='60.917' />
+  <line x1='84.862'
+      y1='42.959'
+      x2='84.862'
+      y2='30.985' />
+  <line x1='25.003'
+      y1='13.027'
+      x2='25.003'
+      y2='1.056' />
+  <path d='M4.051,22.007c29.932,0,59.86,0,89.79,0c8.266,0,14.966,6.702,14.966,14.966c0,8.265-6.7,14.965-14.966,14.965   c-25.938,0-51.878,0-77.817,0c-8.265,0-14.968,6.701-14.968,14.964c0,8.266,6.703,14.968,14.968,14.968c29.93,0,59.859,0,89.791,0' />
+  <rect x='16.023'
+      y='72.889'
+      fill='none'
+      width='77.817'
+      height='17.96' />
+  <rect x='16.023'
+      y='42.959'
+      fill='none'
+      width='77.817'
+      height='17.958' />
+  <rect x='16.023'
+      y='13.027'
+      fill='none'
+      width='77.817'
+      height='17.958' />
+ </g>
+</svg>

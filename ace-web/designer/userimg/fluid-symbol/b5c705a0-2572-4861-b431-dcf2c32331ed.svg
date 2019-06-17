@@ -1,0 +1,45 @@
+ 
+<svg version="1.1" id="_x30_" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none"   xmlns:agg="http://www.example.com" x="0px" y="0px"
+	   viewBox="0 0 51.307 51.307" enable-background="new 0 0 51.307 51.307" xml:space="preserve">
+
+
+<agg:params>
+        <agg:param name="color" description="Color" type="C" cssAttributes="fill" classes="color"/>
+        <agg:param name="strokeColor" description="Stroke Color" type="C" cssAttributes="stroke" classes="color,stroked"/>
+</agg:params>
+
+<style type="text/css" >
+   <![CDATA[
+
+	.color,.stroked{
+		stroke-width:1;
+		stroke-linecap:round;
+		stroke-linejoin:round;
+		stroke: #000000;
+	}
+	
+	.color {
+		fill:   #A1BFE2;
+
+	}
+	
+	.stroked {
+		fill:none;
+	}
+
+     ]]>
+</style>
+
+<rect class="color" x="5.311" y="11.719"  />
+
+<g class="stroked">
+	<circle cx="38.53" cy="35.082" r="2.948"/>
+	<circle cx="11.777" cy="35.082" r="2.948"/>
+	<line x1="11.777" y1="38.031" x2="38.53" y2="38.031"/>
+	<line x1="11.777" y1="32.133" x2="38.53" y2="32.133"/>
+	<path d="M5.311,15.714
+	c11.073,0,22.146,0,33.219,0c1.104,0,1.997,0.894,1.997,1.997c0,1.103-0.894,1.997-1.997,1.997c-8.917,0-17.835,0-26.752,0
+	c-1.085,0-1.965,0.88-1.965,1.965c0,1.086,0.88,1.966,1.965,1.966c11.073,0,22.146,0,33.218,0"/>
+</g>
+
+</svg>

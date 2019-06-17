@@ -1,0 +1,27 @@
+ 
+<svg version="1.1" id="图层_1" xmlns:agg="http://www.example.com"
+	 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="64px" height="64px"
+	 viewBox="0 0 64 64" enable-background="new 0 0 64 64" xml:space="preserve">
+<g>
+	
+		<line fill="none" stroke="#040000" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" x1="2.119" y1="20.038" x2="26.017" y2="20.038"/>
+	
+		<line fill="none" stroke="#040000" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" x1="55.916" y1="32" x2="55.916" y2="43.962"/>
+	
+		<line fill="none" stroke="#040000" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" x1="8.084" y1="32" x2="8.084" y2="43.962"/>
+	<polyline fill="none" stroke="#040000" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" points="20.052,32 
+		19.754,30.185 18.902,28.519 17.568,27.185 15.901,26.334 14.086,26.038 12.233,26.334 10.566,27.185 9.232,28.519 8.381,30.185 
+		8.084,32 	"/>
+	<polyline fill="none" stroke="#040000" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" points="32.019,32 
+		31.722,30.185 30.869,28.519 29.535,27.185 27.869,26.334 26.017,26.038 24.164,26.334 22.496,27.185 21.199,28.519 20.348,30.185 
+		20.052,32 	"/>
+	<polyline fill="none" stroke="#040000" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" points="55.916,32 
+		55.619,30.185 54.768,28.519 53.471,27.185 51.803,26.334 49.951,26.038 48.1,26.334 46.432,27.185 45.098,28.519 44.245,30.185 
+		43.949,32 	"/>
+	<polyline fill="none" stroke="#040000" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" points="43.949,32 
+		43.652,30.185 42.837,28.519 41.503,27.185 39.836,26.334 37.982,26.038 36.131,26.334 34.464,27.185 33.13,28.519 32.314,30.185 
+		32.019,32 	"/>
+	
+		<line fill="none" stroke="#040000" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" x1="37.982" y1="20.038" x2="61.881" y2="20.038"/>
+</g>
+</svg>

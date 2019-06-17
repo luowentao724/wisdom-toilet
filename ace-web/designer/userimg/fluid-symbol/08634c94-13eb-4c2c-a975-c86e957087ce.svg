@@ -1,0 +1,80 @@
+ 
+<svg version='1.1'
+    xmlns='http://www.w3.org/2000/svg'
+    xmlns:xlink='http://www.w3.org/1999/xlink'
+    x='0px'
+    y='0px'
+    width='154.757px'
+    height='47.007px'
+    viewBox='0 0 154.757 47.007'
+    xmlns:agg='http://www.example.com'
+    xml:space='preserve'>
+<agg:params>
+	<agg:param  type="C" name="Color" classes="boundary" description="Color" cssAttributes="fill"></agg:param>
+	<agg:param  type="C" name="strokeColor" classes="contours,dashed,thick" description="Stroke Color" cssAttributes="stroke"></agg:param>
+</agg:params>
+
+<style type="text/css" >
+<![CDATA[
+
+	.contours,.dashed,.thick{
+		stroke-linecap:round;
+		stroke-linejoin:round;
+		stroke: #000000;
+		fill:none;
+	}
+	
+	.contours,dashed {
+		stroke-width:0.5;
+	}
+	
+	.thick {
+		stroke-width:1.5;
+	}
+	
+	.boundary {
+		fill:   #A1BFE2;
+		stroke:none;
+	}
+	
+	.dashed {
+		stroke-dasharray:1.5,1.5;
+	}
+]]>
+</style>
+ <g id='boundary'
+     class='boundary'>
+  <path d='M140.233,10.038v-8.98h-4.49h-4.49v8.98H23.503v-8.98h-4.49h-4.49v8.98c-7.439,0-13.47,6.029-13.47,13.47   c0,7.43,6.03,13.46,13.47,13.46v8.98h4.49h4.49v-8.98h107.75v8.98h4.49h4.49v-8.98c7.439,0,13.47-6.03,13.47-13.46   C153.703,16.067,147.673,10.038,140.233,10.038z' />
+ </g>
+ <g id='contours'
+     class='contours'>
+  <line x1='135.743'
+      y1='45.951'
+      x2='135.743'
+      y2='1.056' />
+  <rect x='131.254'
+      y='1.056'
+      fill='none'
+      width='8.979'
+      height='44.896' />
+  <line x1='23.505'
+      y1='10.034'
+      x2='131.254'
+      y2='10.034' />
+  <path d='M140.233,10.034c7.438,0,13.468,6.03,13.468,13.469s-6.029,13.469-13.468,13.469' />
+  <path d='M14.526,10.034c-7.44,0-13.471,6.03-13.471,13.469s6.03,13.469,13.471,13.469' />
+  <rect x='14.526'
+      y='1.056'
+      fill='none'
+      width='8.979'
+      height='44.896' />
+  <line x1='23.505'
+      y1='36.972'
+      x2='131.254'
+      y2='36.972' />
+  <line x1='19.016'
+      y1='45.951'
+      x2='19.016'
+      y2='1.056' />
+ </g>
+</svg>

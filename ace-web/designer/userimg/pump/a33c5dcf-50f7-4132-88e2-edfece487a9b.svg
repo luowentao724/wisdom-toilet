@@ -1,0 +1,156 @@
+ 
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none"  xmlns:agg="http://www.example.com" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	   viewBox="0 0 127 202">
+	 
+<agg:params>
+	<agg:param type="C" name="color" description="Color" cssAttributes="fill" classes="color"/>
+	<agg:param type="F" name="saturation" description="Saturation" min="0" max="1" cssAttributes="opacity" classes="color"/>
+</agg:params>
+
+<style type="text/css" >
+   <![CDATA[
+
+	.stroke,.thin,.thick{
+		stroke-linecap:butt;
+		stroke-linejoin:round;
+		stroke: black;
+		fill:none;
+		opacity:0.5;
+	}
+
+	.stroke{stroke-width:0.5;}
+
+	.thin {stroke-width:0.25;}
+
+	.thick {stroke-width:0.75;}
+	
+	.color {
+		fill:#3664BF;
+		opacity:0.2;
+	}
+
+      ]]>
+</style>
+	 
+<defs>
+	<linearGradient id="support_1" gradientUnits="userSpaceOnUse" x1="91.4727" y1="207.8203" x2="62.1749" y2="157.075">
+		<stop  offset="0" style="stop-color:#CFCFCF"/>
+		<stop  offset="0.4788" style="stop-color:#B5B5B5"/>
+		<stop  offset="0.4848" style="stop-color:#C9C9C9"/>
+		<stop  offset="1" style="stop-color:#EDEDED"/>
+	</linearGradient>
+	<linearGradient id="support_2" xlink:href="#support_1" x1="316.666" y1="-78.7666" x2="301.5558" y2="-52.5949" gradientTransform="matrix(1 0 0 -1 -229.6201 128.6094)"/>
+	
+	<linearGradient id="cyl" gradientUnits="userSpaceOnUse">
+		<stop  offset="0" style="stop-color:#616262"/>
+		<stop  offset="0.0134" style="stop-color:#676767"/>
+		<stop  offset="0.0824" style="stop-color:#939393"/>
+		<stop  offset="0.1517" style="stop-color:#B9B9BA"/>
+		<stop  offset="0.2205" style="stop-color:#D6D6D6"/>
+		<stop  offset="0.2885" style="stop-color:#EAEAEA"/>
+		<stop  offset="0.3554" style="stop-color:#F6F7F7"/>
+		<stop  offset="0.42" style="stop-color:#FCFDFF"/>
+		<stop  offset="0.546" style="stop-color:#F6F7F7"/>
+		<stop  offset="0.6766" style="stop-color:#EAEAEA"/>
+		<stop  offset="0.8093" style="stop-color:#D6D6D6"/>
+		<stop  offset="0.9426" style="stop-color:#B9B9BA"/>
+		<stop  offset="1" style="stop-color:#ABABAB"/>
+	</linearGradient>
+	
+	<linearGradient id="cyl_1" xlink:href="#cyl" x1="4.6475" y1="147.7412" x2="9.8229" y2="147.7412"/>
+	<linearGradient id="cyl_2" xlink:href="#cyl" x1="846.6387" y1="-622.623" x2="889.4434" y2="-622.623" gradientTransform="matrix(1 0 0 -1 -809.9609 -516.6934)"/>
+	<linearGradient id="cyl_3" xlink:href="#cyl" x1="834.6367" y1="-579.4746" x2="901.4434" y2="-579.4746" gradientTransform="matrix(1 0 0 -1 -809.9609 -516.6934)"/>
+	<linearGradient id="cyl_4" xlink:href="#cyl" x1="831.29" y1="-529.6123" x2="904.8214" y2="-529.6123" gradientTransform="matrix(1 0 0 -1 -809.9609 -516.6934)"/>
+	<linearGradient id="cyl_5" xlink:href="#cyl" x1="26.3306" y1="116.3335" x2="89.859" y2="116.3335"/>
+	<linearGradient id="cyl_6" xlink:href="#cyl" x1="45.3486" y1="141.0269" x2="70.8377" y2="141.0269"/>
+	<linearGradient id="cyl_7" xlink:href="#cyl" x1="47.0962" y1="145.0039" x2="72.5862" y2="145.0039" gradientTransform="matrix(-1.346898e-010 1 -1 -1.346898e-010 189.8213 87.9014)"/>
+	<linearGradient id="cyl_8" xlink:href="#cyl" x1="9.8931" y1="140.498" x2="9.8931" y2="154.8618"/>
+	
+	<linearGradient id="flat_1" gradientUnits="userSpaceOnUse" x1="67.0181" y1="121.7383" x2="104.2318" y2="178.0128">
+		<stop  offset="0" style="stop-color:#D7D7D7"/>
+		<stop  offset="0.2418" style="stop-color:#F8F8F8"/>
+		<stop  offset="0.6424" style="stop-color:#D7D7D7"/>
+		<stop  offset="1" style="stop-color:#8B8B8B"/>
+	</linearGradient>
+	<linearGradient id="flat_2" xlink:href="#flat_1" x1="535.3672" y1="675.0674" x2="553.7073" y2="706.8334" gradientTransform="matrix(1 0 0 1 -459.2402 -541.6152)"/>
+	
+	<linearGradient id="shadow_1" gradientUnits="userSpaceOnUse" x1="561.4307" y1="720.21" x2="527.8498" y2="662.0461" gradientTransform="matrix(1 0 0 1 -459.2402 -541.6152)">
+		<stop  offset="0" style="stop-color:#000000"/>
+		<stop  offset="1" style="stop-color:#FFFFFF"/>
+	</linearGradient>
+	<linearGradient id="shadow_2" xlink:href="#shadow_1" x1="554.6641" y1="708.4834" x2="535.2913" y2="674.9288" gradientTransform="matrix(1 0 0 1 -459.2402 -541.6152)"/>
+	
+	<path id="boundary" d="M114.321,166.552c6.23-10.653,6.28-24.361-1.018-35.319
+		c-5.535-8.324-14.16-13.35-23.345-14.589v-5.51H79.482v-10.409h2.6l9.4-10.412V24.838c2.089,0,3.348,0,3.493,0
+		c0-2.33,0-4.662,0-6.991C94.976,8.551,87.485,1,78.277,1C64.801,1,51.356,1,37.91,1c-9.244,0-16.703,7.548-16.703,16.847
+		c0,2.329,0,4.661,0,6.991c0.145,0,1.394,0,3.468,0v65.476l9.426,10.412h2.576v10.409H26.225v10.399h19.081l-0.005,13.422H18.762
+		v5.678H9.893v-5.678H4.906v5.678H1.024v14.213h3.881v5.681h4.987v-5.681h8.869v5.681h30.61L33.038,187.71h0.008v13.288h92.964
+		V187.71h0.005L114.321,166.552z"/>
+</defs>	 
+	 
+<polygon fill="url(#support_1)" points="110.984,160.514 126.015,187.71 33.038,187.71 49.381,160.514 	"/>
+<rect x="33.046" y="187.71" fill="url(#support_2)"  />
+
+<g id="cyl">
+	<rect x="4.906" y="134.955" fill="url(#cyl_1)"  />
+	<rect x="36.678" y="100.725" fill="url(#cyl_2)"  />
+	<path fill="url(#cyl_3)" d="M91.482,24.838v65.476l-9.4,10.412h-2.6H36.678h-2.576l-9.426-10.412V24.838
+		C46.947,24.838,69.188,24.838,91.482,24.838z"/>
+	<path id="top_part" fill="url(#cyl_4)" d="M94.976,17.847c0,2.329,0,4.661,0,6.991c-1.155,0-72.609,0-73.768,0
+		c0-2.33,0-4.662,0-6.991C21.208,8.548,28.666,1,37.91,1c13.446,0,26.891,0,40.367,0C87.485,1,94.976,8.551,94.976,17.847z"/>
+	<rect x="26.225" y="111.134" fill="url(#cyl_5)"  />
+	<polygon fill="url(#cyl_6)" points="70.877,160.521 45.306,134.949 45.306,121.533 70.877,121.533"/>
+	<polygon fill="url(#cyl_7)" points="18.762,160.527 18.762,134.955 45.301,134.955 70.872,160.527"/>
+	<rect x="1.024" y="140.633" fill="url(#cyl_8)"  />
+</g>
+
+<g id="flat">
+	<path fill="url(#flat_1)" d="M113.304,131.232c-10.209-15.355-30.931-19.515-46.294-9.312
+		c-15.338,10.207-19.5,30.919-9.293,46.251c10.211,15.353,30.933,19.517,46.271,9.305
+		C119.349,167.278,123.513,146.563,113.304,131.232z"/>
+	<path fill="url(#flat_2)" d="M92.328,166.265c9.149-3.75,13.524-14.206,9.75-23.379c-3.749-9.146-14.233-13.517-23.386-9.745
+		c-9.154,3.744-13.525,14.227-9.751,23.375C72.686,165.666,83.151,170.03,92.328,166.265z"/>
+</g>
+
+<g id="shadows" opacity="0.5">
+	<path fill="url(#shadow_1)" d="M103.437,176.629c14.88-9.886,18.922-29.976,9.015-44.846c-9.891-14.872-29.99-18.915-44.868-9.01
+		c-14.881,9.883-18.927,29.973-9.015,44.846C68.458,182.492,88.555,186.538,103.437,176.629z M113.304,131.232
+		c10.209,15.331,6.051,36.046-9.316,46.244c-15.338,10.212-36.06,6.048-46.271-9.305c-10.207-15.333-6.044-36.044,9.293-46.251
+		C82.371,111.717,103.089,115.877,113.304,131.232z"/>
+	<path fill="url(#shadow_2)" d="M92.328,166.265c9.149-3.75,13.524-14.206,9.75-23.379c-3.749-9.146-14.233-13.517-23.386-9.745
+		c-9.154,3.744-13.525,14.227-9.751,23.375C72.686,165.666,83.151,170.03,92.328,166.265z M103.021,142.496
+		c3.981,9.673-0.642,20.733-10.325,24.712c-9.66,3.973-20.744-0.646-24.696-10.323c-3.979-9.657,0.64-20.71,10.323-24.687
+		C87.98,128.22,99.043,132.839,103.021,142.496z"/>
+</g>
+
+<use xlink:href="#boundary" class="color"/>
+
+<g id="ribs" opacity="0.3">
+	<polyline points="87.137,24.838 87.137,84.248 89.691,88.592 89.691,87.715 89.691,24.838 	"/>
+	<polyline points="79.893,24.838 79.893,84.248 82.453,88.592 82.453,87.715 82.453,24.838 	"/>
+	<polyline points="69.063,24.838 69.063,84.248 71.616,88.592 71.616,87.715 71.616,24.838 	"/>
+	<polyline points="56.276,24.838 56.276,84.248 58.833,88.592 58.833,87.715 58.833,24.838 	"/>
+	<polyline points="43.492,24.838 43.492,84.248 46.048,88.592 46.048,87.715 46.048,24.838 	"/>
+	<polyline points="32.653,24.838 32.653,84.248 35.212,88.592 35.212,87.715 35.212,24.838 	"/>
+	<polyline points="26.618,24.838 26.618,84.248 29.175,88.592 29.175,87.715 29.175,24.838 	"/>
+</g>
+
+<g class="stroke">
+	<use xlink:href="#boundary"/>
+	<path d="M103.021,142.496
+		c3.981,9.673-0.642,20.733-10.325,24.712c-9.66,3.973-20.744-0.646-24.696-10.323c-3.979-9.657,0.64-20.71,10.323-24.687
+		C87.98,128.22,99.043,132.839,103.021,142.496z"/>
+	<path d="M113.302,131.232
+		c10.209,15.331,6.051,36.046-9.316,46.244c-15.338,10.212-36.06,6.048-46.271-9.305c-10.207-15.333-6.045-36.044,9.293-46.251
+		C82.369,111.717,103.087,115.877,113.302,131.232z"/>
+	<line x1="36.678" y1="111.134" x2="79.482" y2="111.134"/>
+	<line x1="26.225" y1="121.533" x2="67.01" y2="121.533"/>
+	<line x1="45.306" y1="134.949" x2="52.911" y2="142.553"/>
+	<line x1="18.762" y1="140.633" x2="18.762" y2="154.847"/>
+	<line x1="4.906" y1="140.633" x2="9.893" y2="140.633"/>
+	<line x1="4.906" y1="154.847" x2="9.893" y2="154.847"/>
+	<line x1="33.046" y1="187.71" x2="126.01" y2="187.71"/>
+	<line x1="24.681" y1="24.844" x2="91.478" y2="24.844"/>
+	<line x1="36.682" y1="100.728" x2="79.477" y2="100.728"/>
+</g>
+</svg>

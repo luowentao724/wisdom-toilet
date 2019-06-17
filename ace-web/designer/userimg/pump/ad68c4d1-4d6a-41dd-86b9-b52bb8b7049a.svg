@@ -1,0 +1,101 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!-- Generator: Adobe Illustrator 15.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC '-//W3C//DTD SVG 1.1//EN' 'http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd'>
+<svg version='1.1'
+    xmlns='http://www.w3.org/2000/svg'
+    xmlns:xlink='http://www.w3.org/1999/xlink'		preserveAspectRatio="none"
+    x='0px'
+    y='0px'
+    width='97.889px'
+    height='115.847px'
+    viewBox='0 0 97.889 115.847'
+    xmlns:agg='http://www.example.com'
+    xml:space='preserve'>
+<agg:params>
+	<agg:param  type="C" name="Color" classes="boundary" description="Color" cssAttributes="fill"></agg:param>
+	<agg:param  type="C" name="strokeColor" classes="contours,dashed,thick" description="Stroke Color" cssAttributes="stroke"></agg:param>
+</agg:params>
+
+<style type="text/css" >
+<![CDATA[
+
+	.contours,.dashed,.thick{
+		stroke-linecap:round;
+		stroke-linejoin:round;
+		stroke: #000000;
+		fill:none;
+	}
+	
+	.contours,dashed {
+		stroke-width:0.5;
+	}
+	
+	.thick {
+		stroke-width:1.5;
+	}
+	
+	.boundary {
+		fill:   #A1BFE2;
+		stroke:none;
+	}
+	
+	.dashed {
+		stroke-dasharray:1.5,1.5;
+	}
+]]>
+</style>
+ <g id='boundary'
+     class='boundary'>
+  <path d='M90.839,84.859c-3.992,0-7.982,0-11.974,0c-2.514-2.533-5.048-5.067-7.581-7.58   c-3.042-3.063-6.104-4.351-10.369-4.393V48.938h5.998V1.066H30.991v47.873h5.977v23.948c-4.266,0.042-7.307,1.33-10.368,4.393   c-2.534,2.513-5.048,5.047-7.582,7.58c-4.013,0-7.981,0-11.974,0v-5.976H1.047v29.924h5.997v-5.998c3.992,0,7.961,0,11.974,0   c2.534,2.534,5.048,5.069,7.582,7.603c3.104,3.083,6.208,4.371,10.579,4.371c7.856,0,15.691,0,23.525,0   c4.371,0,7.496-1.288,10.58-4.371c2.533-2.533,5.067-5.068,7.581-7.603c3.991,0,7.981,0,11.974,0v5.998h5.997V78.884h-5.997V84.859   z' />
+ </g>
+ <g id='contours'
+     class='contours'>
+  <line x1='36.973'
+      y1='7.042'
+      x2='36.973'
+      y2='30.986' />
+  <line x1='42.958'
+      y1='7.042'
+      x2='42.958'
+      y2='30.986' />
+  <line x1='60.917'
+      y1='72.889'
+      x2='60.917'
+      y2='48.944' />
+  <path d='M19.015,84.862c2.529-2.531,5.059-5.061,7.589-7.59c3.095-3.095,6.204-4.384,10.581-4.384   c7.84,0,15.68,0,23.52,0c4.377,0,7.487,1.289,10.582,4.384c2.529,2.529,5.059,5.059,7.588,7.59' />
+  <line x1='36.973'
+      y1='72.889'
+      x2='36.973'
+      y2='48.944' />
+  <rect x='90.847'
+      y='78.875'
+      fill='none'
+      width='5.986'
+      height='29.931' />
+  <path d='M7.042,102.82c4.988,0,9.977,0,14.965,0c9.023,0,16.127-2.369,23.346-7.783   c3.968-2.975,4.771-8.603,1.797-12.57c-2.977-3.967-8.604-4.771-12.57-1.796c-3.889,2.915-7.713,4.191-12.572,4.191   c-4.988,0-9.977,0-14.965,0' />
+  <line x1='54.931'
+      y1='7.042'
+      x2='54.931'
+      y2='30.986' />
+  <path d='M19.015,102.82c2.529,2.529,5.059,5.059,7.589,7.588c3.095,3.096,6.204,4.383,10.581,4.383   c7.84,0,15.68,0,23.52,0c4.377,0,7.487-1.287,10.582-4.383c2.529-2.529,5.059-5.059,7.588-7.588' />
+  <rect x='1.056'
+      y='78.875'
+      fill='none'
+      width='5.986'
+      height='29.931' />
+  <rect x='30.985'
+      y='1.056'
+      fill='none'
+      width='35.917'
+      height='47.889' />
+  <line x1='48.944'
+      y1='7.042'
+      x2='48.944'
+      y2='30.986' />
+  <path d='M90.847,102.82c-4.988,0-9.977,0-14.964,0c-4.858,0-8.685,1.273-12.571,4.188   c-3.967,2.976-9.595,2.172-12.571-1.795c-2.976-3.968-2.171-9.596,1.796-12.571c7.219-5.414,14.322-7.78,23.346-7.78   c4.988,0,9.977,0,14.965,0' />
+  <line x1='60.917'
+      y1='7.042'
+      x2='60.917'
+      y2='30.986' />
+ </g>
+</svg>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.github.wxiaoqi.security.things.mapper.DataRuleMapper">
+
+	<!-- 可根据自己的需求，是否要使用 -->
+    <resultMap type="com.github.wxiaoqi.security.things.entity.DataRule" id="dataRuleMap">
+        <result property="id" column="id"/>
+        <result property="ruleName" column="rule_name"/>
+        <result property="type" column="type"/>
+        <result property="remark" column="remark"/>
+        <result property="realtime" column="realtime"/>
+        <result property="readBtn" column="read_btn"/>
+        <result property="history" column="history"/>
+        <result property="alarm" column="alarm"/>
+        <result property="managePush" column="manage_push"/>
+        <result property="ordinaryPush" column="ordinary_push"/>
+        <result property="fault" column="fault"/>
+        <result property="createTime" column="create_time"/>
+        <result property="times" column="times"/>
+        <result property="ordinaryRealtime" column="ordinary_realtime"/>
+        <result property="ordinaryReadBtn" column="ordinary_read_btn"/>
+        <result property="ordinaryHistory" column="ordinary_history"/>
+        <result property="ordinaryAlarm" column="ordinary_alarm"/>
+    </resultMap>
+
+</mapper>

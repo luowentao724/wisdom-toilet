@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.github.wxiaoqi.security.things.mapper.RealDataInfoMapper">
+
+	<!-- 可根据自己的需求，是否要使用 -->
+    <resultMap type="com.github.wxiaoqi.security.things.entity.RealDataInfo" id="realDataInfoMap">
+        <result property="id" column="id"/>
+        <result property="dtuId" column="dtu_id"/>
+        <result property="realtimeDataType" column="realtime_data_type"/>
+        <result property="realtimeDataName" column="realtime_data_name"/>
+        <result property="realDataValue" column="real_data_value"/>
+        <result property="dataUnit" column="data_unit"/>
+        <result property="gatherTime" column="gather_time"/>
+        <result property="createDate" column="create_date"/>
+    </resultMap>
+
+</mapper>

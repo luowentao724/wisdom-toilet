@@ -1,0 +1,37 @@
+ 
+<svg version="1.1" id="_x30_" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none"   xmlns:agg="http://www.example.com" x="0px" y="0px"
+	   viewBox="0 0 51.307 51.307" enable-background="new 0 0 51.307 51.307" xml:space="preserve">
+
+<agg:params>
+        <agg:param name="color" description="Color" type="C" cssAttributes="fill" classes="color"/>
+        <agg:param name="strokeColor" description="Stroke Color" type="C" cssAttributes="stroke" classes="color,stroked"/>
+</agg:params>
+
+<style type="text/css" >
+   <![CDATA[
+
+	.color,.stroked{
+		stroke-width:1;
+		stroke-linecap:round;
+		stroke-linejoin:round;
+		stroke: #000000;
+	}
+	
+	.color {
+		fill:   #A1BFE2;
+
+	}
+	
+	.stroked {
+		fill:none;
+	}
+
+      ]]>
+</style>
+
+<rect class="color" x="8.145" y="18.935"  />
+<path class="stroked" d="M13.165,26.618
+	c1.516-1.517,3.881-2.43,6.005-2.425c2.121,0.005,4.486,0.947,6.016,2.425c1.531,1.477,3.896,2.419,6.017,2.425
+	c2.124,0.005,4.488-0.908,6.005-2.425"/>
+
+</svg>

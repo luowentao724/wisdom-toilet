@@ -1,0 +1,66 @@
+ 
+<svg version='1.1'
+    xmlns='http://www.w3.org/2000/svg'
+    xmlns:xlink='http://www.w3.org/1999/xlink'		preserveAspectRatio="none"
+    x='0px'
+    y='0px'
+    width='115.839px'
+    height='73.944px'
+    viewBox='0 0 115.839 73.944'
+    xmlns:agg='http://www.example.com'
+    xml:space='preserve'>
+<agg:params>
+	<agg:param  type="C" name="Color" classes="boundary" description="Color" cssAttributes="fill"></agg:param>
+	<agg:param  type="C" name="strokeColor" classes="contours,dashed,thick" description="Stroke Color" cssAttributes="stroke"></agg:param>
+</agg:params>
+
+<style type="text/css" >
+<![CDATA[
+
+	.contours,.dashed,.thick{
+		stroke-linecap:round;
+		stroke-linejoin:round;
+		stroke: #000000;
+		fill:none;
+	}
+	
+	.contours,dashed {
+		stroke-width:0.5;
+	}
+	
+	.thick {
+		stroke-width:1.5;
+	}
+	
+	.boundary {
+		fill:   #A1BFE2;
+		stroke:none;
+	}
+	
+	.dashed {
+		stroke-dasharray:1.5,1.5;
+	}
+]]>
+</style>
+ <g id='boundary'
+     class='boundary'>
+  <path d='M93.826,13.031h-68.83v-0.005c-13.221,0-23.94,10.72-23.94,23.95c0,13.22,10.72,23.94,23.94,23.94v0.004h68.83   h8.98v-8.979v-8.98h-68.83h-8.98v-0.005c-3.301,0-5.98-2.68-5.98-5.979c0-3.31,2.68-5.99,5.98-5.99v0.005h8.98h68.83v-8.979v-8.98   H93.826z' />
+ </g>
+ <g id='contours'
+     class='contours'>
+  <line x1='93.831'
+      y1='60.919'
+      x2='93.831'
+      y2='72.889' />
+  <line x1='33.972'
+      y1='42.959'
+      x2='33.972'
+      y2='30.987' />
+  <line x1='93.831'
+      y1='13.029'
+      x2='93.831'
+      y2='1.056' />
+  <path d='M114.783,22.008c-25.938,0-63.852,0-89.791,0c-8.265,0-14.968,6.701-14.968,14.964   c0,8.266,6.703,14.968,14.968,14.968c29.93,0,59.859,0,89.791,0' />
+  <path d='M24.996,60.917c-13.221,0-23.94-10.721-23.94-23.94c0-13.23,10.72-23.95,23.94-23.95l-0.004,0.003h77.817   v17.958H24.992l0.004-0.001c-3.301,0-5.98,2.681-5.98,5.99c0,3.3,2.68,5.979,5.98,5.979l-0.004,0.003h77.817v17.96H24.992   L24.996,60.917z' />
+ </g>
+</svg>

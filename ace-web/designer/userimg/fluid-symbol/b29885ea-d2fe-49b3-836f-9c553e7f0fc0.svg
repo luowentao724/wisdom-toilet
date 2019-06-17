@@ -1,0 +1,32 @@
+ 
+<svg version="1.1" id="_x30_" xmlns:agg="http://www.example.com"
+	 xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none"   x="0px" y="0px" 
+	  viewBox="10.341 0 23.581 39.702" enable-background="new 10.341 0 23.581 39.702" xml:space="preserve">
+<agg:params>
+	<agg:param type="C" name="color" description="Color" cssAttributes="fill" classes="color"/>
+	<agg:param type="C" name="strokeColor" description="Stroke Color" cssAttributes="stroke" classes="color,stroked"/>
+</agg:params>
+<style type="text/css" >
+<![CDATA[
+
+	.color,.stroked{
+		stroke-width:0.5;
+		stroke-linecap:round;
+		stroke-linejoin:round;
+		stroke: #000000;
+	}
+	
+	.color {
+		fill:   #A1BFE2;
+
+	}
+	
+	.stroked{
+		fill:none;
+	}
+]]>
+</style>
+<polygon class="color" points="11.759,1.337 32.505,1.337 32.505,27.939 11.759,27.939 11.759,1.337 "/>
+<line class="stroked" x1="22.131" y1="27.939" x2="22.131" y2="38.285"/>
+<line class="stroked" x1="32.505" y1="17.594" x2="11.759" y2="11.83"/>
+</svg>

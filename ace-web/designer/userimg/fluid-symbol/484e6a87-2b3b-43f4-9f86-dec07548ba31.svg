@@ -1,0 +1,80 @@
+ 
+<svg version='1.1'
+    xmlns='http://www.w3.org/2000/svg'
+    xmlns:xlink='http://www.w3.org/1999/xlink'		preserveAspectRatio="none"
+    x='0px'
+    y='0px'
+    width='47.009px'
+    height='159.247px'
+    viewBox='0 0 47.009 159.247'
+    xmlns:agg='http://www.example.com'
+    xml:space='preserve'>
+<agg:params>
+	<agg:param  type="C" name="Color" classes="boundary" description="Color" cssAttributes="fill"></agg:param>
+	<agg:param  type="C" name="strokeColor" classes="contours,dashed,thick" description="Stroke Color" cssAttributes="stroke"></agg:param>
+</agg:params>
+
+<style type="text/css" >
+<![CDATA[
+
+	.contours,.dashed,.thick{
+		stroke-linecap:round;
+		stroke-linejoin:round;
+		stroke: #000000;
+		fill:none;
+	}
+	
+	.contours,dashed {
+		stroke-width:0.5;
+	}
+	
+	.thick {
+		stroke-width:1.5;
+	}
+	
+	.boundary {
+		fill:   #A1BFE2;
+		stroke:none;
+	}
+	
+	.dashed {
+		stroke-dasharray:1.5,1.5;
+	}
+]]>
+</style>
+ <g id='boundary'
+     class='boundary'>
+  <path d='M10.727,156.597c4.22,1.17,8.42,1.59,12.78,1.59c4.359,0,8.56-0.42,12.779-1.59c2.94-0.82,9.67-3.01,9.67-7.38   c0-5.99,0-11.98,0-17.96c-3-3-5.989-5.99-8.979-8.98c0-3,0-5.99,0-8.979h8.979v-4.49v-4.49h-8.979v-80.81h8.979v-4.49v-4.49h-8.979   c0-7.439-6.03-13.47-13.47-13.47c-7.44,0-13.471,6.03-13.471,13.47H1.057v4.49v4.49h8.979v80.81H1.057v4.49v4.49h8.979   c0,2.989,0,5.979,0,8.979c-2.989,2.99-5.989,5.98-8.979,8.98c0,5.979,0,11.97,0,17.96C1.057,153.587,7.786,155.776,10.727,156.597z   ' />
+ </g>
+ <g id='contours'
+     class='contours'>
+  <path d='M36.975,113.296c0,2.993,0,5.985,0,8.979c2.992,2.992,5.986,5.984,8.979,8.979c0,5.984,0,11.971,0,17.958   c0,4.372-6.725,6.565-9.665,7.381c-4.226,1.169-8.423,1.598-12.782,1.598s-8.555-0.427-12.777-1.596   c-2.941-0.817-9.673-3.011-9.673-7.383c0-5.987,0-11.974,0-17.958c2.995-2.995,5.989-5.987,8.981-8.979c0-2.994,0-5.986,0-8.979' />
+  <path d='M36.975,14.526c0-7.44-6.03-13.471-13.469-13.471s-13.469,6.03-13.469,13.471' />
+  <line x1='1.056'
+      y1='19.014'
+      x2='45.953'
+      y2='19.014' />
+  <line x1='36.975'
+      y1='23.506'
+      x2='36.975'
+      y2='104.317' />
+  <line x1='10.037'
+      y1='23.506'
+      x2='10.037'
+      y2='104.317' />
+  <rect x='1.056'
+      y='104.317'
+      fill='none'
+      width='44.897'
+      height='8.979' />
+  <line x1='1.056'
+      y1='108.805'
+      x2='45.953'
+      y2='108.805' />
+  <rect x='1.056'
+      y='14.526'
+      fill='none'
+      width='44.897'
+      height='8.979' />
+ </g>
+</svg>

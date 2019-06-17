@@ -1,0 +1,102 @@
+ 
+<svg version='1.1'
+    xmlns='http://www.w3.org/2000/svg'
+    xmlns:xlink='http://www.w3.org/1999/xlink'		preserveAspectRatio="none"
+    x='0px'
+    y='0px'
+    width='58.271px'
+    height='86.499px'
+    viewBox='0 0 58.271 86.499'
+    xmlns:agg='http://www.example.com'
+    xml:space='preserve'>
+<agg:params>
+	<agg:param  type="C" name="Color" classes="boundary" description="Color" cssAttributes="fill"></agg:param>
+	<agg:param  type="C" name="strokeColor" classes="contours,dashed,thick" description="Stroke Color" cssAttributes="stroke"></agg:param>
+</agg:params>
+
+<style type="text/css" >
+<![CDATA[
+
+	.contours,.dashed,.thick{
+		stroke-linecap:round;
+		stroke-linejoin:round;
+		stroke: #000000;
+		fill:none;
+	}
+	
+	.contours,dashed {
+		stroke-width:0.5;
+	}
+	
+	.thick {
+		stroke-width:1.5;
+	}
+	
+	.boundary {
+		fill:   #A1BFE2;
+		stroke:none;
+	}
+	
+	.dashed {
+		stroke-dasharray:1.5,1.5;
+	}
+]]>
+</style>
+ <g id='boundary'
+     class='boundary'>
+  <polygon points='40.989,39.598 40.989,28.268 40.989,24.757 31.56,15.188 31.56,1.058 21.3,1.058 21.3,15.188    11.869,24.757 11.869,43.217 1.06,54.197 1.06,85.447 51.8,85.447 51.8,78.717 51.8,60.917 51.8,54.197 40.989,43.217  ' />
+ </g>
+ <g id='contours'
+     class='contours'>
+  <polyline points='57.215,60.919 20.813,60.919 36.068,65.37 20.813,69.818 36.068,74.269 20.813,78.719 57.215,78.719     ' />
+  <polyline points='57.215,28.27 22.161,28.27 31.87,31.102 22.161,33.933 31.87,36.767 22.161,39.598 57.215,39.598     ' />
+  <line x1='40.985'
+      y1='43.221'
+      x2='40.985'
+      y2='24.754' />
+  <line x1='51.802'
+      y1='54.192'
+      x2='40.985'
+      y2='43.221' />
+  <line x1='51.802'
+      y1='85.443'
+      x2='51.802'
+      y2='54.192' />
+  <line x1='1.056'
+      y1='54.192'
+      x2='1.056'
+      y2='85.443' />
+  <line x1='11.87'
+      y1='43.221'
+      x2='1.056'
+      y2='54.192' />
+  <line x1='11.87'
+      y1='24.754'
+      x2='11.87'
+      y2='43.221' />
+  <line x1='21.299'
+      y1='1.056'
+      x2='21.299'
+      y2='15.188' />
+  <line x1='31.557'
+      y1='1.056'
+      x2='31.557'
+      y2='15.188' />
+  <line x1='21.299'
+      y1='1.056'
+      x2='31.557'
+      y2='1.056' />
+  <line x1='40.985'
+      y1='24.754'
+      x2='31.557'
+      y2='15.188' />
+  <line x1='21.299'
+      y1='15.188'
+      x2='11.87'
+      y2='24.754' />
+  <line x1='1.056'
+      y1='85.443'
+      x2='51.802'
+      y2='85.443' />
+ </g>
+</svg>

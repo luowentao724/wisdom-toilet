@@ -1,0 +1,76 @@
+
+<svg version="1.1" id="Layer_1" xmlns:agg="http://www.example.com"
+	 xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none"  xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"  
+	 viewBox="0 0 152 201" xml:space="preserve">
+	 
+<agg:params>
+	<agg:param type="C" name="color" description="Color" cssAttributes="fill" classes="color"/>
+	<agg:param type="F" name="saturation" description="Saturation" min="0" max="1" cssAttributes="opacity" classes="color"/>
+</agg:params>
+
+<style type="text/css" >
+   <![CDATA[
+
+	.stroke{
+		stroke-width:0.3;
+		stroke-linecap:round;
+		stroke-linejoin:round;
+		stroke: black;
+		fill:none;
+	}
+	
+	.color {
+		fill:#3664BF;
+		opacity:0.2;
+	}
+
+      ]]>
+</style>	 
+
+<defs>
+	<linearGradient id="base" gradientUnits="userSpaceOnUse">
+		<stop  offset="0" style="stop-color:#767676"/>
+		<stop  offset="0.06" style="stop-color:#919191"/>
+		<stop  offset="0.14" style="stop-color:#B1B1B1"/>
+		<stop  offset="0.21" style="stop-color:#CECECE"/>
+		<stop  offset="0.28" style="stop-color:#E4E4E4"/>
+		<stop  offset="0.35" style="stop-color:#F6F6F6"/>
+		<stop  offset="0.42" style="stop-color:#FEFEFF"/>
+		<stop  offset="0.47" style="stop-color:#F6F6F6"/>
+		<stop  offset="0.53" style="stop-color:#E7E7E7"/>
+		<stop  offset="0.58" style="stop-color:#D2D1D1"/>
+		<stop  offset="0.64" style="stop-color:#B7B7B7"/>
+		<stop  offset="0.7" style="stop-color:#989898"/>
+		<stop  offset="0.72" style="stop-color:#8B8B8B"/>
+		<stop  offset="1" style="stop-color:#FDFDFD"/>
+	</linearGradient>
+	<path id="boundary" d="M143.787,31.026V1H8.692v30.026L1,38.175v119.15l7.234,7.172
+	c-0.004,0.151-0.022,0.302-0.022,0.454C8.211,184.309,38.561,200,76,200c37.438,0,67.788-15.691,67.788-35.049l7.213-7.626V38.175
+	L143.787,31.026z"/>
+</defs>
+
+<linearGradient id="gradient1" xlink:href="#base" x1="8.2119" y1="164.9512" x2="143.7881" y2="164.9512"/>
+<ellipse fill="url(#gradient1)" cx="76" cy="164.951" rx="67.788" ry="35.049"/>
+
+<linearGradient id="v1_1_" gradientUnits="userSpaceOnUse" x1="75.9995" y1="169.167" x2="75.9995" y2="200.5">
+	<stop  offset="0" style="stop-color:#FFFFFF"/>
+	<stop  offset="1" style="stop-color:#B0B0B0"/>
+</linearGradient>
+<ellipse id="v1" opacity="0.5" fill="url(#v1_1_)" cx="76" cy="164.951" rx="67.788" ry="35.049"/>
+
+<rect fill="url(#gradient1)" x="8.692" y="1"  />
+
+<linearGradient id="gradient2" xlink:href="#base" gradientUnits="userSpaceOnUse" x1="1.0005" y1="97.9883" x2="151" y2="97.9883"/>
+<polygon fill="url(#gradient2)" points="8.692,31.026 1,38.175 1,157.325 8.692,164.951 143.788,164.951 151,157.325 151,38.175 143.788,31.026 "/>
+	
+<use xlink:href="#boundary" class="color"/>
+
+<g class="stroke">
+	<use xlink:href="#boundary"/>
+	<line x1="8.692" y1="31.026" x2="143.788" y2="31.026"/>
+	<line x1="1" y1="38.175" x2="151" y2="38.175"/>
+	<line x1="1" y1="157.325" x2="151" y2="157.325"/>
+	<line x1="8.692" y1="164.951" x2="143.788" y2="164.951"/>
+</g>
+
+</svg>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.github.wxiaoqi.security.things.mapper.DataRuleReadMapper">
+
+	<!-- 可根据自己的需求，是否要使用 -->
+    <resultMap type="com.github.wxiaoqi.security.things.entity.DataRuleRead" id="dataRuleReadMap">
+        <result property="id" column="id"/>
+        <result property="dataRuleId" column="data_rule_id"/>
+        <result property="systemDictId" column="system_dict_id"/>
+        <result property="subStationAddr" column="sub_station_addr"/>
+        <result property="functionCode" column="function_code"/>
+        <result property="registerAddr" column="register_addr"/>
+        <result property="dataType" column="data_type"/>
+        <result property="decodeFlag" column="decode_flag"/>
+        <result property="dataUnit" column="data_unit"/>
+        <result property="ratioExchange" column="ratio_exchange"/>
+        <result property="inputTopLimit" column="input_top_limit"/>
+        <result property="inputLowLimit" column="input_low_limit"/>
+        <result property="contentZero" column="content_zero"/>
+        <result property="contentOne" column="content_one"/>
+        <result property="picAddr" column="pic_addr"/>
+        <result property="createTime" column="create_time"/>
+        <result property="dataOrderby" column="data_orderby"/>
+    </resultMap>
+
+</mapper>

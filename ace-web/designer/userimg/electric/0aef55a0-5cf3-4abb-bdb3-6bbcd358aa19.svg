@@ -1,0 +1,16 @@
+ 
+<svg version="1.1" id="图层_1" xmlns:agg="http://www.example.com"
+	 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="64px" height="64px"
+	 viewBox="0 0 64 64" enable-background="new 0 0 64 64" xml:space="preserve">
+<line fill="none" stroke="#040000" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" x1="29.541" y1="45.208" x2="55.66" y2="45.208"/>
+<line fill="none" stroke="#040000" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" x1="42.602" y1="6.048" x2="42.602" y2="58.262"/>
+<line fill="none" stroke="#040000" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" x1="6.952" y1="21.747" x2="19.658" y2="35.152"/>
+<line fill="none" stroke="#040000" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" x1="13.658" y1="15.396" x2="26.364" y2="28.803"/>
+<line fill="none" stroke="#040000" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" x1="42.602" y1="45.208" x2="57.529" y2="19.102"/>
+<line fill="none" stroke="#040000" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" x1="57.529" y1="19.102" x2="27.635" y2="19.102"/>
+<line fill="none" stroke="#040000" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" x1="27.635" y1="19.102" x2="42.602" y2="45.208"/>
+<polygon fill="none" stroke="#040000" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" points="23.826,29.382 
+	27.127,26.278 28.366,30.638 "/>
+<polygon fill="none" stroke="#040000" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" points="17.388,36.078 
+	20.69,32.975 21.928,37.334 "/>
+</svg>

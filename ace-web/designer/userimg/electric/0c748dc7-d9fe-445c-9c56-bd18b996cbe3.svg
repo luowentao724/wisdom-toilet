@@ -1,0 +1,17 @@
+ 
+<svg version="1.1" id="图层_1" xmlns:agg="http://www.example.com"
+	 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="64px" height="64px"
+	 viewBox="0 0 64 64" enable-background="new 0 0 64 64" xml:space="preserve">
+<g>
+	
+		<line fill="none" stroke="#040000" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" x1="15.2" y1="37.6" x2="60" y2="37.6"/>
+	
+		<line fill="none" stroke="#040000" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" x1="37.602" y1="37.6" x2="37.602" y2="4"/>
+	
+		<line fill="none" stroke="#040000" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" x1="15.2" y1="37.6" x2="4" y2="60"/>
+	
+		<line fill="none" stroke="#040000" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" x1="37.602" y1="37.6" x2="26.4" y2="60"/>
+	
+		<line fill="none" stroke="#040000" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" x1="60" y1="37.6" x2="48.8" y2="60"/>
+</g>
+</svg>

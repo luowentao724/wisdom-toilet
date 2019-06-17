@@ -1,0 +1,17 @@
+ 
+<svg version="1.1" id="图层_1" xmlns:agg="http://www.example.com"
+	 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="64px" height="64px"
+	 viewBox="0 0 64 64" enable-background="new 0 0 64 64" xml:space="preserve">
+<g>
+	
+		<line fill="none" stroke="#040000" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" x1="34.241" y1="59.184" x2="34.241" y2="35.404"/>
+	
+		<line fill="none" stroke="#040000" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" x1="34.241" y1="4.817" x2="34.241" y2="28.596"/>
+	
+		<line fill="none" stroke="#040000" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" x1="20.652" y1="35.404" x2="47.83" y2="35.404"/>
+	
+		<line fill="none" stroke="#040000" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" x1="20.652" y1="28.596" x2="47.83" y2="28.596"/>
+	<polygon fill="#040000" points="21.076,11.626 20.37,11.626 20.37,17.659 16.17,17.659 16.17,18.506 20.37,18.506 20.37,24.539 
+		21.076,24.539 21.076,18.506 25.276,18.506 25.276,17.659 21.076,17.659 	"/>
+</g>
+</svg>

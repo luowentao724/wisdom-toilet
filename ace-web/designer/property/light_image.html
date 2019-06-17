@@ -1,0 +1,351 @@
+
+<form id="lightImageForm">
+    <input type="hidden" name="ele.id"/>
+    <table class="property-table" style="width:100%;height:auto;"
+         cellpadding="0" cellspacing="0" border="1">
+        <thead>
+            <tr>
+                <th width="100" align="right">名称</th>
+                <th width="130">值</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td align="right">元件类型:</td>
+                <td><input type="text" class="easyui-textbox" value="位图指示灯" disabled="disabled"></td>
+            </tr>
+            <tr class="property-type">
+                <td>
+                    <span class="datagrid-row-collapse">&nbsp;</span>
+                    <span>位置</span>
+                </td>
+                <td></td>
+            </tr>
+            <tr>
+                <td align="right">X轴坐标:</td>
+                <td><input id="eleX" type="text" class="easyui-numberspinner" required="required"/></td>
+            </tr>
+            <tr>
+                <td align="right">Y轴坐标:</td>
+                <td><input id="eleY" type="text" class="easyui-numberspinner" required="required"/></td>
+            </tr>
+            <tr>
+                <td align="right">宽:</td>
+                <td><input id="eleWidth" type="text" class="easyui-numberspinner" data-options="min:0" required="required"/></td>
+            </tr>
+            <tr>
+                <td align="right">高:</td>
+                <td><input id="eleHeight" type="text" class="easyui-numberspinner" data-options="min:0" required="required"/></td>
+            </tr>
+            <tr>
+                <td align="right">旋转角度:</td>
+                <td><input id="eleRadius" type="text" class="easyui-numberspinner" data-options="min:0,max:360" required="required"/></td>
+            </tr>
+            <tr>
+                <td align="right">位置锁定:</td>
+                <td><input id="elePosLock" style="height: 22px; width: 104px;"/></td>
+            </tr>
+            <tr class="property-type">
+                <td>
+                    <span class="datagrid-row-collapse">&nbsp;</span>
+                    <span>变量</span>
+                </td>
+                <td></td>
+            </tr>
+            <tr>
+                <td align="right">绑定:</td>
+                <td>
+                  <a href="javascript:void(0);" id="btnDataSelect" class="btn-defult">
+                     <span class="icon icon-db">&nbsp;</span>选择
+                  </a>
+                </td>
+            </tr>
+            <tr>
+                <td align="right">数据名称:</td>
+                <td>
+                    <input id="eleSignalName" type="text" class="disabled-input" disabled="disabled">
+                </td>
+            </tr>
+            <tr>
+                <td align="right">判断条件:</td>
+                <td>
+                    <div class="formula-group">
+                      <select id="eleContentSelect">
+                        <option value="!=">≠</option>
+                        <option value="==">=</option>
+                        <option value="&gt;">&gt;</option>
+                        <option value="&lt;">&lt;</option>
+                        <option value="&gt;=">&gt;=</option>
+                        <option value="&lt;=">&lt;=</option>
+                      </select>
+                      <input id="eleContentInput" type="number">
+                    </div>
+                </td>
+            </tr>
+            <tr class="property-type">
+                <td>
+                    <span class="datagrid-row-collapse">&nbsp;</span>
+                    <span>为假时图片:</span>
+                </td>
+                <td>
+                    <a href="javascript:void(0);" id="btnFalseClear" class="btn-sm">
+                           清空
+                    </a>
+                    <i style="font-size: 8px;">后，为假时透明</i>
+                </td>
+            </tr>
+            <tr>
+                <td align="right" class="td-img">
+                    <div class="input-img-wapper">
+                        <span></span><img id="eleFalseAlter" alt="请选择" src="" >
+                    </div>
+                </td>
+                <td>
+                    <a href="javascript:void(0);" id="btnFalseImageDB" class="btn-lg">
+                           <span class="icon icon-db">&nbsp;</span>图库
+                    </a>
+                </td>
+            </tr>
+            <tr class="property-type">
+                <td>
+                    <span class="datagrid-row-collapse">&nbsp;</span>
+                    <span>为真时图片:</span>
+                </td>
+                <td>
+                    <a href="javascript:void(0);" id="btnTrueClear" class="btn-sm">
+                           清空
+                    </a>
+                    <i style="font-size: 8px;">后，为真时透明</i>
+                </td>
+            </tr>
+            <tr>
+                <td align="right" class="td-img">
+                    <div class="input-img-wapper">
+                        <span></span><img id="eleTrueAlter" alt="请选择" src="">
+                    </div>
+                </td>
+                <td>
+                    <a href="javascript:void(0);" id="btnTrueImageDB" class="btn-lg">
+                           <span class="icon icon-db">&nbsp;</span>图库
+                    </a>
+                </td>
+            </tr>
+            
+        </tbody>
+    </table>
+    </form>
+    <script type="text/javascript">
+    $(function(){
+        $.parser.parse('#lightImageForm');
+        //点击元件库
+        $("#btnFalseImageDB").click(function(){
+            $("#eleTrueAlter").removeClass("active");
+            $("#eleFalseAlter").addClass("active");
+            $("#dlgToolbar").show();
+            $("#dlgButtons").show();
+            var node = $('#dbMenu').tree('find', 9);
+            $('#dbMenu').tree('select', node.target);
+            loadImages(node.type);
+            $('#databaseDialog').dialog("open");
+        });
+        
+        //点击元件库
+        $("#btnTrueImageDB").click(function(){
+            $("#eleFalseAlter").removeClass("active");
+            $("#eleTrueAlter").addClass("active");
+            $("#dlgToolbar").show();
+            $("#dlgButtons").show();
+            var node = $('#dbMenu').tree('find', 9);
+            $('#dbMenu').tree('select', node.target);
+            loadImages(node.type);
+            $('#databaseDialog').dialog("open");
+        });
+        
+        $("#eleX").parent().find("input.textbox-text").change(function(){
+            var d = d3.select("svg > g.active").data()[0];
+            if(d.id== $("#lightImageForm input[name='ele.id']").val()){
+                //设置值
+                var value = $(this).val();
+                if(value==''){
+                    value = 0;
+                }
+                var angle = 2*Math.PI/360* d.radius;
+                var mx = (parseInt(value)-d.x2)*Math.cos(angle)-(d.y-d.y2)*Math.sin(angle)+d.x2;
+                if(mx>=0){
+                    //保存撤销信息
+                    if(d.x!=parseInt(value)){
+                        saveMoveUndo();
+                    }
+                    d.x=parseInt(value);
+                    d.x2 = parseInt(d.x+d.width/2);
+                }
+                //修改元件位置
+                d3.select("svg > g.active > image.light-image").attr("x",d.x);
+                d3.select("svg > g.active").attr("transform","rotate("+d.radius+","+d.x2+","+d.y2+")");
+                moveImagePoint(d3.select("svg > g.active"));
+            }
+        });
+        
+        $("#eleY").parent().find("input.textbox-text").change(function(){
+            var d = d3.select("svg > g.active").data()[0];
+            if(d.id== $("#lightImageForm input[name='ele.id']").val()){
+                //设置值
+                var value = $(this).val();
+                if(value==''){
+                    value = 0;
+                }
+                var angle = 2*Math.PI/360* d.radius;
+                var my = (d.x-d.x2)*Math.sin(angle)+(parseInt(value)-d.y2)*Math.cos(angle)+d.y2;
+                if(my>=0){
+                    //保存撤销信息
+                    if(d.y!=parseInt(value)){
+                        saveMoveUndo();
+                    }
+                    d.y=parseInt(value);
+                    d.y2 = parseInt(d.y+d.height/2);
+                }
+                //修改元件位置
+                d3.select("svg > g.active > image.light-image").attr("y",d.y);
+                d3.select("svg > g.active").attr("transform","rotate("+d.radius+","+d.x2+","+d.y2+")");
+                moveImagePoint(d3.select("svg > g.active"));
+            }
+        });
+        
+        $("#eleWidth").parent().find("input.textbox-text").change(function(){
+            var d = d3.select("svg > g.active").data()[0];
+            if(d.id== $("#lightImageForm input[name='ele.id']").val()){
+                //设置值
+                var value = $(this).val();
+                if(value==''){
+                    value = 0;
+                }
+                //保存撤销信息
+                if(d.width!=parseInt(value)){
+                    saveMoveUndo();
+                }
+                d.width=parseInt(value);
+                d.x2 = parseInt(d.x+d.width/2);
+                //修改元件位置
+                d3.select("svg > g.active > image.light-image").attr("width",d.width);
+                d3.select("svg > g.active").attr("transform","rotate("+d.radius+","+d.x2+","+d.y2+")");
+                moveImagePoint(d3.select("svg > g.active"));
+            }
+        });
+        
+        $("#eleHeight").parent().find("input.textbox-text").change(function(){
+            var d = d3.select("svg > g.active").data()[0];
+            if(d.id== $("#lightImageForm input[name='ele.id']").val()){
+                //设置值
+                var value = $(this).val();
+                if(value==''){
+                    value = 0;
+                }
+                //保存撤销信息
+                if(d.height!=parseInt(value)){
+                    saveMoveUndo();
+                }
+                d.height=parseInt(value);
+                d.y2 = parseInt(d.y+d.height/2);
+                //修改元件位置
+                d3.select("svg > g.active > image.light-image").attr("height",d.height);
+                d3.select("svg > g.active").attr("transform","rotate("+d.radius+","+d.x2+","+d.y2+")");
+                moveImagePoint(d3.select("svg > g.active"));
+            }
+        });
+    
+        $("#eleRadius").parent().find("input.textbox-text").change(function(){
+            var d = d3.select("svg > g.active").data()[0];
+            if(d.id== $("#lightImageForm input[name='ele.id']").val()){
+                //设置值
+                var value = $(this).val();
+                if(value=='' || value<0){
+                    value = 0;
+                }
+                //保存撤销信息
+                if(d.radius!=parseInt(value)){
+                    saveMoveUndo();
+                }
+                d.radius=parseInt(value);
+                d.x2 = parseInt(d.x+d.width/2);
+                d.y2 = parseInt(d.y+d.height/2);
+                //修改元件位置
+                d3.select("svg > g.active").attr("transform","rotate("+d.radius+","+d.x2+","+d.y2+")");
+                changeImagePointCursor(d3.select("svg > g.active"));
+            }
+        });
+    
+        $("#elePosLock").switchbutton({
+            checked: false,
+            onText:"开启",
+            offText:"关闭",
+            onChange: function(checked){
+                var d = d3.select("svg > g.active").data()[0];
+                d.posLock = checked;
+                if(checked){
+                    numberDisable();
+                    d3.select("svg > g.active").classed("lock",true);
+                }else{
+                    numberEnable();
+                    d3.select("svg > g.active").classed("lock",false);
+                }
+            }
+        });
+        
+        //变量
+        $("#btnDataSelect").click(function(){
+            querySignal(1,true);
+            $('#signalListDialog').dialog("open");
+        });
+    
+        //判断条件-关系运算符号
+        $("#eleContentSelect").change(function(){
+            var d = d3.select("svg > g.active").data()[0];
+            var formula = "X"+$("#eleContentSelect").val()+$("#eleContentInput").val();
+            if(d.content!=formula){
+                savePropertyUndo();
+            }
+            d.content=formula;
+        });
+        
+        //判断条件-值
+        $("#eleContentInput").change(function(){
+            var d = d3.select("svg > g.active").data()[0];
+            var formula = "X"+$("#eleContentSelect").val()+$("#eleContentInput").val();
+            if(d.id== $("#lightImageForm input[name='ele.id']").val()){
+                if(d.content!=formula){
+                    savePropertyUndo();
+                }
+                d.content=formula;
+            }
+        });
+    
+        $("#btnTrueClear").click(function(){
+            var d = d3.select("svg > g.active").data()[0];
+            if(d.trueAlter!=""){
+                savePropertyUndo();
+            }
+            d.trueAlter="";
+            $("#eleTrueAlter").attr("src","");
+            d3.select("svg > g.active > image.light-image")
+            .attr("xlink:href",function(d){
+                return initCDN+'userimg/'+d.trueAlter;
+            });
+        });
+        
+        $("#btnFalseClear").click(function(){
+            var d = d3.select("svg > g.active").data()[0];
+            if(d.falseAlter!=""){
+                savePropertyUndo();
+            }
+            d.falseAlter="";
+            $("#eleFalseAlter").attr("src","");
+        });
+    
+        //数值输入框右侧加1、减1功能触发对应的修改事件。
+        $("#eleX,#eleY,#eleWidth,#eleHeight,#eleRadius").parent().find("span.textbox-addon").click(function(){
+            $(this).parent().find("input.textbox-text").change();
+        });
+        //触发修改以后关闭页面提示“未保存”
+        $("#lightImageForm input,#lightImageForm select").change(bindBeforeunload);
+    });
+    </script>

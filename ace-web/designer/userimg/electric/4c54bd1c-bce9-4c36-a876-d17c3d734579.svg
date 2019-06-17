@@ -1,0 +1,25 @@
+ 
+<svg version="1.1" id="图层_1" xmlns:agg="http://www.example.com"
+	 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="64px" height="64px"
+	 viewBox="0 0 64 64" enable-background="new 0 0 64 64" xml:space="preserve">
+<polygon fill="none" stroke="#040000" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" points="45.008,38.527 
+	44.887,36.137 44.459,33.809 43.729,31.54 42.754,29.394 41.534,27.371 40.072,25.471 38.428,23.817 36.6,22.346 34.589,21.118 
+	32.397,20.138 30.141,19.464 27.826,19.035 25.51,18.852 23.135,19.035 20.818,19.464 18.564,20.138 16.432,21.118 14.422,22.346 
+	12.533,23.817 10.887,25.471 9.426,27.371 8.207,29.394 7.233,31.54 6.562,33.809 6.135,36.137 5.953,38.527 6.135,40.918 
+	6.562,43.248 7.233,45.518 8.207,47.662 9.426,49.686 10.887,51.585 12.533,53.24 14.422,54.712 16.432,55.938 18.564,56.918 
+	20.818,57.592 23.135,58.021 25.51,58.205 27.826,58.021 30.141,57.592 32.397,56.918 34.589,55.938 36.6,54.712 38.428,53.24 
+	40.072,51.585 41.534,49.686 42.754,47.662 43.729,45.518 44.459,43.248 44.887,40.918 "/>
+<line fill="none" stroke="#040000" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" x1="18.991" y1="5.795" x2="18.991" y2="20.015"/>
+<line fill="none" stroke="#040000" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" x1="31.969" y1="5.795" x2="31.969" y2="20.015"/>
+<line fill="none" stroke="#040000" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" x1="58.047" y1="31.97" x2="43.911" y2="31.97"/>
+<line fill="none" stroke="#040000" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" x1="58.047" y1="45.087" x2="43.911" y2="45.087"/>
+<rect x="11.333" y="37.995" fill="none" width="27.833" height="15.083"/>
+<text transform="matrix(1 0 0 1 15.731 48.2842)" font-family="'MicrosoftYaHei'" font-size="12">3～</text>
+<text transform="matrix(1 0 0 1 15.731 48.2842)" fill="none" stroke="#040000" stroke-miterlimit="10" font-family="'MicrosoftYaHei'" font-size="12">3～</text>
+<g>
+	<path stroke="#040000" stroke-width="0.75" stroke-miterlimit="10" d="M28.771,34.808v-6.013c0-0.496,0.028-1.092,0.088-1.787
+		H28.83c-0.102,0.438-0.191,0.742-0.27,0.914l-2.994,6.886h-0.65l-2.988-6.832c-0.07-0.156-0.16-0.479-0.27-0.968h-0.036
+		c0.039,0.423,0.059,1.035,0.059,1.841v5.959h-1.119v-9.076h1.588l2.678,6.224c0.203,0.477,0.338,0.848,0.404,1.112h0.042
+		c0.203-0.56,0.346-0.938,0.428-1.137l2.725-6.199h1.512v9.076H28.771z"/>
+</g>
+</svg>

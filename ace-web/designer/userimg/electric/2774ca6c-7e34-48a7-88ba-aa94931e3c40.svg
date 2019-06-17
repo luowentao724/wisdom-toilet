@@ -1,0 +1,20 @@
+ 
+<svg version="1.1" id="图层_1" xmlns:agg="http://www.example.com"
+	 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="64px" height="64px"
+	 viewBox="0 0 64 64" enable-background="new 0 0 64 64" xml:space="preserve">
+<line fill="none" stroke="#040000" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" x1="33.846" y1="20.435" x2="33.846" y2="43.564"/>
+<line fill="none" stroke="#040000" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" x1="33.846" y1="32" x2="5.451" y2="31.937"/>
+<line fill="none" stroke="#040000" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" x1="56.955" y1="8.87" x2="33.846" y2="26.217"/>
+<line fill="none" stroke="#040000" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" x1="33.846" y1="37.783" x2="56.955" y2="55.131"/>
+<polygon fill="none" stroke="#040000" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" points="58.549,31.968 
+	58.299,28.812 57.549,25.717 56.33,22.779 54.672,20.091 52.607,17.685 50.199,15.621 47.512,13.964 44.572,12.746 41.508,11.996 
+	38.348,11.745 35.158,11.996 32.094,12.746 29.154,13.964 26.465,15.621 24.057,17.685 21.993,20.091 20.335,22.779 19.116,25.717 
+	18.365,28.812 18.115,31.968 18.365,35.125 19.116,38.221 20.335,41.158 21.993,43.846 24.057,46.254 26.465,48.316 29.154,49.973 
+	32.094,51.191 35.158,51.941 38.348,52.191 41.508,51.941 44.572,51.191 47.512,49.973 50.199,48.316 52.607,46.254 54.672,43.846 
+	56.33,41.158 57.549,38.221 58.299,35.125 "/>
+<line fill="none" stroke="#040000" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" x1="49.012" y1="14.809" x2="43.008" y2="16.215"/>
+<line fill="none" stroke="#040000" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" x1="49.012" y1="14.809" x2="45.979" y2="20.122"/>
+<polygon fill="#040000" points="47.354,47.504 46.854,48.254 48.98,49.16 "/>
+<polygon fill="#040000" points="46.854,48.254 46.666,49.16 48.98,49.16 "/>
+<circle fill="none" stroke="#040000" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" cx="49.334" cy="48.708" r="2.5"/>
+</svg>

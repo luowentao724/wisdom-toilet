@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.github.wxiaoqi.security.things.mapper.PumpStationDataMapper">
+
+	<!-- 可根据自己的需求，是否要使用 -->
+    <resultMap type="com.github.wxiaoqi.security.things.entity.PumpStationData" id="pumpStationDataMap">
+        <result property="id" column="id"/>
+        <result property="dtuId" column="dtu_id"/>
+        <result property="vacuumDegree" column="vacuum_degree"/>
+        <result property="acquisitionTime" column="acquisition_time"/>
+        <result property="todayRunTime" column="today_run_time"/>
+        <result property="cumulativeRunTime" column="cumulative_run_time"/>
+        <result property="totalRunTime" column="total_run_time"/>
+        <result property="createTime" column="create_time"/>
+    </resultMap>
+
+</mapper>

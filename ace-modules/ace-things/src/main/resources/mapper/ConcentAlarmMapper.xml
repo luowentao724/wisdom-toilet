@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.github.wxiaoqi.security.things.mapper.ConcentAlarmMapper">
+
+	<!-- 可根据自己的需求，是否要使用 -->
+    <resultMap type="com.github.wxiaoqi.security.things.entity.ConcentAlarm" id="concentAlarmMap">
+        <result property="alarmId" column="alarm_id"/>
+        <result property="dtuId" column="dtu_id"/>
+        <result property="alarmType" column="alarm_type"/>
+        <result property="alarmContent" column="alarm_content"/>
+        <result property="alarmTime" column="alarm_time"/>
+        <result property="createTime" column="create_time"/>
+        <result property="descn" column="descn"/>
+        <result property="fixType" column="fix_type"/>
+        <result property="fixTime" column="fix_time"/>
+        <result property="fixDescn" column="fix_descn"/>
+        <result property="fixUserId" column="fix_user_id"/>
+        <result property="fixUserName" column="fix_user_name"/>
+        <result property="smsCount" column="sms_count"/>
+        <result property="sms" column="sms"/>
+        <result property="smsPhone" column="sms_phone"/>
+        <result property="email" column="email"/>
+        <result property="emailAddress" column="email_address"/>
+        <result property="alarmPacket" column="alarm_packet"/>
+        <result property="status" column="status"/>
+        <result property="totilName" column="totilName"/>
+        <result property="totilId" column="totilId"/>
+    </resultMap>
+
+    <resultMap type="com.github.wxiaoqi.security.things.vo.TotilWashYearMonthVo" id="totilWashYearMonthVoMap">
+        <result property="gatherTime" column="gatherTime"/>
+        <result property="totalNum" column="totalNum"/>
+    </resultMap>
+
+    <!-- 故障分析报表,查询当年每月数据 -->
+    <select id="getAlarmYearMonth" resultMap="totilWashYearMonthVoMap" parameterType="map">
+        SELECT
+        DATE_FORMAT(alarm_time, '%m') AS gatherTime,
+        COUNT(0) AS totalNum
+        FROM
+        concent_alarm
+        WHERE 1=1
+        <if test="cm.alarmTimeYear != null and cm.alarmTimeYear != ''">
+            AND DATE_FORMAT(alarm_time, '%Y') = #{cm.alarmTimeYear}
+        </if>
+        <if test="cm.dtuId != null and cm.dtuId != ''">
+            AND dtu_id = #{cm.dtuId}
+        </if>
+        GROUP BY gatherTime
+        ORDER BY gatherTime ASC
+    </select>
+
+    <!-- 分页查收查询设备报警信息 -->
+    <select id="searchPage" resultMap="concentAlarmMap" parameterType="map">
+        SELECT
+          ca.`alarm_id` AS alarm_id,
+          s.`totil_name` AS totilName,
+          s.`totil_id` AS totilId,
+          ca.alarm_type AS alarm_type,
+          ca.`alarm_time` AS alarm_time,
+          ca.`sms` AS sms,
+          ca.`sms_phone` AS sms_phone,
+          ca.`email` AS email,
+          ca.`email_address` AS email_address,
+          ca.`fix_type` AS fix_type,
+          ca.`fix_user_name` AS fix_user_name,
+          ca.`fix_user_id` AS fix_user_id,
+          ca.`fix_descn` AS fix_descn,
+          ca.`email_address` AS email_address,
+          ca.`sms_phone` AS sms_phone,
+          ca.`descn` AS descn,
+          ca.`create_time` AS create_time,
+          ca.`fix_time` AS fix_time
+        FROM
+          concent_alarm ca
+          LEFT JOIN stations s
+            ON ca.`dtu_id` = s.`id`
+          WHERE 1=1
+        <!-- DTU  id -->
+        <if test="cm.dtuId != null and cm.dtuId != ''">
+            AND ca.`dtu_id` = #{cm.dtuId}
+        </if>
+        <if test="cm.totilName != null and cm.totilName != ''">
+            AND s.`totil_name` like concat('%', #{cm.totilName},'%')
+        </if>
+        <!-- 报警开始时间 -->
+        <if test="cm.startDate != null and cm.startDate != ''">
+            AND DATE_FORMAT(ca.`alarm_time`,'%Y-%m-%d') <![CDATA[ >= ]]> DATE_FORMAT(#{cm.startDate},'%Y-%m-%d')
+        </if>
+        <!-- 报警结束时间 -->
+        <if test="cm.endDate != null and cm.endDate != ''">
+            AND DATE_FORMAT(ca.`alarm_time`,'%Y-%m-%d') <![CDATA[ <= ]]> DATE_FORMAT(#{cm.endDate},'%Y-%m-%d')
+        </if>
+        <if test="cm.dateYear != null and cm.dateYear != ''">
+            AND DATE_FORMAT(ca.`alarm_time`, '%Y') <![CDATA[ <= ]]> #{cm.dateYear}
+        </if>
+        <!-- 处理状态0未处理 1已处理好 -->
+        <if test="cm.status != null and cm.status != ''">
+            AND ca.status = #{cm.status}
+        </if>
+        ORDER BY ca.`alarm_time` DESC
+ <!-- LIMIT #{cm.pageIndex},#{cm.pageSize} -->
+    </select>
+
+
+</mapper>

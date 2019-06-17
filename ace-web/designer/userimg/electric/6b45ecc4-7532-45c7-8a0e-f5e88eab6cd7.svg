@@ -1,0 +1,26 @@
+ 
+<svg version="1.1" id="图层_1" xmlns:agg="http://www.example.com"
+	 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="64px" height="64px"
+	 viewBox="0 0 64 64" enable-background="new 0 0 64 64" xml:space="preserve">
+<line fill="none" stroke="#040000" stroke-width="1.5" stroke-linecap="round" stroke-miterlimit="10" x1="31.974" y1="1.08" x2="31.974" y2="16.014"/>
+<polygon fill="none" stroke="#040000" stroke-width="1.5" stroke-linecap="round" stroke-miterlimit="10" points="43.969,35.997 
+	43.865,34.543 43.605,33.09 43.191,31.741 42.566,30.391 41.84,29.198 40.957,28.055 39.92,27.018 38.775,26.135 37.529,25.356 
+	36.23,24.786 34.83,24.37 33.428,24.111 31.974,24.007 30.52,24.111 29.118,24.37 27.768,24.786 26.417,25.356 25.171,26.135 
+	24.029,27.018 23.042,28.055 22.16,29.198 21.381,30.391 20.81,31.741 20.394,33.09 20.134,34.543 20.031,35.997 20.134,37.398 
+	20.394,38.852 20.81,40.2 21.381,41.551 22.16,42.795 23.042,43.938 24.029,44.925 25.171,45.807 26.417,46.585 27.768,47.156 
+	29.118,47.623 30.52,47.883 31.974,47.936 33.428,47.883 34.83,47.623 36.23,47.156 37.529,46.585 38.775,45.807 39.92,44.925 
+	40.957,43.938 41.84,42.795 42.566,41.551 43.191,40.2 43.605,38.852 43.865,37.398 "/>
+<line fill="none" stroke="#040000" stroke-width="1.5" stroke-linecap="round" stroke-miterlimit="10" x1="27.976" y1="14.042" x2="35.973" y2="10.045"/>
+<line fill="none" stroke="#040000" stroke-width="1.5" stroke-linecap="round" stroke-miterlimit="10" x1="27.976" y1="10.069" x2="35.973" y2="6.073"/>
+<line fill="none" stroke="#040000" stroke-width="1.5" stroke-linecap="round" stroke-miterlimit="10" x1="27.976" y1="6.045" x2="35.973" y2="2.049"/>
+<line fill="none" stroke="#040000" stroke-width="1.5" stroke-linecap="round" stroke-miterlimit="10" x1="31.974" y1="35.997" x2="35.973" y2="33.973"/>
+<line fill="none" stroke="#040000" stroke-width="1.5" stroke-linecap="round" stroke-miterlimit="10" x1="31.974" y1="35.997" x2="27.976" y2="33.973"/>
+<line fill="none" stroke="#040000" stroke-width="1.5" stroke-linecap="round" stroke-miterlimit="10" x1="31.974" y1="35.997" x2="31.974" y2="39.941"/>
+<polyline fill="none" stroke="#040000" stroke-width="1.5" stroke-linecap="round" stroke-miterlimit="10" points="43.969,35.997 
+	43.709,33.816 43.242,31.638 42.619,29.561 41.84,27.537 40.854,25.564 39.762,23.644 38.465,21.879 37.012,20.218 35.453,18.661 
+	33.791,17.312 31.974,16.014 "/>
+<line fill="none" stroke="#040000" stroke-width="1.5" stroke-linecap="round" stroke-miterlimit="10" x1="31.974" y1="47.936" x2="31.974" y2="63.414"/>
+<line fill="none" stroke="#040000" stroke-width="1.5" stroke-linecap="round" stroke-miterlimit="10" x1="27.976" y1="61.898" x2="35.973" y2="57.904"/>
+<line fill="none" stroke="#040000" stroke-width="1.5" stroke-linecap="round" stroke-miterlimit="10" x1="27.976" y1="57.927" x2="35.973" y2="53.93"/>
+<line fill="none" stroke="#040000" stroke-width="1.5" stroke-linecap="round" stroke-miterlimit="10" x1="27.976" y1="53.904" x2="35.973" y2="49.959"/>
+</svg>

@@ -1,0 +1,406 @@
+
+<form id="scrollbarForm">
+    <input type="hidden" name="ele.id"/>
+    <table class="property-table" style="width:100%;height:auto;"
+         cellpadding="0" cellspacing="0" border="1">
+        <thead>
+            <tr>
+                <th width="100" align="right">名称</th>
+                <th width="130">值</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td align="right">元件类型:</td>
+                <td><input type="text" class="easyui-textbox" value="流动条" disabled="disabled"></td>
+            </tr>
+            <tr class="property-type">
+                <td>
+                    <span class="datagrid-row-collapse">&nbsp;</span>
+                    <span>位置</span>
+                </td>
+                <td></td>
+            </tr>
+            <tr>
+                <td align="right">起点X轴坐标:</td>
+                <td><input id="eleX" type="text" name="ele.x" class="easyui-numberspinner" data-options="min:0" required="required"/></td>
+            </tr>
+            <tr>
+                <td align="right">起点Y轴坐标:</td>
+                <td><input id="eleY" type="text" name="ele.y" class="easyui-numberspinner" data-options="min:0" required="required"/></td>
+            </tr>
+            <tr>
+                <td align="right">终点X轴坐标:</td>
+                <td><input id="eleWidth" type="text" name="ele.width" class="easyui-numberspinner" data-options="min:0" required="required"/></td>
+            </tr>
+            <tr>
+                <td align="right">终点Y轴坐标:</td>
+                <td><input id="eleHeight" type="text" name="ele.height" class="easyui-numberspinner" data-options="min:0" required="required"/></td>
+            </tr>
+            <tr>
+                <td align="right">位置锁定:</td>
+                <td><input id="elePosLock" style="height: 22px; width: 104px;"/></td>
+            </tr>
+            <tr class="property-type">
+                <td>
+                    <span class="datagrid-row-collapse">&nbsp;</span>
+                    <span>变量</span>
+                </td>
+                <td></td>
+            </tr>
+            <tr>
+                <td align="right">绑定:</td>
+                <td>
+                  <a href="javascript:void(0);" id="btnDataSelect" class="btn-defult">
+                     <span class="icon icon-db">&nbsp;</span>选择
+                  </a>
+                </td>
+            </tr>
+            <tr>
+                <td align="right">数据名称:</td>
+                <td>
+                    <input id="eleSignalName" type="text" class="disabled-input" disabled="disabled">
+                </td>
+            </tr>
+            <tr>
+                <td align="right">触发条件:</td>
+                <td>
+                    <div class="formula-group">
+                      <select id="eleContentSelect">
+                        <option value="!=">≠</option>
+                        <option value="==">=</option>
+                        <option value="&gt;">&gt;</option>
+                        <option value="&lt;">&lt;</option>
+                        <option value="&gt;=">&gt;=</option>
+                        <option value="&lt;=">&lt;=</option>
+                      </select>
+                      <input id="eleContentInput" type="number">
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td align="right">速度:</td>
+                <td>
+                    <select id="eleRadius" class="defult-input">
+                        <option value="15000">快</option>
+                        <option value="30000">中</option>
+                        <option value="45000">慢</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td align="right">流动方向:</td>
+                <td>
+                     <span>正</span><input type="radio" name="ele.strokeLinecap" id="strokeLinecapForward" value="3000">
+                     <span>反</span><input type="radio" name="ele.strokeLinecap" id="strokeLinecapBack" value="-3000">
+                </td>
+            </tr>
+            <tr>
+                <td align="center" colspan="2" style="padding: 5px;">
+                  <a href="javascript:void(0);" id="btnTriggerBar" class="btn-lg">
+                     <span class="icon icon-scrollbar">&nbsp;</span>动作预览(1s)
+                  </a>
+                </td>
+            </tr>
+            <tr class="property-type">
+                <td>
+                    <span class="datagrid-row-collapse">&nbsp;</span>
+                    <span>样式</span>
+                </td>
+                <td></td>
+            </tr>
+            <tr>
+                <td align="right">颜色:</td>
+                <td><input type="text" id="eleStroke" class="input_cxcolor" readonly/></td>
+            </tr>
+            <tr>
+                <td align="right">粗细:</td>
+                <td>
+                    <input id="eleStrokeWidth" type="text" name="ele.strokeWidth" class="easyui-numberspinner" data-options="min:1" required="required"/>
+                </td>
+            </tr>
+            <tr>
+                <td align="right">色块长度:</td>
+                <td>
+                    <input id="eleStrokeDasharray1" type="text" name="ele.strokeDasharray" class="easyui-numberspinner" data-options="min:1" required="required"/>
+                </td>
+            </tr>
+            <tr>
+                <td align="right">色块间距:</td>
+                <td>
+                    <input id="eleStrokeDasharray2" type="text" name="ele.strokeDasharray" class="easyui-numberspinner" data-options="min:1" required="required"/>
+                </td>
+            </tr>
+            <tr>
+                <td align="right">边框显隐:</td>
+                <td>
+                     <span>显示</span><input type="radio" name="ele.showBg" id="showBg1" value="1">
+                     <span>隐藏</span><input type="radio" name="ele.showBg" id="showBg0" value="0">
+                </td>
+            </tr>
+            <tr>
+                <td align="right">边框颜色:</td>
+                <td><input type="text" id="eleFill" class="input_cxcolor" readonly/></td>
+            </tr>
+        </tbody>
+    </table>
+    </form>
+    <script type="text/javascript">
+    $(function(){
+        $.parser.parse('#scrollbarForm');
+        //位置
+        $("#eleX").parent().find("input.textbox-text").change(function(){
+            var d = d3.select("svg > g.active").data()[0];
+            if(d.id== $("#scrollbarForm input[name='ele.id']").val()){
+                var value = $(this).val();
+                if(value=='' || value<0){
+                    value = 0;
+                }
+                //保存撤销信息
+                if(d.x!=parseInt(value)){
+                    saveMoveUndo();
+                }
+                d.x=parseInt(value);
+                d3.select("svg>g.active>line.scrollbar-line").attr("x1",d.x);
+                d3.select("svg>g.active>polygon.scrollbar-border").attr("points",calcScrollbarPoints);
+                moveLinePoint(d3.select("svg > g.active"));
+            }
+            
+        });
+        $("#eleY").parent().find("input.textbox-text").change(function(){
+            var d = d3.select("svg > g.active").data()[0];
+            if(d.id== $("#scrollbarForm input[name='ele.id']").val()){
+                var value = $(this).val();
+                if(value=='' || value<0){
+                    value = 0;
+                }
+                //保存撤销信息
+                if(d.y!=parseInt(value)){
+                    saveMoveUndo();
+                }
+                d.y=parseInt(value);
+                d3.select("svg>g.active>line.scrollbar-line").attr("y1",d.y);
+                d3.select("svg>g.active>polygon.scrollbar-border").attr("points",calcScrollbarPoints);
+                moveLinePoint(d3.select("svg > g.active"));
+            }
+        });
+        $("#eleWidth").parent().find("input.textbox-text").change(function(){
+            var d = d3.select("svg > g.active").data()[0];
+            if(d.id== $("#scrollbarForm input[name='ele.id']").val()){
+                var value = $(this).val();
+                if(value=='' || value<0){
+                    value = 0;
+                }
+                //保存撤销信息
+                if(d.width!=parseInt(value)){
+                    saveMoveUndo();
+                }
+                d.width=parseInt(value);
+                d3.select("svg>g.active>line.scrollbar-line").attr("x2",d.width);
+                d3.select("svg>g.active>polygon.scrollbar-border").attr("points",calcScrollbarPoints);
+                moveLinePoint(d3.select("svg > g.active"));
+            }
+        });
+        
+        $("#eleHeight").parent().find("input.textbox-text").change(function(){
+            var d = d3.select("svg > g.active").data()[0];
+            if(d.id== $("#scrollbarForm input[name='ele.id']").val()){
+                var value = $(this).val();
+                if(value=='' || value<0){
+                    value = 0;
+                }
+                //保存撤销信息
+                if(d.height!=parseInt(value)){
+                    saveMoveUndo();
+                }
+                d.height=parseInt(value);
+                d3.select("svg>g.active>line.scrollbar-line").attr("y2",d.height);
+                d3.select("svg>g.active>polygon.scrollbar-border").attr("points",calcScrollbarPoints);
+                moveLinePoint(d3.select("svg > g.active"));
+            }
+        });
+        $("#elePosLock").switchbutton({
+            checked: false,
+            onText:"开启",
+            offText:"关闭",
+            onChange: function(checked){
+                var d = d3.select("svg > g.active").data()[0];
+                d.posLock = checked;
+                if(checked){
+                    numberDisable();
+                    d3.select("svg > g.active").classed("lock",true);
+                }else{
+                    numberEnable();
+                    d3.select("svg > g.active").classed("lock",false);
+                }
+            }
+        })
+        
+        //变量
+        $("#btnDataSelect").click(function(){
+            querySignal(1,true);
+            $('#signalListDialog').dialog("open");
+        });
+        //触发条件-关系运算符号
+        $("#eleContentSelect").change(function(){
+            var d = d3.select("svg > g.active").data()[0];
+            var formula = "X"+$("#eleContentSelect").val()+$("#eleContentInput").val();
+            if(d.content!=formula){
+                savePropertyUndo();
+            }
+            d.content=formula;
+        });
+        //触发条件-触发值
+        $("#eleContentInput").change(function(){
+            var d = d3.select("svg > g.active").data()[0];
+            var formula = "X"+$("#eleContentSelect").val()+$("#eleContentInput").val();
+            if(d.id== $("#scrollbarForm input[name='ele.id']").val()){
+                if(d.content!=formula){
+                    savePropertyUndo();
+                }
+                d.content=formula;
+            }
+        });
+        $("#eleRadius").change(function(){
+            var d = d3.select("svg > g.active").data()[0];
+            if(d.radius != $(this).val()){
+                savePropertyUndo();
+            }
+            d.radius = $(this).val();
+        });
+        
+        $("#scrollbarForm input[name='ele.strokeLinecap']").click(function(){
+            var d = d3.select("svg > g.active").data()[0];
+            if(d.strokeLinecap != $(this).val()){
+                savePropertyUndo();
+            }
+            d.strokeLinecap = $(this).val();
+        });
+    
+        //触发
+        $("#btnTriggerBar").click(function(){
+            var d = d3.select("svg > g.active").data()[0];
+            d3.select("svg > g.active").remove();
+            var scrollbarGroup = createScrollbar(d);
+            scrollbarGroup.classed("active",true);
+            var offset = (d.strokeLinecap/d.radius)*1000;
+            scrollbarGroup.select("line.scrollbar-line")
+                .style("stroke-dashoffset",0)
+                .transition()
+                .duration(1000)
+                .ease("linear")
+                .style("stroke-dashoffset",offset);
+        });
+    
+        //样式
+        $("#eleStroke").change(function(){
+            d3.select("svg>g.active>line.scrollbar-line")
+            .style("stroke",function(d){
+                if(d.stroke!=$("#eleStroke").val()){
+                    savePropertyUndo();
+                }
+                d.stroke=$("#eleStroke").val();
+                return d.stroke;
+            });
+        });
+    
+        //流动条宽度
+        $("#eleStrokeWidth").parent().find("input.textbox-text").change(function(){
+            var d = d3.select("svg > g.active").data()[0];
+            if(d.id== $("#scrollbarForm input[name='ele.id']").val()){
+                var value = $(this).val();
+                if(value=='' || value<0){
+                    value = 0;
+                }
+                if(d.strokeWidth!=parseInt(value)){
+                    savePropertyUndo();
+                }
+                d.strokeWidth=parseInt(value);
+                d3.select("svg>g.active>line.scrollbar-line").style("stroke-width",d.strokeWidth);
+                d3.select("svg>g.active>polygon.scrollbar-border").attr("points",calcScrollbarPoints);
+            }
+        });
+    
+        //色块长度
+        $("#eleStrokeDasharray1").parent().find("input.textbox-text").change(function(){
+            var d = d3.select("svg > g.active").data()[0];
+            if(d.id== $("#scrollbarForm input[name='ele.id']").val()){
+                var value = $(this).val();
+                if(value=='' || value<0){
+                    value = 0;
+                }
+                if(d.strokeDasharray){
+                    var dasharray = d.strokeDasharray.split(" ");
+                    dasharray[0] = parseInt(value);
+                    if(!dasharray[1]){
+                        dasharray[1]="10"
+                    }
+                    if(d.strokeDasharray != dasharray.join(" ")){
+                        savePropertyUndo();
+                    }
+                    d.strokeDasharray = dasharray.join(" ");
+                }else{
+                    savePropertyUndo();
+                    d.strokeDasharray = value+" 10";
+                }
+                d3.select("svg>g.active>line.scrollbar-line").style("stroke-dasharray",d.strokeDasharray);
+            }
+        });
+    
+        //色块间距
+        $("#eleStrokeDasharray2").parent().find("input.textbox-text").change(function(){
+            var d = d3.select("svg > g.active").data()[0];
+            if(d.id== $("#scrollbarForm input[name='ele.id']").val()){
+                var value = $(this).val();
+                if(value=='' || value<0){
+                    value = 0;
+                }
+                if(d.strokeDasharray){
+                    var dasharray = d.strokeDasharray.split(" ");
+                    if(!dasharray[0]){
+                        dasharray[0]="10"
+                    }
+                    dasharray[1] = parseInt(value);
+                    if(d.strokeDasharray != dasharray.join(" ")){
+                        savePropertyUndo();
+                    }
+                    d.strokeDasharray = dasharray.join(" ");
+                }else{
+                    savePropertyUndo();
+                    d.strokeDasharray = "10 "+value;
+                }
+                d3.select("svg>g.active>line.scrollbar-line").style("stroke-dasharray",d.strokeDasharray);
+            }
+        });
+        
+        $("#scrollbarForm input[name='ele.showBg']").click(function(){
+             var showBg = $(this).val();
+            d3.select("svg > g.active > polygon.scrollbar-border")
+            .style("opacity",function(d){
+                if(d.showBg!=showBg){
+                    savePropertyUndo();
+                }
+                d.showBg=showBg;
+                return d.showBg;
+            });
+        });
+        
+        $("#eleFill").change(function(){
+            d3.selectAll("svg > g.active > polygon.scrollbar-border")
+            .style("stroke",function(d){
+                if(d.fill!=$("#eleFill").val()){
+                    savePropertyUndo();
+                }
+                d.fill=$("#eleFill").val();
+                return d.fill;
+            });
+        });
+    
+        //数值输入框右侧加1、减1功能触发对应的修改事件。
+        $("#eleX,#eleY,#eleWidth,#eleHeight,#eleStrokeDasharray").parent().find("span.textbox-addon").click(function(){
+            $(this).parent().find("input.textbox-text").change();
+        });
+        //触发修改以后关闭页面提示“未保存”
+        $("#scrollbarForm input,#scrollbarForm select").change(bindBeforeunload);
+    });
+    </script>

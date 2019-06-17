@@ -1,0 +1,63 @@
+ 
+<svg version="1.1" id="图层_1" xmlns:agg="http://www.example.com"
+	 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="64px" height="64px"
+	 viewBox="0 0 64 64" enable-background="new 0 0 64 64" xml:space="preserve">
+<g>
+	<polyline fill="none" stroke="#040000" stroke-width="1.5" stroke-linecap="round" stroke-miterlimit="10" points="15.041,21.546 
+		15.843,21.412 16.545,21.045 17.146,20.477 17.514,19.742 17.647,18.94 17.514,18.139 17.146,17.403 16.545,16.836 15.843,16.469 
+		15.041,16.335 	"/>
+	<polyline fill="none" stroke="#040000" stroke-width="1.5" stroke-linecap="round" stroke-miterlimit="10" points="15.041,26.756 
+		15.843,26.655 16.545,26.288 17.146,25.688 17.514,24.952 17.647,24.15 17.514,23.349 17.146,22.614 16.545,22.046 15.843,21.68 
+		15.041,21.546 	"/>
+	<polyline fill="none" stroke="#040000" stroke-width="1.5" stroke-linecap="round" stroke-miterlimit="10" points="15.041,37.21 
+		15.843,37.077 16.545,36.709 17.146,36.143 17.514,35.407 17.647,34.605 17.514,33.805 17.146,33.068 16.545,32.501 15.843,32.134 
+		15.041,32 	"/>
+	<polyline fill="none" stroke="#040000" stroke-width="1.5" stroke-linecap="round" stroke-miterlimit="10" points="15.041,32 
+		15.843,31.866 16.545,31.499 17.146,30.932 17.514,30.196 17.647,29.395 17.514,28.593 17.146,27.858 16.545,27.257 15.843,26.89 
+		15.041,26.756 	"/>
+	
+		<line fill="none" stroke="#040000" stroke-width="1.5" stroke-linecap="round" stroke-miterlimit="10" x1="15.041" y1="42.454" x2="56.813" y2="42.454"/>
+	
+		<line fill="none" stroke="#040000" stroke-width="1.5" stroke-linecap="round" stroke-miterlimit="10" x1="35.928" y1="42.454" x2="35.928" y2="37.21"/>
+	
+		<line fill="none" stroke="#040000" stroke-width="1.5" stroke-linecap="round" stroke-miterlimit="10" x1="56.813" y1="42.454" x2="56.813" y2="37.21"/>
+	
+		<line fill="none" stroke="#040000" stroke-width="1.5" stroke-linecap="round" stroke-miterlimit="10" x1="15.041" y1="42.454" x2="15.041" y2="37.21"/>
+	<polyline fill="none" stroke="#040000" stroke-width="1.5" stroke-linecap="round" stroke-miterlimit="10" points="35.928,21.546 
+		36.729,21.412 37.463,21.045 38.031,20.477 38.398,19.742 38.533,18.94 38.398,18.139 38.031,17.403 37.463,16.836 36.729,16.469 
+		35.928,16.335 	"/>
+	<polyline fill="none" stroke="#040000" stroke-width="1.5" stroke-linecap="round" stroke-miterlimit="10" points="35.928,26.756 
+		36.729,26.655 37.463,26.288 38.031,25.688 38.398,24.952 38.533,24.15 38.398,23.349 38.031,22.614 37.463,22.046 36.729,21.68 
+		35.928,21.546 	"/>
+	<polyline fill="none" stroke="#040000" stroke-width="1.5" stroke-linecap="round" stroke-miterlimit="10" points="35.928,37.21 
+		36.729,37.077 37.463,36.709 38.031,36.143 38.398,35.407 38.533,34.605 38.398,33.805 38.031,33.068 37.463,32.501 36.729,32.134 
+		35.928,32 	"/>
+	<polyline fill="none" stroke="#040000" stroke-width="1.5" stroke-linecap="round" stroke-miterlimit="10" points="35.928,32 
+		36.729,31.866 37.463,31.499 38.031,30.932 38.398,30.196 38.533,29.395 38.398,28.593 38.031,27.858 37.463,27.257 36.729,26.89 
+		35.928,26.756 	"/>
+	<polyline fill="none" stroke="#040000" stroke-width="1.5" stroke-linecap="round" stroke-miterlimit="10" points="56.813,21.546 
+		57.613,21.412 58.35,21.045 58.917,20.477 59.285,19.742 59.418,18.94 59.285,18.139 58.917,17.403 58.35,16.836 57.613,16.469 
+		56.813,16.335 	"/>
+	<polyline fill="none" stroke="#040000" stroke-width="1.5" stroke-linecap="round" stroke-miterlimit="10" points="56.813,26.756 
+		57.613,26.655 58.35,26.288 58.917,25.688 59.285,24.952 59.418,24.15 59.285,23.349 58.917,22.614 58.35,22.046 57.613,21.68 
+		56.813,21.546 	"/>
+	<polyline fill="none" stroke="#040000" stroke-width="1.5" stroke-linecap="round" stroke-miterlimit="10" points="56.813,37.21 
+		57.613,37.077 58.35,36.709 58.917,36.143 59.285,35.407 59.418,34.605 59.285,33.805 58.917,33.068 58.35,32.501 57.613,32.134 
+		56.813,32 	"/>
+	<polyline fill="none" stroke="#040000" stroke-width="1.5" stroke-linecap="round" stroke-miterlimit="10" points="56.813,32 
+		57.613,31.866 58.35,31.499 58.917,30.932 59.285,30.196 59.418,29.395 59.285,28.593 58.917,27.858 58.35,27.257 57.613,26.89 
+		56.813,26.756 	"/>
+	
+		<line fill="none" stroke="#040000" stroke-width="1.5" stroke-linecap="round" stroke-miterlimit="10" x1="25.467" y1="32" x2="35.928" y2="32"/>
+	
+		<line fill="none" stroke="#040000" stroke-width="1.5" stroke-linecap="round" stroke-miterlimit="10" x1="25.467" y1="32" x2="25.467" y2="47.665"/>
+	
+		<line fill="none" stroke="#040000" stroke-width="1.5" stroke-linecap="round" stroke-miterlimit="10" x1="46.352" y1="32" x2="56.813" y2="32"/>
+	
+		<line fill="none" stroke="#040000" stroke-width="1.5" stroke-linecap="round" stroke-miterlimit="10" x1="46.352" y1="32" x2="46.352" y2="47.665"/>
+	
+		<line fill="none" stroke="#040000" stroke-width="1.5" stroke-linecap="round" stroke-miterlimit="10" x1="4.582" y1="32" x2="15.041" y2="32"/>
+	
+		<line fill="none" stroke="#040000" stroke-width="1.5" stroke-linecap="round" stroke-miterlimit="10" x1="4.582" y1="32" x2="4.582" y2="47.665"/>
+</g>
+</svg>

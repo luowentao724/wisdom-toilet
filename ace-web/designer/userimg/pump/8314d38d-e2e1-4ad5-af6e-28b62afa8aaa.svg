@@ -1,0 +1,81 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!-- Generator: Adobe Illustrator 15.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC '-//W3C//DTD SVG 1.1//EN' 'http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd'>
+<svg version='1.1'
+    xmlns='http://www.w3.org/2000/svg'
+    xmlns:xlink='http://www.w3.org/1999/xlink'		preserveAspectRatio="none"
+    x='0px'
+    y='0px'
+    width='114.804px'
+    height='55.951px'
+    viewBox='0 0 114.804 55.951'
+    xmlns:agg='http://www.example.com'
+    xml:space='preserve'>
+<agg:params>
+	<agg:param  type="C" name="Color" classes="boundary" description="Color" cssAttributes="fill"></agg:param>
+	<agg:param  type="C" name="strokeColor" classes="contours,dashed,thick" description="Stroke Color" cssAttributes="stroke"></agg:param>
+</agg:params>
+
+<style type="text/css" >
+<![CDATA[
+
+	.contours,.dashed,.thick{
+		stroke-linecap:round;
+		stroke-linejoin:round;
+		stroke: #000000;
+		fill:none;
+	}
+	
+	.contours,dashed {
+		stroke-width:0.5;
+	}
+	
+	.thick {
+		stroke-width:1.5;
+	}
+	
+	.boundary {
+		fill:   #A1BFE2;
+		stroke:none;
+	}
+	
+	.dashed {
+		stroke-dasharray:1.5,1.5;
+	}
+]]>
+</style>
+ <g id='boundary'
+     class='boundary'>
+  <path d='M98.493,1.056c-11.97,0-23.939,0-35.91,0c-22.699,0-32.6,28.57-14.97,42.63l-8.97,11.21h47.88l-8.96-11.21   c6.83-5.43,10.83-14.489,8.2-24.67c4.25,0,8.49,0,12.729,0C98.493,13.026,98.493,7.046,98.493,1.056z' />
+ </g>
+ <g id='contours'
+     class='contours'>
+  <line x1='98.497'
+      y1='10'
+      x2='113.748'
+      y2='10' />
+  <line x1='113.748'
+      y1='1.056'
+      x2='113.748'
+      y2='18.946' />
+  <line x1='1.056'
+      y1='33.91'
+      x2='1.056'
+      y2='16.021' />
+  <g>
+   <path d='M47.613,43.686c-17.63-14.06-7.729-42.63,14.97-42.63c11.971,0,23.94,0,35.91,0c0,5.99,0,11.971,0,17.96    c-4.239,0-8.479,0-12.729,0c2.63,10.181-1.37,19.24-8.2,24.67c-8.01,6.37-19.92,7.78-29.65,0.24    C47.813,43.846,47.714,43.766,47.613,43.686z' />
+   <polyline points='47.623,43.666 47.613,43.686 38.644,54.896 86.523,54.896 77.563,43.686 77.543,43.666   ' />
+  </g>
+  <line x1='14.606'
+      y1='24.966'
+      x2='1.056'
+      y2='24.966' />
+ </g>
+ <g id='thick'
+     class='thick'>
+  <line x1='62.581'
+      y1='24.966'
+      x2='14.606'
+      y2='24.966' />
+ </g>
+</svg>

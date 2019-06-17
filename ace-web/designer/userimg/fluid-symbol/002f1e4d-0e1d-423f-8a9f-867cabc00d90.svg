@@ -1,0 +1,64 @@
+ 
+<svg version='1.1'
+    xmlns='http://www.w3.org/2000/svg'
+    xmlns:xlink='http://www.w3.org/1999/xlink'		preserveAspectRatio="none"
+    x='0px'
+    y='0px'
+    width='141.357px'
+    height='55.985px'
+    viewBox='0 0 141.357 55.985'
+    xmlns:agg='http://www.example.com'
+    xml:space='preserve'>
+<agg:params>
+	<agg:param  type="C" name="Color" classes="boundary" description="Color" cssAttributes="fill"></agg:param>
+	<agg:param  type="C" name="strokeColor" classes="contours,dashed,thick" description="Stroke Color" cssAttributes="stroke"></agg:param>
+</agg:params>
+
+<style type="text/css" >
+<![CDATA[
+
+	.contours,.dashed,.thick{
+		stroke-linecap:round;
+		stroke-linejoin:round;
+		stroke: #000000;
+		fill:none;
+	}
+	
+	.contours,dashed {
+		stroke-width:0.5;
+	}
+	
+	.thick {
+		stroke-width:1.5;
+	}
+	
+	.boundary {
+		fill:   #A1BFE2;
+		stroke:none;
+	}
+	
+	.dashed {
+		stroke-dasharray:1.5,1.5;
+	}
+]]>
+</style>
+ <g id='boundary'
+     class='boundary'>
+  <path d='M126.763,1.06c-22.7,0-45.41,0-68.11,0c-2.63,0-4.49,0.77-6.35,2.63c-4.23,4.229-8.471,8.46-12.7,12.689   c-1.86,1.86-3.72,2.63-6.351,2.63c-3.25,0-6.5,0-9.75,0v-8.979h-4.489h-4.49v8.979c-7.43,0-13.47,6.03-13.47,13.48   c0,7.43,6.04,13.46,13.47,13.46v8.98h4.49h4.489v-8.98c34.421,0,68.841,0,103.261,0c5.13,0,8.729-4.56,10.609-8.51   c2.16-4.521,2.931-8.99,2.931-13.931c0-4.949-0.771-9.42-2.931-13.939C135.492,5.619,131.893,1.06,126.763,1.06z' />
+ </g>
+ <g id='contours'
+     class='contours'>
+  <rect x='14.526'
+      y='10.034'
+      fill='none'
+      width='8.979'
+      height='44.896' />
+  <line x1='19.014'
+      y1='54.93'
+      x2='19.014'
+      y2='10.034' />
+  <path d='M14.526,19.014c-7.438,0-13.471,6.029-13.471,13.471c0,7.437,6.032,13.466,13.471,13.466' />
+  <path d='M23.506,45.95c34.419,0,68.838,0,103.259,0c5.125,0,8.726-4.562,10.612-8.513   c2.159-4.521,2.925-8.987,2.925-13.933c0-4.947-0.766-9.414-2.925-13.937c-1.887-3.951-5.487-8.513-10.612-8.513   c-22.705,0-45.408,0-68.114,0c-2.625,0-4.491,0.773-6.348,2.631c-4.233,4.232-8.468,8.464-12.699,12.697   c-1.856,1.858-3.725,2.63-6.35,2.63c-3.248,0-6.498,0-9.748,0' />
+  <path d='M23.506,23.505c29.93,0,59.858,0,89.79,0c4.958,0,8.979,4.02,8.979,8.979c0,4.957-4.021,8.979-8.979,8.979   c-29.932,0-59.86,0-89.79,0' />
+ </g>
+</svg>

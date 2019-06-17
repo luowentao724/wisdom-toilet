@@ -1,0 +1,506 @@
+
+<form id="fillRectForm">
+    <input type="hidden" name="ele.id"/>
+    <input type="hidden" name="ele.signalName"/>
+    <table class="property-table" style="width:100%;height:auto;"
+         cellpadding="0" cellspacing="0" border="1">
+        <thead>
+            <tr>
+                <th width="100" align="right">名称</th>
+                <th width="130">值</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td align="right">元件类型:</td>
+                <td>
+                    <select id="eleType" class="defult-input">
+                        <option value="fillHRect">横向填充控件</option>
+                        <option value="fillVRect">纵向填充控件</option>
+                    </select>
+                </td>
+            </tr>
+            <tr class="property-type">
+                <td>
+                    <span class="datagrid-row-collapse">&nbsp;</span>
+                    <span>位置</span>
+                </td>
+                <td></td>
+            </tr>
+            <tr>
+                <td align="right">X轴坐标:</td>
+                <td><input id="eleX" type="text" class="easyui-numberspinner" data-options="min:0" required="required"/></td>
+            </tr>
+            <tr>
+                <td align="right">Y轴坐标:</td>
+                <td><input id="eleY" type="text" class="easyui-numberspinner" data-options="min:0" required="required"/></td>
+            </tr>
+            <tr>
+                <td align="right">宽:</td>
+                <td><input id="eleWidth" type="text" class="easyui-numberspinner" data-options="min:0" required="required"/></td>
+            </tr>
+            <tr>
+                <td align="right">高:</td>
+                <td><input id="eleHeight" type="text" class="easyui-numberspinner" data-options="min:0" required="required"/></td>
+            </tr>
+            <tr>
+                <td align="right">位置锁定:</td>
+                <td><input id="elePosLock" style="height: 22px; width: 104px;"/></td>
+            </tr>
+            <tr class="property-type">
+                <td>
+                    <span class="datagrid-row-collapse">&nbsp;</span>
+                    <span>变量</span>
+                </td>
+                <td></td>
+            </tr>
+            <tr>
+                <td align="right">绑定:</td>
+                <td>
+                  <a href="javascript:void(0);" id="btnDataSelect" class="btn-defult">
+                     <span class="icon icon-db">&nbsp;</span>选择
+                  </a>
+                </td>
+            </tr>
+            <tr>
+                <td align="right">数据名称:</td>
+                <td>
+                    <input id="eleSignalName" type="text" class="disabled-input" disabled="disabled">
+                </td>
+            </tr>
+            <tr>
+                <td align="right">填充颜色:</td>
+                <td><input type="text" id="eleTrueAlter" class="input_cxcolor" readonly/></td>
+            </tr>
+            <tr>
+                <td align="right">0%对应值:</td>
+                <td><input type="number" id="eleX2" class="defult-input"/></td>
+            </tr>
+            <tr>
+                <td align="right">100%对应值:</td>
+                <td><input type="number" id="eleY2" class="defult-input"/></td>
+            </tr>
+            <tr class="property-type">
+                <td>
+                    <span class="datagrid-row-collapse">&nbsp;</span>
+                    <span>样式:</span>
+                </td>
+                <td></td>
+            </tr>
+            <tr>
+                <td align="right">字体:</td>
+                <td>
+                    <select id="eleFontFamily" class="defult-input">
+                        <option value="宋体">宋体</option>
+                        <option value="黑体">黑体</option>
+                        <option value="微软雅黑">微软雅黑</option>
+                        <option value="华文细黑">华文细黑</option>
+                        
+                        <option value="Helvetica, sans-serif">Helvetica</option>
+                        <option value="Arial, sans-serif">Arial</option>
+                        <option value="'Lucida Grande', sans-serif">Lucida Grande</option>
+                        <option value="Verdana,sans-serif">Verdana</option>
+                        <option value="Tahoma, sans-serif">Tahoma</option>
+                        <option value="'Trebuchet MS', sans-serif">Trebuchet MS</option>
+                        
+                        <option value="Georgia, serif">Georgia</option>
+                        <option value="Times, serif">Times</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td align="right">字体大小:</td>
+                <td>
+                    <select id="eleFontSize" class="defult-input">
+                        <option value="9px">9</option>
+                        <option value="10px">10</option>
+                        <option value="12px">12</option>
+                        <option value="14px">14</option>
+                        <option value="16px">16</option>
+                        <option value="18px">18</option>
+                        <option value="22px">22</option>
+                        <option value="26px">26</option>
+                        <option value="32px">32</option>
+                        <option value="48px">48</option>
+                        <option value="64px">64</option>
+                        <option value="80px">80</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td align="right">字体粗细:</td>
+                <td>
+                    <select id="eleFontWeight" class="defult-input">
+                        <option value="normal">正常</option>
+                        <option value="bolder">加粗</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td align="right">字体颜色:</td>
+                <td><input type="text" id="eleColor" class="input_cxcolor" readonly/></td>
+            </tr>
+            <tr>
+                <td align="right">背景显隐:</td>
+                <td>
+                     <span>显示</span><input type="radio" name="ele.showBg" id="showBg1" value="1">
+                     <span>隐藏</span><input type="radio" name="ele.showBg" id="showBg0" value="0">
+                </td>
+            </tr>
+            <tr>
+                <td align="right">背景颜色:</td>
+                <td><input type="text" id="eleFalseAlter" class="input_cxcolor" readonly/></td>
+            </tr>
+            <tr>
+                <td align="right">边线颜色:</td>
+                <td><input type="text" id="eleStroke" class="input_cxcolor" readonly/></td>
+            </tr>
+            <tr>
+                <td align="right">线型:</td>
+                <td>
+                    <input type="text" id="eleStrokeDasharray"/>
+                    <ul id="dasharrayOption" class="line-group">
+                        <li value="0"><div class="line line-option-1">&nbsp;</div></li>
+                        <li value="3,3"><div class="line line-option-7">&nbsp;</div></li>
+                        <li value="8,8"><div class="line line-option-8">&nbsp;</div></li>
+                        <li value="16,8,3,3,3,8"><div class="line line-option-9">&nbsp;</div></li>
+                    </ul>
+                </td>
+            </tr>
+            <tr>
+                <td align="right">粗细:</td>
+                <td>
+                    <input id="eleStrokeWidth" type="text" />
+                    <ul id="widthOption" class="line-group">
+                        <li value="0"><div class="line-option-0">隐藏边线</div></li>
+                        <li value="1"><div class="line line-option-1">&nbsp;</div></li>
+                        <li value="2"><div class="line line-option-2">&nbsp;</div></li>
+                        <li value="3"><div class="line line-option-3">&nbsp;</div></li>
+                        <li value="4"><div class="line line-option-4">&nbsp;</div></li>
+                        <li value="6"><div class="line line-option-5">&nbsp;</div></li>
+                        <li value="8"><div class="line line-option-6">&nbsp;</div></li>
+                    </ul>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    </form>
+    <script type="text/javascript">
+    $(function(){
+        $.parser.parse('#fillRectForm');
+        //线型、线宽初始化
+        var setdasharray = function(value){
+            d3.select("svg > g.active > rect.fill-rect")
+            .style("stroke-dasharray",function(d){
+                if(d.strokeDasharray!=value){
+                    savePropertyUndo();
+                }
+                d.strokeDasharray=value;
+                return d.strokeDasharray;
+            });
+        }
+        var setwidth = function(value){
+            d3.select("svg > g.active > rect.fill-rect")
+            .style("stroke-width",function(d){
+                if(d.strokeWidth!=value){
+                    savePropertyUndo();
+                }
+                d.strokeWidth=value;
+                return d.strokeWidth;
+            });
+        }
+        initStrokeSelect(setdasharray,setwidth);
+        //元件类型
+        $("#eleType").change(function(){
+            var d = d3.select("svg > g.active").data()[0];
+            if(!d)return false;
+            if(d.type!=$("#eleType").val()){
+                savePropertyUndo();
+            }
+            d.type = $("#eleType").val();
+            if(d.type=='fillVRect'){
+                 resetFillVRect(d3.select("svg > g.active"));
+            }else{
+                 resetFillHRect(d3.select("svg > g.active"));
+            }
+        });
+    
+        //位置
+        $("#eleX").parent().find("input.textbox-text").change(function(){
+            var d = d3.select("svg > g.active").data()[0];
+            if(d.id== $("#fillRectForm input[name='ele.id']").val()){
+                //设置值
+                var value = $(this).val();
+                if(value=='' || value<0){
+                    value = 0;
+                }
+                //保存撤销信息
+                if(d.x!=parseInt(value)){
+                    saveMoveUndo();
+                }
+                d.x=parseInt(value);
+                //修改元件位置
+                d3.select("svg > g.active > rect.fill-rect").attr("x",d.x);
+                if(d.type=='fillVRect'){
+                    d3.select("svg > g.active > polygon.fill-rect")
+                    .attr("points",Math.round(d.x+1)+","+Math.round(d.y+d.height/2-1)+
+                            " "+Math.round(d.x+d.width-1)+","+Math.round(d.y+d.height/2-1)+
+                            " "+Math.round(d.x+d.width-1)+","+Math.round(d.y+d.height-1)+
+                            " "+Math.round(d.x+1)+","+Math.round(d.y+d.height-1)
+                    );
+                    d3.select("svg > g.active > text.fill-rect").attr("x",Math.round(d.x+d.width/2));
+                }else{
+                    d3.select("svg > g.active > polygon.fill-rect")
+                    .attr("points",Math.round(d.x+1)+","+Math.round(d.y+1)+
+                                " "+Math.round(d.x+d.width/2-1)+","+Math.round(d.y+1)+
+                                " "+Math.round(d.x+d.width/2-1)+","+Math.round(d.y+d.height-1)+
+                                " "+Math.round(d.x+1)+","+Math.round(d.y+d.height-1)
+                     );
+                    d3.select("svg > g.active > text.fill-rect").attr("x",Math.round(d.x+d.width/2+5));
+                }
+                moveRectPoint(d3.select("svg > g.active"));
+            }
+        });
+        $("#eleY").parent().find("input.textbox-text").change(function(){
+            var d = d3.select("svg > g.active").data()[0];
+            if(d.id== $("#fillRectForm input[name='ele.id']").val()){
+                //设置值
+                var value = $(this).val();
+                if(value=='' || value<0){
+                    value = 0;
+                }
+                //保存撤销信息
+                if(d.y!=parseInt(value)){
+                    saveMoveUndo();
+                }
+                d.y=parseInt(value);
+                //修改元件位置
+                d3.select("svg > g.active > rect.fill-rect").attr("y",d.y);
+                if(d.type=='fillVRect'){
+                    d3.select("svg > g.active > polygon.fill-rect")
+                    .attr("points",Math.round(d.x+1)+","+Math.round(d.y+d.height/2-1)+
+                            " "+Math.round(d.x+d.width-1)+","+Math.round(d.y+d.height/2-1)+
+                            " "+Math.round(d.x+d.width-1)+","+Math.round(d.y+d.height-1)+
+                            " "+Math.round(d.x+1)+","+Math.round(d.y+d.height-1)
+                    );
+                    d3.select("svg > g.active > text.fill-rect").attr("y",Math.round(d.y+d.height/2-10));
+                }else{
+                    d3.select("svg > g.active > polygon.fill-rect")
+                    .attr("points",Math.round(d.x+1)+","+Math.round(d.y+1)+
+                                " "+Math.round(d.x+d.width/2-1)+","+Math.round(d.y+1)+
+                                " "+Math.round(d.x+d.width/2-1)+","+Math.round(d.y+d.height-1)+
+                                " "+Math.round(d.x+1)+","+Math.round(d.y+d.height-1)
+                     );
+                    d3.select("svg > g.active > text.fill-rect").attr("y",Math.round(d.y+d.height/2));
+                }
+                moveRectPoint(d3.select("svg > g.active"));
+            }
+        });
+        $("#eleWidth").parent().find("input.textbox-text").change(function(){
+            var d = d3.select("svg > g.active").data()[0];
+            if(d.id== $("#fillRectForm input[name='ele.id']").val()){
+                //设置值
+                var value = $(this).val();
+                if(value=='' || value<0){
+                    value = 0;
+                }
+                //保存撤销信息
+                if(d.width!=parseInt(value)){
+                    saveMoveUndo();
+                }
+                d.width=parseInt(value);
+                //修改元件位置
+                d3.select("svg > g.active > rect.fill-rect").attr("width",d.width);
+                if(d.type=='fillVRect'){
+                    d3.select("svg > g.active > polygon.fill-rect")
+                    .attr("points",Math.round(d.x+1)+","+Math.round(d.y+d.height/2-1)+
+                            " "+Math.round(d.x+d.width-1)+","+Math.round(d.y+d.height/2-1)+
+                            " "+Math.round(d.x+d.width-1)+","+Math.round(d.y+d.height-1)+
+                            " "+Math.round(d.x+1)+","+Math.round(d.y+d.height-1)
+                    );
+                    d3.select("svg > g.active > text.fill-rect").attr("x",Math.round(d.x+d.width/2));
+                }else{
+                    d3.select("svg > g.active > polygon.fill-rect")
+                    .attr("points",Math.round(d.x+1)+","+Math.round(d.y+1)+
+                                " "+Math.round(d.x+d.width/2-1)+","+Math.round(d.y+1)+
+                                " "+Math.round(d.x+d.width/2-1)+","+Math.round(d.y+d.height-1)+
+                                " "+Math.round(d.x+1)+","+Math.round(d.y+d.height-1)
+                     );
+                    d3.select("svg > g.active > text.fill-rect").attr("x",Math.round(d.x+d.width/2+5));
+                }
+                moveRectPoint(d3.select("svg > g.active"));
+            }
+        });
+        
+        $("#eleHeight").parent().find("input.textbox-text").change(function(){
+            var d = d3.select("svg > g.active").data()[0];
+            if(d.id== $("#fillRectForm input[name='ele.id']").val()){
+                //设置值
+                var value = $(this).val();
+                if(value=='' || value<0){
+                    value = 0;
+                }
+                //保存撤销信息
+                if(d.height!=parseInt(value)){
+                    saveMoveUndo();
+                }
+                d.height=parseInt(value);
+                //修改元件位置
+                d3.select("svg > g.active > rect.fill-rect").attr("height",d.height);
+                if(d.type=='fillVRect'){
+                    d3.select("svg > g.active > polygon.fill-rect")
+                    .attr("points",Math.round(d.x+1)+","+Math.round(d.y+d.height/2-1)+
+                            " "+Math.round(d.x+d.width-1)+","+Math.round(d.y+d.height/2-1)+
+                            " "+Math.round(d.x+d.width-1)+","+Math.round(d.y+d.height-1)+
+                            " "+Math.round(d.x+1)+","+Math.round(d.y+d.height-1)
+                    );
+                    d3.select("svg > g.active > text.fill-rect").attr("y",Math.round(d.y+d.height/2-10));
+                }else{
+                    d3.select("svg > g.active > polygon.fill-rect")
+                    .attr("points",Math.round(d.x+1)+","+Math.round(d.y+1)+
+                                " "+Math.round(d.x+d.width/2-1)+","+Math.round(d.y+1)+
+                                " "+Math.round(d.x+d.width/2-1)+","+Math.round(d.y+d.height-1)+
+                                " "+Math.round(d.x+1)+","+Math.round(d.y+d.height-1)
+                     );
+                    d3.select("svg > g.active > text.fill-rect").attr("y",Math.round(d.y+d.height/2));
+                }
+                moveRectPoint(d3.select("svg > g.active"));
+            }
+        });
+        $("#elePosLock").switchbutton({
+            checked: false,
+            onText:"开启",
+            offText:"关闭",
+            onChange: function(checked){
+                var d = d3.select("svg > g.active").data()[0];
+                d.posLock = checked;
+                if(checked){
+                    numberDisable();
+                    d3.select("svg > g.active").classed("lock",true);
+                }else{
+                    numberEnable();
+                    d3.select("svg > g.active").classed("lock",false);
+                }
+            }
+        })
+    
+        //变量
+        $("#btnDataSelect").click(function(){
+            querySignal(1,true);
+            $('#signalListDialog').dialog("open");
+        });
+    
+        $("#eleTrueAlter").change(function(){
+            d3.select("svg > g.active > polygon.fill-rect")
+            .style("fill",function(d){
+                if(d.trueAlter!=$("#eleTrueAlter").val()){
+                    savePropertyUndo();
+                }
+                d.trueAlter=$("#eleTrueAlter").val();
+                return d.trueAlter;
+            });
+        });
+        $("#eleX2").change(function(){
+            var d = d3.select("svg > g.active").data()[0];
+            if(d.id== $("#fillRectForm input[name='ele.id']").val()){
+                //保存撤销信息
+                if(d.x2!=$(this).val()){
+                    saveMoveUndo();
+                }
+                d.x2=$(this).val();
+            }
+        });
+        $("#eleY2").change(function(){
+            var d = d3.select("svg > g.active").data()[0];
+            if(d.id== $("#fillRectForm input[name='ele.id']").val()){
+                if(d.y2!=$(this).val()){
+                    saveMoveUndo();
+                }
+                d.y2=$(this).val();
+            }
+        });
+        
+        //样式
+        $("#eleStroke").change(function(){
+            d3.select("svg > g.active >rect.fill-rect")
+            .style("stroke",function(d){
+                if(d.stroke!=$("#eleStroke").val()){
+                    savePropertyUndo();
+                }
+                d.stroke=$("#eleStroke").val();
+                return d.stroke;
+            });
+        });
+        
+        $("#eleFontFamily").change(function(){
+            d3.select("svg > g.active > text.fill-rect")
+            .style("font-family",function(d){
+                if(d.fontFamily!=$("#eleFontFamily").val()){
+                    savePropertyUndo();
+                }
+                d.fontFamily=$("#eleFontFamily").val();
+                return d.fontFamily;
+            });
+        });
+        
+        $("#eleFontSize").change(function(){
+            d3.select("svg > g.active > text.fill-rect")
+            .style("font-size",function(d){
+                if(d.fontSize!=$("#eleFontSize").val()){
+                    savePropertyUndo();
+                }
+                d.fontSize=$("#eleFontSize").val();
+                return d.fontSize;
+            });
+        });
+        $("#eleFontWeight").change(function(){
+            d3.select("svg > g.active > text.fill-rect")
+            .style("font-weight",function(d){
+                if(d.fontWeight!=$("#eleFontWeight").val()){
+                    savePropertyUndo();
+                }
+                d.fontWeight=$("#eleFontWeight").val();
+                return d.fontWeight;
+            });
+        });
+        $("#eleColor").change(function(){
+            d3.select("svg > g.active > text.fill-rect")
+            .style("fill",function(d){
+                if(d.color!=$("#eleColor").val()){
+                    savePropertyUndo();
+                }
+                d.color=$("#eleColor").val();
+                return d.color;
+            });
+        });
+        
+        $("#fillRectForm input[name='ele.showBg']").click(function(){
+            var showBg = $(this).val();
+            d3.select("svg > g.active >rect.fill-rect")
+            .style("opacity",function(d){
+                if(d.showBg!=showBg){
+                    savePropertyUndo();
+                }
+                d.showBg=showBg;
+                return d.showBg;
+            });
+        });
+        $("#eleFalseAlter").change(function(){
+            d3.select("svg > g.active > rect.fill-rect")
+            .style("fill",function(d){
+                if(d.falseAlter!=$("#eleFalseAlter").val()){
+                    savePropertyUndo();
+                }
+                d.falseAlter=$("#eleFalseAlter").val();
+                return d.falseAlter;
+            });
+        });
+    
+        //数值输入框右侧加1、减1功能触发对应的修改事件。
+        $("#eleX,#eleY,#eleWidth,#eleHeight,#eleX2,#eleY2").parent().find("span.textbox-addon").click(function(){
+            $(this).parent().find("input.textbox-text").change();
+        });
+        //触发修改以后关闭页面提示“未保存”
+        $("#fillRectForm input,#fillRectForm select").change(bindBeforeunload);
+    });
+    </script>

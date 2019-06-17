@@ -1,0 +1,77 @@
+ 
+<svg version='1.1'
+    xmlns='http://www.w3.org/2000/svg'
+    xmlns:xlink='http://www.w3.org/1999/xlink'		preserveAspectRatio="none"
+    x='0px'
+    y='0px'
+    width='127.82px'
+    height='50.002px'
+    viewBox='0 0 127.82 50.002'
+    xmlns:agg='http://www.example.com'
+    xml:space='preserve'>
+<agg:params>
+	<agg:param  type="C" name="Color" classes="boundary" description="Color" cssAttributes="fill"></agg:param>
+	<agg:param  type="C" name="strokeColor" classes="contours,dashed,thick" description="Stroke Color" cssAttributes="stroke"></agg:param>
+</agg:params>
+
+<style type="text/css" >
+<![CDATA[
+
+	.contours,.dashed,.thick{
+		stroke-linecap:round;
+		stroke-linejoin:round;
+		stroke: #000000;
+		fill:none;
+	}
+	
+	.contours,dashed {
+		stroke-width:0.5;
+	}
+	
+	.thick {
+		stroke-width:1.5;
+	}
+	
+	.boundary {
+		fill:   #A1BFE2;
+		stroke:none;
+	}
+	
+	.dashed {
+		stroke-dasharray:1.5,1.5;
+	}
+]]>
+</style>
+ <g id='boundary'
+     class='boundary'>
+  <polygon points='13.022,1.053 1.053,1.053 1.053,48.942 13.022,48.942 114.793,48.942 126.763,48.942 126.763,1.053    114.793,1.053  ' />
+ </g>
+ <g id='contours'
+     class='contours'>
+  <line x1='13.027'
+      y1='13.029'
+      x2='114.791'
+      y2='13.029' />
+  <line x1='13.027'
+      y1='25.001'
+      x2='114.791'
+      y2='25.001' />
+  <line x1='13.027'
+      y1='36.973'
+      x2='114.791'
+      y2='36.973' />
+  <rect x='1.056'
+      y='1.056'
+      fill='none'
+      width='125.709'
+      height='47.891' />
+  <line x1='13.027'
+      y1='1.056'
+      x2='13.027'
+      y2='48.946' />
+  <line x1='114.791'
+      y1='1.056'
+      x2='114.791'
+      y2='48.946' />
+ </g>
+</svg>

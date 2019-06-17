@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.github.wxiaoqi.security.things.mapper.RealDataInfoHistoryMapper">
+
+	<!-- 可根据自己的需求，是否要使用 -->
+    <resultMap type="com.github.wxiaoqi.security.things.entity.RealDataInfoHistory" id="realDataInfoHistoryMap">
+        <result property="id" column="id"/>
+        <result property="dtuId" column="dtu_id"/>
+        <result property="realtimeDataType" column="realtime_data_type"/>
+        <result property="realtimeDataName" column="realtime_data_name"/>
+        <result property="realDataValue" column="real_data_value"/>
+        <result property="dataUnit" column="data_unit"/>
+        <result property="gatherTime" column="gather_time"/>
+        <result property="createDate" column="create_date"/>
+    </resultMap>
+
+
+    <resultMap type="com.github.wxiaoqi.security.things.vo.TotilWashYearMonthVo" id="totilWashYearMonthVoMap">
+        <result property="timeMinute" column="timeMinute"/>
+        <result property="num" column="num"/>
+    </resultMap>
+
+    <!-- 数据报表,查询子站泵器真空度等数据 -->
+    <select id="getStationsRealDataInfo" resultMap="totilWashYearMonthVoMap" parameterType="map">
+        SELECT
+            DATE_FORMAT(gather_time, '%H:%i') AS timeMinute,
+            real_data_value AS num
+        FROM
+            real_data_info_history
+        WHERE 1 = 1
+            <if test="cm.gatherTime != null and cm.gatherTime != ''">
+                AND DATE_FORMAT(gather_time,'%Y-%m-%d') <![CDATA[ = ]]> #{cm.gatherTime}
+            </if>
+            <if test="cm.dtuId != null and cm.dtuId != ''">
+                AND dtu_id = #{cm.dtuId}
+            </if>
+            <if test="cm.id != null and cm.id != ''">
+                AND id = #{cm.id}
+            </if>
+            <if test="cm.realtimeDataType != null and cm.realtimeDataType != ''">
+                AND realtime_data_type = #{cm.realtimeDataType}
+            </if>
+            GROUP BY timeMinute
+            ORDER BY timeMinute ASC
+    </select>
+
+</mapper>

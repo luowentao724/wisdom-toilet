@@ -1,0 +1,49 @@
+ 
+<svg version="1.1" id="_x30_" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none"   xmlns:agg="http://www.example.com" x="0px" y="0px"
+	   viewBox="0 0 51.307 51.307" enable-background="new 0 0 51.307 51.307" xml:space="preserve">
+
+<agg:params>
+        <agg:param name="color" description="Color" type="C" cssAttributes="fill" classes="color"/>
+        <agg:param name="strokeColor" description="Stroke Color" type="C" cssAttributes="stroke" classes="color,stroked"/>
+</agg:params>
+
+<style type="text/css" >
+   <![CDATA[
+
+	.color,.stroked{
+		stroke-width:1;
+		stroke-linecap:round;
+		stroke-linejoin:round;
+		stroke: #000000;
+	}
+	
+	.color {
+		fill:   #A1BFE2;
+
+	}
+	
+	.stroked {
+		fill:none;
+	}
+
+      ]]>
+</style>
+
+<path class="color" d="M27.007,40.764
+	c-1.852-0.531-3.816-0.531-5.668,0c0,2.698,0,5.396,0,8.094c1.852,0.531,3.816,0.531,5.668,0
+	C27.007,46.159,27.007,43.462,27.007,40.764z"/>
+<path class="color" d="M41.103,33.483
+	c-4.704,1.498-9.408,2.996-14.112,4.494c-1.87,0-3.739,0-5.609,0c-4.704-1.498-9.408-2.996-14.111-4.494c0-3.961,0-7.923,0-11.885
+	c2.618,0,5.235,0,7.853,0c0.768-5.243,1.535-10.486,2.303-15.729c4.11-2.602,9.352-2.602,13.462,0
+	c0.787,5.243,1.574,10.486,2.361,15.729c2.618,0,5.236,0,7.854,0C41.103,25.559,41.103,29.522,41.103,33.483z"/>
+<line class="stroked" x1="24.173" y1="24.199" x2="24.173" y2="40.365"/>
+<path class="color" d="M27.335,24.997
+	c-1.055-0.266-2.108-0.532-3.162-0.798c1.054-0.266,2.107-0.532,3.162-0.798C27.981,23.738,27.981,24.661,27.335,24.997z"/>
+<path class="color" d="M21.011,24.997
+	c1.054-0.266,2.108-0.532,3.162-0.798c-1.054-0.266-2.108-0.532-3.162-0.798C20.365,23.738,20.365,24.661,21.011,24.997z"/>
+
+<line class="stroked" x1="33.191" y1="21.538" x2="33.781" y2="25.56"/>
+<line class="stroked" x1="15.182" y1="21.48" x2="14.592" y2="25.559"/>
+<line class="stroked" x1="31.537" y1="19.883" x2="26.991" y2="28.93"/>
+<line class="stroked" x1="16.835" y1="19.883" x2="21.382" y2="28.93"/>
+</svg>

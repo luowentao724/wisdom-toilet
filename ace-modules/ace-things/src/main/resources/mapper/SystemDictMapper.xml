@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.github.wxiaoqi.security.things.mapper.SystemDictMapper">
+
+	<!-- 可根据自己的需求，是否要使用 -->
+    <resultMap type="com.github.wxiaoqi.security.things.entity.SystemDict" id="systemDictMap">
+        <result property="id" column="id"/>
+        <result property="dictId" column="dict_id"/>
+        <result property="dictName" column="dict_name"/>
+        <result property="dictUnit" column="dict_unit"/>
+        <result property="type" column="type"/>
+        <result property="relTable" column="rel_table"/>
+    </resultMap>
+
+</mapper>

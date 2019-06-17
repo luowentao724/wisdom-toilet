@@ -1,0 +1,39 @@
+ 
+<svg version="1.1" id="图层_1" xmlns:agg="http://www.example.com"
+	 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="64px" height="64px"
+	 viewBox="0 0 64 64" enable-background="new 0 0 64 64" xml:space="preserve">
+<polygon fill="none" stroke="#040000" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" points="51.316,32 
+	51.162,29.681 50.775,27.361 50.08,25.158 49.111,23.032 47.914,21.022 46.443,19.206 44.818,17.543 42.963,16.113 40.99,14.915 
+	38.863,13.949 36.621,13.253 34.34,12.828 32.019,12.673 29.699,12.828 27.379,13.253 25.175,13.949 23.048,14.915 21.036,16.113 
+	19.219,17.543 17.557,19.206 16.125,21.022 14.927,23.032 13.959,25.158 13.264,27.361 12.838,29.681 12.723,32 12.838,34.32 
+	13.264,36.6 13.959,38.842 14.927,40.969 16.125,42.977 17.557,44.795 19.219,46.457 21.036,47.887 23.048,49.084 25.175,50.051 
+	27.379,50.748 29.699,51.172 32.019,51.287 34.34,51.172 36.621,50.748 38.863,50.051 40.99,49.084 42.963,47.887 44.818,46.457 
+	46.443,44.795 47.914,42.977 49.111,40.969 50.08,38.842 50.775,36.6 51.162,34.32 "/>
+<line fill="none" stroke="#040000" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" x1="34.258" y1="41.576" x2="39.439" y2="41.576"/>
+<line fill="none" stroke="#040000" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" x1="24.561" y1="41.576" x2="29.743" y2="41.576"/>
+<line fill="none" stroke="#040000" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" x1="24.5" y1="36.297" x2="39.75" y2="36.297"/>
+<line fill="none" stroke="#040000" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" x1="6.264" y1="6.256" x2="6.264" y2="57.744"/>
+<line fill="none" stroke="#040000" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" x1="57.736" y1="6.256" x2="57.736" y2="57.744"/>
+<polyline fill="none" stroke="#040000" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" points="38.439,57.744 
+	38.283,56.738 37.82,55.85 37.125,55.154 36.234,54.689 35.229,54.535 34.223,54.689 33.334,55.154 32.639,55.85 32.174,56.738 
+	32.019,57.744 "/>
+<polyline fill="none" stroke="#040000" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" points="44.896,57.744 
+	44.742,56.738 44.277,55.85 43.543,55.154 42.654,54.689 41.648,54.535 40.682,54.689 39.793,55.154 39.057,55.85 38.594,56.738 
+	38.439,57.744 "/>
+<polyline fill="none" stroke="#040000" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" points="32.019,57.744 
+	31.864,56.738 31.401,55.85 30.704,55.154 29.777,54.689 28.81,54.535 27.804,54.689 26.915,55.154 26.179,55.85 25.754,56.738 
+	25.561,57.744 "/>
+<polyline fill="none" stroke="#040000" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" points="25.561,57.744 
+	25.407,56.738 24.981,55.85 24.246,55.154 23.357,54.689 22.351,54.535 21.385,54.689 20.456,55.154 19.761,55.85 19.296,56.738 
+	19.141,57.744 "/>
+<line fill="none" stroke="#040000" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" x1="19.141" y1="57.744" x2="6.264" y2="57.744"/>
+<line fill="none" stroke="#040000" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" x1="44.896" y1="57.744" x2="57.736" y2="57.744"/>
+<line fill="none" stroke="#040000" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" x1="6.264" y1="32" x2="12.723" y2="32"/>
+<line fill="none" stroke="#040000" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" x1="51.316" y1="32" x2="57.736" y2="32"/>
+<g>
+	<path stroke="#040000" stroke-width="0.75" stroke-miterlimit="10" d="M36.02,31.534v-6.012c0-0.496,0.028-1.092,0.088-1.787
+		h-0.029c-0.102,0.438-0.191,0.742-0.27,0.914l-2.994,6.885h-0.65l-2.988-6.832c-0.07-0.156-0.16-0.479-0.27-0.967H28.87
+		c0.039,0.422,0.059,1.035,0.059,1.84v5.959H27.81v-9.076h1.588l2.678,6.223c0.203,0.477,0.338,0.848,0.404,1.113h0.042
+		c0.203-0.559,0.346-0.938,0.428-1.137l2.725-6.199h1.512v9.076H36.02z"/>
+</g>
+</svg>

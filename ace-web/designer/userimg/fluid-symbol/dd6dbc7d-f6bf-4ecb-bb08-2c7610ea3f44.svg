@@ -1,0 +1,77 @@
+ 
+<svg version='1.1'
+    xmlns='http://www.w3.org/2000/svg'
+    xmlns:xlink='http://www.w3.org/1999/xlink'		preserveAspectRatio="none"
+    x='0px'
+    y='0px'
+    width='163.736px'
+    height='47.007px'
+    viewBox='0 0 163.736 47.007'
+    xmlns:agg='http://www.example.com'
+    xml:space='preserve'>
+<agg:params>
+	<agg:param  type="C" name="Color" classes="boundary" description="Color" cssAttributes="fill"></agg:param>
+	<agg:param  type="C" name="strokeColor" classes="contours,dashed,thick" description="Stroke Color" cssAttributes="stroke"></agg:param>
+</agg:params>
+
+<style type="text/css" >
+<![CDATA[
+
+	.contours,.dashed,.thick{
+		stroke-linecap:round;
+		stroke-linejoin:round;
+		stroke: #000000;
+		fill:none;
+	}
+	
+	.contours,dashed {
+		stroke-width:0.5;
+	}
+	
+	.thick {
+		stroke-width:1.5;
+	}
+	
+	.boundary {
+		fill:   #A1BFE2;
+		stroke:none;
+	}
+	
+	.dashed {
+		stroke-dasharray:1.5,1.5;
+	}
+]]>
+</style>
+ <g id='boundary'
+     class='boundary'>
+  <path d='M149.207,10.033v-8.98h-4.49h-4.49v8.98c-3.25,0-6.5,0-9.739,0c-2.631,0-4.5-0.771-6.351-2.631   c-1.24-1.239-2.479-2.479-3.72-3.72c-1.86-1.859-3.73-2.63-6.35-2.63c-21.471,0-42.931,0-64.4,0c-2.62,0-4.49,0.771-6.35,2.63   c-1.23,1.24-2.471,2.48-3.721,3.72c-1.85,1.86-3.72,2.631-6.34,2.631c-3.25,0-6.5,0-9.75,0v-8.98h-4.49h-4.489v8.98   c-7.44,0-13.471,6.029-13.471,13.47c0,7.439,6.03,13.47,13.471,13.47v8.98h4.489h4.49v-8.98h116.72v8.98h4.49h4.49v-8.98   c7.439,0,13.47-6.03,13.47-13.47C162.677,16.063,156.646,10.033,149.207,10.033z' />
+ </g>
+ <g id='contours'
+     class='contours'>
+  <path d='M149.21,10.034c7.44,0,13.471,6.03,13.471,13.467c0,7.44-6.03,13.471-13.471,13.471' />
+  <line x1='144.721'
+      y1='45.951'
+      x2='144.721'
+      y2='1.056' />
+  <line x1='23.503'
+      y1='36.972'
+      x2='140.23'
+      y2='36.972' />
+  <path d='M14.523,10.034c-7.438,0-13.468,6.03-13.468,13.467c0,7.44,6.029,13.471,13.468,13.471' />
+  <path d='M23.503,10.034c3.25,0,6.5,0,9.75,0c2.626,0,4.492-0.773,6.348-2.631c1.242-1.239,2.481-2.479,3.721-3.719   c1.855-1.857,3.723-2.629,6.348-2.629c21.466,0,42.932,0,64.396,0c2.626,0,4.492,0.771,6.348,2.629   c1.242,1.239,2.481,2.479,3.721,3.719c1.855,1.857,3.725,2.631,6.35,2.631c3.248,0,6.498,0,9.748,0' />
+  <line x1='19.014'
+      y1='45.951'
+      x2='19.014'
+      y2='1.056' />
+  <rect x='140.23'
+      y='1.056'
+      fill='none'
+      width='8.979'
+      height='44.896' />
+  <rect x='14.523'
+      y='1.056'
+      fill='none'
+      width='8.979'
+      height='44.896' />
+ </g>
+</svg>

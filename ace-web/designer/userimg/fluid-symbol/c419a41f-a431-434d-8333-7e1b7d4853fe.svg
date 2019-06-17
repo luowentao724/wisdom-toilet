@@ -1,0 +1,41 @@
+ 
+<svg version="1.1" id="_x30_" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none"   xmlns:agg="http://www.example.com" x="0px" y="0px"
+	   viewBox="0 0 51.307 51.307" enable-background="new 0 0 51.307 51.307" xml:space="preserve">
+
+<agg:params>
+        <agg:param name="color" description="Color" type="C" cssAttributes="fill" classes="color"/>
+        <agg:param name="strokeColor" description="Stroke Color" type="C" cssAttributes="stroke" classes="color,stroked"/>
+</agg:params>
+
+<style type="text/css" >
+   <![CDATA[
+
+	.color,.stroked{
+		stroke-width:1;
+		stroke-linecap:round;
+		stroke-linejoin:round;
+		stroke: #000000;
+	}
+	
+	.color {
+		fill:   #A1BFE2;
+
+	}
+	
+	.stroked {
+		fill:none;
+	}
+
+      ]]>
+</style>
+
+<path class="stroked" d="M35.819,27.262 c-3.128,0-5.66-2.542-5.65-5.671c0.01-3.128,2.561-5.652,5.69-5.631c1.397,0,2.795,0,4.194,0"/>
+<path  class="stroked" d="M40.053,38.51c-1.412,0-2.823,0-4.234,0
+	c-3.106,0-5.625-2.519-5.625-5.624c0-3.106,2.519-5.624,5.625-5.624c1.411,0,2.822,0,4.234,0"/>
+<path  class="stroked" d="M15.065,27.262
+	c3.128,0,5.661-2.542,5.65-5.671c-0.011-3.128-2.561-5.652-5.69-5.631c-1.397,0-2.796,0-4.194,0"/>
+<path class="stroked" d="M10.831,38.51c1.412,0,2.822,0,4.234,0
+	c3.106,0,5.624-2.519,5.624-5.624c0-3.106-2.518-5.624-5.624-5.624c-1.412,0-2.822,0-4.234,0"/>
+<line class="stroked" x1="27.042" y1="13.948" x2="27.042" y2="41.143"/>
+<line class="stroked" x1="23.841" y1="13.948" x2="23.841" y2="41.143"/>
+</svg>

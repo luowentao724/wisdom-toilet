@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.github.wxiaoqi.security.things.mapper.StationsMapper">
+
+	<!-- 可根据自己的需求，是否要使用 -->
+    <resultMap type="com.github.wxiaoqi.security.things.entity.Stations" id="stationsMap">
+        <result property="id" column="id"/>
+        <result property="dataRuleId" column="data_rule_id"/>
+        <result property="sim" column="sim"/>
+        <result property="isPublic" column="is_public"/>
+        <result property="areaInfo" column="area_info"/>
+        <result property="codeSn" column="code_sn"/>
+        <result property="totilName" column="totil_name"/>
+        <result property="totilId" column="totil_id"/>
+        <result property="areaId" column="area_id"/>
+        <result property="totilNums" column="totil_nums"/>
+        <result property="bumpNums" column="bump_nums"/>
+        <result property="customerId" column="customer_id"/>
+        <result property="remark" column="remark"/>
+        <result property="createTime" column="create_time"/>
+        <result property="createMan" column="create_man"/>
+        <result property="totilPic" column="totil_pic"/>
+        <result property="totilTypeId" column="totil_type_id"/>
+        <result property="totilState" column="totil_state"/>
+        <result property="relName" column="rel_name"/>
+        <result property="relPhone" column="rel_phone"/>
+        <result property="relEmail" column="rel_email"/>
+        <result property="lng" column="lng"/>
+        <result property="lat" column="lat"/>
+        <result property="currentPumpStationData" column="current_pump_station_data"/>
+        <result property="alarmStatus" column="alarm_status"/>
+        <result property="ipAddress" column="ip_address"/>
+        <result property="ignoreAlarm" column="ignore_alarm"/>
+        <result property="ignoreTime" column="ignore_time"/>
+        <result property="alarmPacket" column="alarm_packet"/>
+        <result property="isOpen" column="is_open"/>
+        <result property="factory" column="factory"/>
+        <result property="reverse1" column="reverse1"/>
+        <result property="reverse2" column="reverse2"/>
+        <result property="reverse3" column="reverse3"/>
+        <result property="reverse4" column="reverse4"/>
+        <result property="reverseAlarm" column="reverse_alarm"/>
+    </resultMap>
+
+    <resultMap type="com.github.wxiaoqi.security.things.vo.TotilWashYearMonthVo" id="totilWashYearMonthVoMap">
+        <result property="gatherTime" column="gatherTime"/>
+        <result property="totalNum" column="totalNum"/>
+        <result property="customerId" column="customerId"/>
+        <result property="customerName" column="customerName"/>
+        <result property="systemName" column="systemName"/>
+        <result property="totilNums" column="totilNums"/>
+        <result property="bumpNums" column="bumpNums"/>
+        <result property="nums" column="nums"/>
+    </resultMap>
+
+    <!-- 资产分析报表统计 -->
+    <select id="getAssetsReport" resultMap="totilWashYearMonthVoMap" >
+        SELECT
+          s.customer_id AS customerId,
+          c.`customer_name` AS customerName,
+          c.`system_name` AS systemName,
+          SUM(s.totil_nums) AS totilNums,
+          SUM(s.bump_nums) AS bumpNums,
+          COUNT(s.id) nums
+        FROM
+          stations s
+          LEFT JOIN customer c
+            ON s.`customer_id` = c.`id`
+        GROUP BY customerId
+    </select>
+
+
+</mapper>

@@ -1,0 +1,277 @@
+
+<form id="triangleForm">
+    <input type="hidden" name="ele.id"/>
+    <table class="property-table" style="width:100%;height:auto;"
+         cellpadding="0" cellspacing="0" border="1">
+        <thead>
+            <tr>
+                <th width="100" align="right">名称</th>
+                <th width="130">值</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td align="right">元件类型:</td>
+                <td><input type="text" class="easyui-textbox" value="三角形" disabled="disabled"></td>
+            </tr>
+            <tr class="property-type">
+                <td>
+                    <span class="datagrid-row-collapse">&nbsp;</span>
+                    <span>位置</span>
+                </td>
+                <td></td>
+            </tr>
+            <tr>
+                <td align="right">顶点1X轴坐标:</td>
+                <td><input id="eleX" type="text" class="easyui-numberspinner" data-options="min:0" required="required"/></td>
+            </tr>
+            <tr>
+                <td align="right">顶点1Y轴坐标:</td>
+                <td><input id="eleY" type="text" class="easyui-numberspinner" data-options="min:0" required="required"/></td>
+            </tr>
+            <tr>
+                <td align="right">顶点2X轴坐标:</td>
+                <td><input id="eleX2" type="text" class="easyui-numberspinner" data-options="min:0" required="required"/></td>
+            </tr>
+            <tr>
+                <td align="right">顶点2Y轴坐标:</td>
+                <td><input id="eleY2" type="text" class="easyui-numberspinner" data-options="min:0" required="required"/></td>
+            </tr>
+            <tr>
+                <td align="right">顶点3X轴坐标:</td>
+                <td><input id="eleWidth" type="text" class="easyui-numberspinner" data-options="min:0" required="required"/></td>
+            </tr>
+            <tr>
+                <td align="right">顶点3Y轴坐标:</td>
+                <td><input id="eleHeight" type="text" class="easyui-numberspinner" data-options="min:0" required="required"/></td>
+            </tr>
+            <tr>
+                <td align="right">位置锁定:</td>
+                <td><input id="elePosLock" style="height: 22px; width: 104px;"/></td>
+            </tr>
+            <tr class="property-type">
+                <td>
+                    <span class="datagrid-row-collapse">&nbsp;</span>
+                    <span>样式</span>
+                </td>
+                <td></td>
+            </tr>
+            <tr>
+                <td align="right">填充颜色:</td>
+                <td><input type="text" id="eleFill" class="input_cxcolor" readonly/></td>
+            </tr>
+            <tr>
+                <td align="right">边线颜色:</td>
+                <td><input type="text" id="eleStroke" class="input_cxcolor" readonly/></td>
+            </tr>
+            <tr>
+                <td align="right">线型:</td>
+                <td>
+                    <input type="text" id="eleStrokeDasharray"/>
+                    <ul id="dasharrayOption" class="line-group">
+                        <li value="0"><div class="line line-option-1">&nbsp;</div></li>
+                        <li value="3,3"><div class="line line-option-7">&nbsp;</div></li>
+                        <li value="8,8"><div class="line line-option-8">&nbsp;</div></li>
+                        <li value="16,8,3,3,3,8"><div class="line line-option-9">&nbsp;</div></li>
+                    </ul>
+                </td>
+            </tr>
+            <tr>
+                <td align="right">粗细:</td>
+                <td>
+                    <input id="eleStrokeWidth" type="text" />
+                    <ul id="widthOption" class="line-group">
+                        <li value="0"><div class="line-option-0">隐藏边线</div></li>
+                        <li value="1"><div class="line line-option-1">&nbsp;</div></li>
+                        <li value="2"><div class="line line-option-2">&nbsp;</div></li>
+                        <li value="3"><div class="line line-option-3">&nbsp;</div></li>
+                        <li value="4"><div class="line line-option-4">&nbsp;</div></li>
+                        <li value="6"><div class="line line-option-5">&nbsp;</div></li>
+                        <li value="8"><div class="line line-option-6">&nbsp;</div></li>
+                    </ul>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    </form>
+    <script type="text/javascript">
+    $(function(){
+        $.parser.parse('#triangleForm');
+        //线型、线宽初始化
+        var setdasharray = function(value){
+            d3.select("svg > g.active > polygon.shape-triangle")
+            .style("stroke-dasharray",function(d){
+                if(d.strokeDasharray!=value){
+                    savePropertyUndo();
+                }
+                d.strokeDasharray=value;
+                return d.strokeDasharray;
+            });
+        }
+        var setwidth = function(value){
+            d3.select("svg > g.active > polygon.shape-triangle")
+            .style("stroke-width",function(d){
+                if(d.strokeWidth!=value){
+                    savePropertyUndo();
+                }
+                d.strokeWidth=value;
+                return d.strokeWidth;
+            });
+        }
+        initStrokeSelect(setdasharray,setwidth);
+    
+        //位置
+        $("#eleX").parent().find("input.textbox-text").change(function(){
+            var d = d3.select("svg > g.active").data()[0];
+            if(d.id== $("#triangleForm input[name='ele.id']").val()){
+                //设置值
+                var value = $(this).val();
+                if(value=='' || value<0){
+                    value = 0;
+                }
+                //保存撤销信息
+                if(d.x!=parseInt(value)){
+                    saveMoveUndo();
+                }
+                d.x=parseInt(value);
+                //修改元件位置
+                d3.select("svg > g.active > polygon.shape-triangle").attr("points",d.x+","+d.y+" "+d.x2+","+d.y2+" "+d.width+","+d.height);
+                moveTrianglePoint(d3.select("svg > g.active"));
+            }
+        });
+        $("#eleY").parent().find("input.textbox-text").change(function(){
+            var d = d3.select("svg > g.active").data()[0];
+            if(d.id== $("#triangleForm input[name='ele.id']").val()){
+                //设置值
+                var value = $(this).val();
+                if(value=='' || value<0){
+                    value = 0;
+                }
+                //保存撤销信息
+                if(d.y!=parseInt(value)){
+                    saveMoveUndo();
+                }
+                d.y=parseInt(value);
+                //修改元件位置
+                d3.select("svg > g.active > polygon.shape-triangle").attr("points",d.x+","+d.y+" "+d.x2+","+d.y2+" "+d.width+","+d.height);
+                moveTrianglePoint(d3.select("svg > g.active"));
+            }
+        });
+        $("#eleX2").parent().find("input.textbox-text").change(function(){
+            var d = d3.select("svg > g.active").data()[0];
+            if(d.id== $("#triangleForm input[name='ele.id']").val()){
+                //设置值
+                var value = $(this).val();
+                if(value=='' || value<0){
+                    value = 0;
+                }
+                //保存撤销信息
+                if(d.x2!=parseInt(value)){
+                    saveMoveUndo();
+                }
+                d.x2=parseInt(value);
+                //修改元件位置
+                d3.select("svg > g.active > polygon.shape-triangle").attr("points",d.x+","+d.y+" "+d.x2+","+d.y2+" "+d.width+","+d.height);
+                moveTrianglePoint(d3.select("svg > g.active"));
+            }
+        });
+        $("#eleY2").parent().find("input.textbox-text").change(function(){
+            var d = d3.select("svg > g.active").data()[0];
+            if(d.id== $("#triangleForm input[name='ele.id']").val()){
+                //设置值
+                var value = $(this).val();
+                if(value=='' || value<0){
+                    value = 0;
+                }
+                //保存撤销信息
+                if(d.y2!=parseInt(value)){
+                    saveMoveUndo();
+                }
+                d.y2=parseInt(value);
+                //修改元件位置
+                d3.select("svg > g.active > polygon.shape-triangle").attr("points",d.x+","+d.y+" "+d.x2+","+d.y2+" "+d.width+","+d.height);
+                moveTrianglePoint(d3.select("svg > g.active"));
+            }
+        });
+        $("#eleWidth").parent().find("input.textbox-text").change(function(){
+            var d = d3.select("svg > g.active").data()[0];
+            if(d.id== $("#triangleForm input[name='ele.id']").val()){
+                //设置值
+                var value = $(this).val();
+                if(value=='' || value<0){
+                    value = 0;
+                }
+                //保存撤销信息
+                if(d.width!=parseInt(value)){
+                    saveMoveUndo();
+                }
+                d.width=parseInt(value);
+                //修改元件位置
+                d3.select("svg > g.active > polygon.shape-triangle").attr("points",d.x+","+d.y+" "+d.x2+","+d.y2+" "+d.width+","+d.height);
+                moveTrianglePoint(d3.select("svg > g.active"));
+            }
+        });
+        $("#eleHeight").parent().find("input.textbox-text").change(function(){
+            var d = d3.select("svg > g.active").data()[0];
+            if(d.id== $("#triangleForm input[name='ele.id']").val()){
+                //设置值
+                var value = $(this).val();
+                if(value=='' || value<0){
+                    value = 0;
+                }
+                //保存撤销信息
+                if(d.height!=parseInt(value)){
+                    saveMoveUndo();
+                }
+                d.height=parseInt(value);
+                //修改元件位置
+                d3.select("svg > g.active > polygon.shape-triangle").attr("points",d.x+","+d.y+" "+d.x2+","+d.y2+" "+d.width+","+d.height);
+                moveTrianglePoint(d3.select("svg > g.active"));
+            }
+        });
+        $("#elePosLock").switchbutton({
+            checked: false,
+            onText:"开启",
+            offText:"关闭",
+            onChange: function(checked){
+                var d = d3.select("svg > g.active").data()[0];
+                d.posLock = checked;
+                if(checked){
+                    numberDisable();
+                    d3.select("svg > g.active").classed("lock",true);
+                }else{
+                    numberEnable();
+                    d3.select("svg > g.active").classed("lock",false);
+                }
+            }
+        })
+    
+        $("#eleFill").change(function(){
+            d3.select("svg > g.active > polygon.shape-triangle")
+            .style("fill",function(d){
+                if(d.fill!=$("#eleFill").val()){
+                    savePropertyUndo();
+                }
+                d.fill=$("#eleFill").val();
+                return d.fill;
+            });
+        });
+    
+        $("#eleStroke").change(function(){
+            d3.select("svg > g.active > polygon.shape-triangle")
+            .style("stroke",function(d){
+                if(d.stroke!=$("#eleStroke").val()){
+                    savePropertyUndo();
+                }
+                d.stroke=$("#eleStroke").val();
+                return d.stroke;
+            });
+        });
+        //数值输入框右侧加1、减1功能触发对应的修改事件。
+        $("#eleX,#eleY,#eleWidth,#eleHeight,#eleX2,#eleY2").parent().find("span.textbox-addon").click(function(){
+            $(this).parent().find("input.textbox-text").change();
+        });
+        //触发修改以后关闭页面提示“未保存”
+        $("#triangleForm input,#triangleForm select").change(bindBeforeunload);
+    });
+    </script>

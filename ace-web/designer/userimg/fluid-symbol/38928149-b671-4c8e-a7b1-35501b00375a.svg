@@ -1,0 +1,81 @@
+ 
+<svg version='1.1'
+    xmlns='http://www.w3.org/2000/svg'
+    xmlns:xlink='http://www.w3.org/1999/xlink'		preserveAspectRatio="none"
+    x='0px'
+    y='0px'
+    width='47.007px'
+    height='159.245px'
+    viewBox='0 0 47.007 159.245'
+    xmlns:agg='http://www.example.com'
+    xml:space='preserve'>
+<agg:params>
+	<agg:param  type="C" name="Color" classes="boundary" description="Color" cssAttributes="fill"></agg:param>
+	<agg:param  type="C" name="strokeColor" classes="contours,dashed,thick" description="Stroke Color" cssAttributes="stroke"></agg:param>
+</agg:params>
+
+<style type="text/css" >
+<![CDATA[
+
+	.contours,.dashed,.thick{
+		stroke-linecap:round;
+		stroke-linejoin:round;
+		stroke: #000000;
+		fill:none;
+	}
+	
+	.contours,dashed {
+		stroke-width:0.5;
+	}
+	
+	.thick {
+		stroke-width:1.5;
+	}
+	
+	.boundary {
+		fill:   #A1BFE2;
+		stroke:none;
+	}
+	
+	.dashed {
+		stroke-dasharray:1.5,1.5;
+	}
+]]>
+</style>
+ <g id='boundary'
+     class='boundary'>
+  <path d='M23.501,158.193c4.36,0,8.561-0.43,12.78-1.6c2.95-0.82,9.67-3.011,9.67-7.381c0-5.989,0-11.979,0-17.96   c-2.99-2.989-5.99-5.989-8.98-8.979c0-2.99,0-5.99,0-8.98h8.98v-4.489v-4.49h-8.98V23.503h8.98v-4.489v-4.49h-8.98   c0-7.44-6.029-13.47-13.47-13.47c-7.439,0-13.47,6.029-13.47,13.47h-8.98v4.49v4.489h8.98v80.811h-8.98v4.49v4.489h8.98   c0,2.99,0,5.99,0,8.98c-2.99,2.99-5.98,5.99-8.98,8.979c0,5.98,0,11.971,0,17.96c0,4.37,6.73,6.57,9.67,7.381   C14.951,157.764,19.142,158.193,23.501,158.193z' />
+ </g>
+ <g id='contours'
+     class='contours'>
+  <path d='M32.482,23.503c0,22.448,0,44.896,0,67.344c0,4.957-4.02,8.979-8.979,8.979c-4.959,0-8.979-4.021-8.979-8.979   c0-22.448,0-44.896,0-67.344' />
+  <line x1='10.034'
+      y1='23.503'
+      x2='10.034'
+      y2='104.314' />
+  <rect x='1.056'
+      y='14.524'
+      fill='none'
+      width='44.896'
+      height='8.979' />
+  <rect x='1.056'
+      y='104.314'
+      fill='none'
+      width='44.896'
+      height='8.979' />
+  <path d='M36.972,14.524c0-7.438-6.03-13.469-13.469-13.469s-13.469,6.03-13.469,13.469' />
+  <path d='M36.972,113.294c0,2.992,0,5.986,0,8.979c2.994,2.993,5.987,5.987,8.979,8.979c0,5.986,0,11.972,0,17.958   c0,4.374-6.724,6.566-9.666,7.381c-4.226,1.172-8.422,1.599-12.782,1.599c-4.357,0-8.552-0.427-12.777-1.597   c-2.94-0.814-9.67-3.009-9.67-7.383c0-5.986,0-11.972,0-17.958c2.994-2.992,5.984-5.986,8.979-8.979c0-2.992,0-5.986,0-8.979' />
+  <line x1='1.056'
+      y1='19.014'
+      x2='45.951'
+      y2='19.014' />
+  <line x1='1.056'
+      y1='108.805'
+      x2='45.951'
+      y2='108.805' />
+  <line x1='36.972'
+      y1='23.503'
+      x2='36.972'
+      y2='104.314' />
+ </g>
+</svg>

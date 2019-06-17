@@ -1,0 +1,92 @@
+ 
+<svg version='1.1'
+    xmlns='http://www.w3.org/2000/svg'
+    xmlns:xlink='http://www.w3.org/1999/xlink'		preserveAspectRatio="none"
+    x='0px'
+    y='0px'
+    width='136.798px'
+    height='85.917px'
+    viewBox='0 0 136.798 85.917'
+    xmlns:agg='http://www.example.com'
+    xml:space='preserve'>
+<agg:params>
+	<agg:param  type="C" name="Color" classes="boundary" description="Color" cssAttributes="fill"></agg:param>
+	<agg:param  type="C" name="strokeColor" classes="contours,dashed,thick" description="Stroke Color" cssAttributes="stroke"></agg:param>
+</agg:params>
+
+<style type="text/css" >
+<![CDATA[
+
+	.contours,.dashed,.thick{
+		stroke-linecap:round;
+		stroke-linejoin:round;
+		stroke: #000000;
+		fill:none;
+	}
+	
+	.contours,dashed {
+		stroke-width:0.5;
+	}
+	
+	.thick {
+		stroke-width:1.5;
+	}
+	
+	.boundary {
+		fill:   #A1BFE2;
+		stroke:none;
+	}
+	
+	.dashed {
+		stroke-dasharray:1.5,1.5;
+	}
+]]>
+</style>
+ <g id='boundary'
+     class='boundary'>
+  <polygon points='13.033,54.926 13.033,63.906 13.033,72.886 25.004,72.886 114.794,72.886 114.794,63.906    114.794,54.926 90.844,54.926  ' />
+  <polygon points='13.033,13.026 13.033,22.006 13.033,30.986 90.844,30.986 114.794,30.986 114.794,22.006    114.794,13.026 25.004,13.026  ' />
+ </g>
+ <g id='contours'
+     class='contours'>
+  <rect x='13.029'
+      y='54.93'
+      fill='none'
+      width='101.763'
+      height='17.958' />
+  <line x1='25.001'
+      y1='72.888'
+      x2='25.001'
+      y2='84.861' />
+  <path d='M1.056,63.909c37.913,0,75.825,0,113.736,0c11.571,0,20.95-9.38,20.95-20.953   c0-11.569-9.379-20.948-20.95-20.948c-37.911,0-75.823,0-113.736,0' />
+  <line x1='30.987'
+      y1='84.861'
+      x2='19.015'
+      y2='84.861' />
+  <line x1='90.847'
+      y1='30.985'
+      x2='90.847'
+      y2='54.93' />
+  <line x1='25.001'
+      y1='13.026'
+      x2='25.001'
+      y2='1.056' />
+  <line x1='19.015'
+      y1='1.056'
+      x2='30.987'
+      y2='1.056' />
+  <line x1='1.056'
+      y1='57.924'
+      x2='1.056'
+      y2='69.894' />
+  <line x1='1.056'
+      y1='16.02'
+      x2='1.056'
+      y2='27.992' />
+  <rect x='13.029'
+      y='13.026'
+      fill='none'
+      width='101.763'
+      height='17.959' />
+ </g>
+</svg>

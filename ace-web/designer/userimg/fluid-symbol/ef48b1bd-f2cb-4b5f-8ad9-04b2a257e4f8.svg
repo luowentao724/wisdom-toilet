@@ -1,0 +1,41 @@
+ 
+<svg version="1.1" id="_x30_" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none"   xmlns:agg="http://www.example.com" x="0px" y="0px"
+	   viewBox="0 0 51.307 51.307" enable-background="new 0 0 51.307 51.307" xml:space="preserve">
+
+<agg:params>
+        <agg:param name="color" description="Color" type="C" cssAttributes="fill" classes="color"/>
+        <agg:param name="strokeColor" description="Stroke Color" type="C" cssAttributes="stroke" classes="color,stroked"/>
+</agg:params>
+
+<style type="text/css" >
+   <![CDATA[
+
+	.color,.stroked{
+		stroke-width:1;
+		stroke-linecap:round;
+		stroke-linejoin:round;
+		stroke: #000000;
+	}
+	
+	.color {
+		fill:   #A1BFE2;
+
+	}
+	
+	.stroked {
+		fill:none;
+	}
+
+      ]]>
+</style>
+
+<circle class="color" cx="12.501" cy="39.518" r="4.493"/>
+<polygon class="color" points="32.282,40.078 32.282,38.956 14.81,38.956 14.81,38.396 12.501,39.518 14.81,40.639 14.81,40.078"/>
+<path class="color" d="M22.111,27.618
+	c0,5.462,0,10.923,0,16.385c2.454,2.097,4.909,4.194,7.363,6.292c1.872,0,3.744,0,5.616,0c2.454-2.098,4.909-4.195,7.363-6.292
+	c0-5.462,0-10.923,0-16.385c-1.754-2.515-4.377-4.29-7.363-4.984c0-1.14,0-2.28,0.001-3.42c1.33-1.331,2.662-2.662,3.993-3.993
+	c0-2.762,0-5.524,0-8.286c-4.146-2.659-9.459-2.659-13.604,0c0,2.762,0,5.523,0,8.286c1.331,1.331,2.662,2.662,3.993,3.993
+	c0,1.141,0,2.28,0,3.42C26.489,23.328,23.865,25.104,22.111,27.618z"/>
+<line class="stroked" x1="35.09" y1="22.634" x2="35.09" y2="44.066"/>
+<line class="stroked" x1="29.474" y1="22.634" x2="29.474" y2="44.066"/>
+</svg>

@@ -1,0 +1,20 @@
+ 
+<svg version="1.1" id="图层_1" xmlns:agg="http://www.example.com"
+	 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="64px" height="64px"
+	 viewBox="0 0 64 64" enable-background="new 0 0 64 64" xml:space="preserve">
+<g>
+	
+		<line fill="none" stroke="#040000" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" x1="32" y1="6.417" x2="32" y2="39.096"/>
+	
+		<line fill="none" stroke="#040000" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" x1="28.205" y1="50.623" x2="35.794" y2="50.623"/>
+	
+		<line fill="none" stroke="#040000" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" x1="25.453" y1="44.891" x2="38.566" y2="44.891"/>
+	
+		<line fill="none" stroke="#040000" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" x1="22.659" y1="39.096" x2="41.342" y2="39.096"/>
+	<polygon fill="none" stroke="#040000" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" points="48.243,41.348 
+		47.932,38.18 47.012,35.115 45.514,32.323 43.488,29.863 41.027,27.842 38.214,26.341 35.169,25.404 32,25.09 28.831,25.404 
+		25.787,26.341 22.971,27.842 20.51,29.863 18.509,32.323 17.008,35.115 16.069,38.18 15.757,41.348 16.069,44.516 17.008,47.559 
+		18.509,50.373 20.51,52.83 22.971,54.854 25.787,56.354 28.831,57.271 32,57.584 35.169,57.271 38.214,56.354 41.027,54.854 
+		43.488,52.83 45.514,50.373 47.012,47.559 47.932,44.516 	"/>
+</g>
+</svg>

@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.github.wxiaoqi.security.things.mapper.TotilWashInfoMapper">
+
+	<!-- 可根据自己的需求，是否要使用 -->
+    <resultMap type="com.github.wxiaoqi.security.things.entity.TotilWashInfo" id="totilWashInfoMap">
+        <result property="id" column="id"/>
+        <result property="dtuId" column="dtu_id"/>
+        <result property="totilId" column="totil_id"/>
+        <result property="todayWashTimes" column="today_wash_times"/>
+        <result property="accumulateTimes" column="accumulate_times"/>
+        <result property="yesterdayCashTimes" column="yesterday_cash_times"/>
+        <result property="gatherTime" column="gather_time"/>
+        <result property="createTime" column="create_time"/>
+        <result property="createTime" column="create_time"/>
+        <result property="totalNum" column="total_num"/>
+        <result property="lastNum" column="lastNum"/>
+    </resultMap>
+
+
+    <!-- 获取便器剩余冲洗次数 -->
+    <select id="searchWashData" resultMap="totilWashInfoMap" parameterType="map">
+        SELECT
+            tw.`dtu_id`,
+            tw.`totil_id`,
+            tw.`today_wash_times`,
+            tw.`accumulate_times`,
+            tw.`yesterday_cash_times`,
+            tw.`gather_time`,
+            tw.`create_time`,
+            t.`total_num`,
+            (
+            t.`total_num` - tw.`accumulate_times`
+            ) AS lastNum
+        FROM
+            totil_wash_info AS tw
+        LEFT JOIN toilet AS t
+            ON tw.`totil_id` = t.`id`
+        WHERE 1=1
+            <if test="cm.gatherTime != null and cm.gatherTime != ''">
+                AND DATE_FORMAT(tw.`gather_time`,'%Y-%m-%d') <![CDATA[ = ]]> DATE_FORMAT(#{cm.gatherTime},'%Y-%m-%d')
+            </if>
+            <if test="cm.dtuId != null and cm.dtuId != ''">
+                AND tw.dtu_id = #{cm.dtuId}
+            </if>
+            <if test="cm.totilId != null and cm.totilId != ''">
+                AND tw.totil_id = #{cm.totilId}
+            </if>
+    </select>
+
+
+
+    <resultMap type="com.github.wxiaoqi.security.things.vo.TotilWashYearMonthVo" id="totilWashYearMonthVoMap">
+        <result property="gatherTime" column="gatherTime"/>
+        <result property="totalNum" column="totalNum"/>
+        <result property="totilId" column="totilId"/>
+    </resultMap>
+
+    <!-- 数据报表,查询子站便器每日冲洗数据 -->
+    <select id="getStationsTotilWashDay" resultMap="totilWashYearMonthVoMap" parameterType="map">
+        SELECT
+          totil_id AS totilId,
+          SUM(today_wash_times) AS totalNum
+        FROM
+          totil_wash_info
+        WHERE 1 = 1
+        <if test="cm.dtuId != null and cm.dtuId != ''">
+            AND dtu_id = #{cm.dtuId}
+        </if>
+        <if test="cm.gatherTime != null and cm.gatherTime != ''">
+            AND DATE_FORMAT(gather_time,'%Y-%m-%d') <![CDATA[ = ]]> DATE_FORMAT(#{cm.gatherTime},'%Y-%m-%d')
+        </if>
+        GROUP BY totilId
+        ORDER BY totilId ASC
+    </select>
+
+
+    <!-- 能耗分析报表,查询当月每日数据 -->
+    <select id="getTotilWashYearMonthDay" resultMap="totilWashYearMonthVoMap" parameterType="map">
+		SELECT
+          <!-- 日 -->
+          <if test="cm.yearMonthDay != null and cm.yearMonthDay != ''">
+            totil_id AS totilId
+          </if>
+          <!-- 月 -->
+          <if test="cm.yearMonth != null and cm.yearMonth != ''">
+              DATE_FORMAT(gather_time, '%d') AS gatherTime,
+          </if>
+          <!-- 年 -->
+          <if test="cm.year != null and cm.year != ''">
+              DATE_FORMAT(gather_time, '%m') AS gatherTime,
+          </if>
+          SUM(accumulate_times) AS totalNum
+        FROM
+          totil_wash_info
+          WHERE 1=1
+            <!-- 日 -->
+            <if test="cm.yearMonthDay != null and cm.yearMonthDay != ''">
+                AND DATE_FORMAT(gather_time,'%Y-%m-%d') <![CDATA[ = ]]> #{cm.yearMonthDay}
+            </if>
+            <!-- 月 -->
+            <if test="cm.yearMonth != null and cm.yearMonth != ''">
+                AND DATE_FORMAT(gather_time,'%Y-%m') <![CDATA[ = ]]> #{cm.yearMonth}
+            </if>
+            <!-- 年 -->
+            <if test="cm.year != null and cm.year != ''">
+                AND DATE_FORMAT(gather_time,'%Y') <![CDATA[ = ]]> #{cm.year}
+            </if>
+            <if test="cm.dtuId != null and cm.dtuId != ''">
+                AND dtu_id = #{cm.dtuId}
+            </if>
+            <if test="cm.totilId != null and cm.totilId != ''">
+                AND totil_id = #{cm.totilId}
+            </if>
+        GROUP BY gatherTime
+        ORDER BY gatherTime ASC
+	</select>
+
+</mapper>

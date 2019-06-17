@@ -1,0 +1,454 @@
+
+
+
+<!DOCTYPE html>
+<html lang="zh-cn">
+	<head>
+		<base href="http://www.lfemcp.com:80/">
+		<title>EMCP物联网云平台</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="renderer" content="webkit">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="icon" href="http://cdn.lfemcp.com/userimg/style/e9/e9319b94-7c9d-422b-90ad-52996a6fa4e6.png" 
+		      mce_href="http://cdn.lfemcp.com/userimg/style/e9/e9319b94-7c9d-422b-90ad-52996a6fa4e6.png" type="image/x-icon">
+		<link rel="shortcut icon" href="http://cdn.lfemcp.com/userimg/style/e9/e9319b94-7c9d-422b-90ad-52996a6fa4e6.png"
+		      mce_href="http://cdn.lfemcp.com/userimg/style/e9/e9319b94-7c9d-422b-90ad-52996a6fa4e6.png" type="image/x-icon">
+		<link href="http://cdn.lfemcp.com/designer/easyui/themes/bootstrap/easyui.css" rel="stylesheet">
+		<link href="http://cdn.lfemcp.com/designer/easyui/themes/icon.css" rel="stylesheet">
+		<link href="http://cdn.lfemcp.com/common/css/bootstrap.min.css" rel="stylesheet">
+		<link href="http://cdn.lfemcp.com/common/css/font-awesome.min.css" rel="stylesheet">
+		<link href="http://cdn.lfemcp.com/common/css/jquery.datetimepicker.css" rel="stylesheet">
+		<link href="http://cdn.lfemcp.com/common/css/loader.css" rel="stylesheet">
+		<link href="http://cdn.lfemcp.com/common/css/nindex.css?v=3.12.2" rel="stylesheet">
+		<link href="http://cdn.lfemcp.com/common/css/export_csv.css?v=3.11.3" rel="stylesheet">
+
+		<!--[if lt IE 9]>
+	    <script src="http://cdn.lfemcp.com/common/js/respond.src.js" type="text/javascript"></script>
+	    <script src="http://cdn.lfemcp.com/common/js/html5shiv.min.js" type="text/javascript"></script>
+        <![endif]-->
+		<script src="http://cdn.lfemcp.com/common/js/jquery-1.11.1.min.js"></script>
+		<script src="http://cdn.lfemcp.com/designer/easyui/jquery.easyui.min.js"></script>
+		<script src="http://cdn.lfemcp.com/designer/easyui/easyui-lang-zh_CN.js"></script>
+		<script src="http://cdn.lfemcp.com/common/js/bootstrap.min.js"></script>
+		<script src="http://cdn.lfemcp.com/common/js/bootstrap-paginator.js"></script>
+		<script src="http://cdn.lfemcp.com/common/js/jquery.validate.js"></script>
+		<script src="http://cdn.lfemcp.com/common/js/jquery.cookie.js"></script>
+		<script src="http://cdn.lfemcp.com/common/js/jquery.datetimepicker.js"></script>
+		<script src="http://cdn.lfemcp.com/common/js/messages_cn.js?v=3.12.1"></script>
+		<script src="http://cdn.lfemcp.com/common/js/common.js?v=3.12.1"></script>
+		<script src="http://cdn.lfemcp.com/common/js/session.js?v=3.11.1"></script>
+		<script src="http://cdn.lfemcp.com/common/js/baidu-count.js"></script>
+		<script type="text/javascript">
+			var initCDN = 'http://cdn.lfemcp.com/';
+		</script>
+
+	</head>
+	<body>
+		
+
+<link href="http://cdn.lfemcp.com/common/css/head.css?v=3.12.2" rel="stylesheet">
+<section id="sectionHeadNavbar">
+  <nav class="navbar navbar-default navbar-fixed-top">
+	  <div class="container navbar-container clearfix">
+	    <div class="navbar-header">
+	      <a target="_self" href="index.jsp">
+          <img class="navbar-brand-img" alt="EMCP物联网云平台" src="http://cdn.lfemcp.com/userimg/style/03/03497b50-6999-4468-95ef-8c7e33c4ee4e.png">
+          </a>
+        </div>
+        <ul class="nav navbar-nav navbar-right head-menu">
+        	
+        	<li id="head_equip" class="dropdown active" >
+	          <a href="javascript:void(0);" id="btnDefaultShowMode" class="default-show-mode" onclick="gotoDefaultShow();" title="设备监控">
+	          	 <i class="head-icon-size head-equipmonitor"></i> <span lan_option="text">设备监控</span>
+	          </a>
+	          <a href="javascript:void(0);" id="btnMoreShowMode" class="dropdown-toggle more-show-mode"   data-toggle="dropdown" title="展示方式">
+	          	 <i class="caret"></i>&nbsp;
+	          </a>
+	          <ul id="dropdownShow" class="dropdown-menu sort-list" aria-labelledby="dropdownMenu1" >
+				    <li>
+				    	<a id="btnListShow" target="_self" href="index.jsp" onclick="gotoListShow();">
+				    		<span class="dropdown-icon-size head-listshow"></span> <span>列表展示</span>
+				    	</a>
+				    </li>
+				    <li >
+				    	<a id="btnGroupShow"  href="equipgroup/index_group.jsp" onclick="gotoGroupShow();">
+				    		<span class="dropdown-icon-size head-groupsshow"></span> <span>分组展示</span>
+				    	</a>
+				    </li>
+				</ul>
+	        </li>
+	        <li id="head_map" title="设备地图">
+        		<a target="_self" href="front/map.jsp">
+        			<i class="glyphicon glyphicon-globe"></i> <span lan_option="text">设备地图</span>
+        		</a>
+	        </li>
+	        
+	        
+            <li id="head_backstage" title="后台管理">
+            	<a target="_self" href="nindex.jsp">
+            		<i class="head-icon-size head-backgroundset"></i> <span lan_option="text">后台管理</span>
+            	</a>
+            </li>
+            <li id="head_help" title="帮助文档">
+        		<a target="_self" href="help.jsp?flag=A1">
+        			<i class="fa fa-question-circle-o fa-lg"></i> <span lan_option="text">帮助文档</span>
+        		</a>
+        	</li>
+            
+	        <li class="dropdown" id="userNameHead"  >
+	          <a href="#" class="dropdown-toggle" data-toggle="dropdown" title=hnzc001>
+	          	<i class="fa fa-user" ></i>
+	          	<span lan_option="text">用户名:</span><span  class="head-userinfo"> hnzc001</span><span class="caret"></span>
+	          </a>
+	          <ul id="dropdownUser" class="dropdown-menu" aria-labelledby="dropdownMenu1">
+	          		<li>
+				    	<a id="menutop_password" href="javascript:void(0);">
+				    		<i class="head-icon-size head-pwdreset fa-fw" style="margin-right:3px;"></i>
+				    		<span lan_option="text">重置密码</span>
+				    	</a>
+				    </li>
+				    <li>
+				    	<a id="menutop_user" href="javascript:void(0);">
+				    		<i class="fa fa-sun-o fa-fw"></i><span lan_option="text">设置</span>
+				    	</a>
+				    </li>
+				    <li>
+				    	<a href="LoginAction!quit.action" >
+				    		<i class="fa fa-power-off font-weight-400 fa-fw"></i><span lan_option="text">退出</span>
+				    	</a>
+				    </li>
+				</ul>
+	        </li>
+	        <li id="head_msg">
+				<a target="_self" href="notice/msgindex.jsp" title="消息中心">
+					<span class="badge rounded" id="notificationCount2" ></span>
+        			 <i class="fa fa-envelope-o" style="font-size:15px"></i><span lan_option="text">&nbsp;</span>
+        		</a>
+	        	
+	        </li>
+          </ul>
+	  </div>
+  </nav>
+</section>
+<!-- 说明：这两个包必须放到整个文档的最后，为了保证能够将所有的中文都翻译到 -->
+<script src="http://cdn.lfemcp.com/common/js/language.js?v=3.8"></script>
+<script src="http://cdn.lfemcp.com/common/js/language_EN.js?v=3.8"></script>
+<script src="http://cdn.lfemcp.com/frontjs/head.js?v=3.12.4"></script>
+
+		<aside>
+		<div class="sidebar" role="navigation">
+			<ul class="nav nav-stacked sidebar-menu">
+				
+				<li>
+					<a id="leftmenu_equip" href="javascript:void(0);" class="active">
+						<div class="nav-icon">
+							<span class="glyphicon glyphicon-th-list"></span>
+						</div> <span lan_option="text">设备管理</span> </a>
+				</li>
+				
+				
+				<li>
+					<a id="leftmenu_dtu" href="javascript:void(0);">
+						<div class="nav-icon">
+							<span class="glyphicon glyphicon-log-in"></span>
+						</div> <span lan_option="text">模块管理</span> </a>
+				</li>
+				
+				
+				<li>
+					<a id="leftmenu_rule" href="javascript:void(0);">
+						<div class="nav-icon">
+							<span class="glyphicon glyphicon-pencil"></span>
+						</div> <span lan_option="text">数据规则</span> </a>
+				</li>
+				
+				
+				<li>
+					<a id="leftmenu_user" href="javascript:void(0);">
+						<div class="nav-icon">
+							<span class="glyphicon glyphicon-user"></span>
+						</div> <span lan_option="text">普通账号</span> </a>
+				</li>
+				
+				
+				<li>
+					<a id="leftmenu_admin" href="javascript:void(0);">
+						<div class="nav-icon">
+							<span class="fa fa-user-secret lg-icon"></span>
+						</div> <span lan_option="text">管理账号</span> </a>
+				</li>
+				
+				
+				
+				
+				
+				
+				
+				<li>
+					<a id="leftmenu_feedback" href="javascript:void(0);">
+						<div class="nav-icon">
+							<span class="glyphicon glyphicon-edit"></span>
+						</div> <span lan_option="text">意见反馈</span> </a>
+				</li>
+				
+				
+				
+				
+				
+				
+				
+				
+			</ul>
+		</div>
+		</aside>
+		<section id="main-content">
+		<div class="wrapper">
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col-lg-12" id="mainbar">
+						<div class="m-wraper-user" style="min-height: 200px">
+							<div class="user-wraper">
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		</section>
+		
+
+
+<div class="modal fade" id="passwordModal" tabindex="-1" role="dialog" aria-labelledby="passwordModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+        <h4 class="modal-title" id="passwordModalLabel" lan_option="text">修改密码</h4>
+      </div>
+      <div class="modal-body">
+        <form id="passwordForm" class="form-horizontal" role="form">
+        	  <div class="form-group">
+			    <label for="inputLoginname" class="col-sm-3 control-label" lan_option="text" lan_option="text">旧密码</label>
+			    <div class="col-sm-8">
+			      <input type="password" class="form-control" id="original_password" name="original_password" placeholder="旧密码" required lan_option="placeholder"/>
+			    </div>
+			  </div>
+			  <div class="form-group">
+			    <label for="inputZhName" class="col-sm-3 control-label" lan_option="text">新密码</label>
+			    <div class="col-sm-8">
+			      <input type="password" class="form-control" id="new_password" name="new_password" placeholder="新密码" required lan_option="placeholder"/>
+			    </div>
+			  </div>
+			  <div class="form-group">
+			    <label for="inputUserTelNum" class="col-sm-3 control-label" lan_option="text">确认新密码</label>
+			    <div class="col-sm-8">
+			      <input type="password" class="form-control" id="_new_password" name="_new_password" placeholder="确认新密码" required lan_option="placeholder"/>
+			    </div>
+			  </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" lan_option="text">关闭</button>
+        <button type="button" class="btn btn-primary" id="passwordSaveBtn" lan_option="text">保存</button>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal fade" id="loginUserModal" tabindex="-1" role="dialog" data-keyboard="false" data-backdrop="static" aria-labelledby="userModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+        <h4 class="modal-title" id="userModalLabel" lan_option="text">用户信息</h4>
+      </div>
+      <div class="modal-body">
+        <form id="updateLoginForm" class="form-horizontal" role="form">
+       	  <input type="hidden" id="hiddenUserId" name="user.id" value="134"/>
+       	  <input type="hidden" id="hiddenRoleType" value="01"/>
+       	  <input type="hidden" id="hiddenUserinfo" uname="hnzc001" ucontact="杨桂华" utel="15115323207" uaddress="湖南省株洲市天元区黄河南路天台金谷三栋" uemail="27613271@qq.com" ucompany="湖南真创环保科技有限公司"  />
+       	  <div class="form-group">
+		    <label for="inputLoginname" class="col-sm-3 control-label" lan_option="text">用户名</label>
+		    <div class="col-sm-8">
+		      <input type="text" class="form-control" id="inputLoginname" name="user.emcpUsername" placeholder="登录名" value="hnzc001" readonly lan_option="placeholder" />
+		    </div>
+		  </div>
+		  <div class="form-group">
+		    <label for="inputZhName" class="col-sm-3 control-label" lan_option="text">联系人</label>
+		    <div class="col-sm-8">
+		      <input type="text" class="form-control" id="inputZhName" name="user.contact" placeholder="姓名" value="杨桂华" required lan_option="placeholder"/>
+		    </div>
+		  </div>
+		  <div class="form-group">
+		    <label for="inputUserTelNum" class="col-sm-3 control-label" lan_option="text">联系电话</label>
+		    <div class="col-sm-8">
+		      <input type="text" class="form-control" id="inputTelNum" name="user.tel" placeholder="此号码用于密码找回" value="15115323207" required lan_option="placeholder"/>
+		    </div>
+		  </div>
+		  <div class="form-group">
+		    <label for="inputUserOrg" class="col-sm-3 control-label" lan_option="text">企业名称</label>
+		    <div class="col-sm-8">
+		      <input type="text" class="form-control" id="inputUserOrg" name="user.company" placeholder="企业名称" value="湖南真创环保科技有限公司" required lan_option="placeholder"/>
+		    </div>
+		  </div>
+		  <div class="form-group">
+		    <label for="inputUserEmail" class="col-sm-3 control-label">邮箱</label>
+		    <div class="col-sm-8">
+		      <input type="email" class="form-control" id="inputUserEmail" name="user.email" placeholder="XXXX@XXX.com" value="27613271@qq.com" required>
+		    </div>
+		  </div>
+		  
+		  <div class="form-group">
+		    <label for="inputAddress" class="col-sm-3 control-label" lan_option="text">详细地址</label>
+		    <div class="col-sm-8">
+		      <input type="text" class="form-control" id="inputAddress" name="user.address" placeholder="XX省XX市XX区XX路XX号" value="湖南省株洲市天元区黄河南路天台金谷三栋" required lan_option="placeholder"/>
+		    </div>
+		  </div>
+		  
+		  <div class="form-group">
+		    <div id="initOpenysFalse" class="col-sm-8 col-sm-offset-3">
+		      <a id="btnBindOpenys" href="javascript:void(0);" lan_option="text">关联萤石云密钥</a>
+		    </div>
+		    <div id="initOpenysTrue" class="col-sm-8 col-sm-offset-3">
+		      <a id="btnEditOpenys" href="javascript:void(0);" lan_option="text">修改萤石云密钥</a> | 
+		      <a id="btnDelOpenys" href="javascript:void(0);" lan_option="text">删除萤石云密钥</a>
+		    </div>
+          </div>
+          
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" lan_option="text">关闭</button>
+        <button type="button" class="btn btn-primary" id="userSaveBtn" lan_option="text">保存</button>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal fade" id="bindOpenysModal"  tabindex="-1" data-keyboard="false" data-backdrop="static" role="dialog" aria-labelledby="bindOpenysModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content dialog-container">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+        <h4 class="modal-title" id="bindOpenysModalLabel" lan_option="text">萤石云密钥</h4>
+      </div>
+      <form id="bindOpenysForm">
+	      <div class="modal-body">
+	      	<div class="form-horizontal">
+	      	  <input type="hidden" id="inputOpenysConfId" name="conf.id"/>
+	      	  <div class="form-group">
+			    <label for="inputOpenysConfAppKey" class="col-sm-3 control-label">appKey</label>
+			    <div class="col-sm-8">
+			      <input type="text" class="form-control" id="inputOpenysConfAppKey" name="conf.appKey" placeholder="请输入萤石云appKey" lan_option="placeholder"/>
+			    </div>
+			  </div>
+			  <div class="form-group">
+			    <label for="inputOpenysConfAppSecret" class="col-sm-3 control-label">secret</label>
+			    <div class="col-sm-8">
+			      <input type="text" class="form-control" id="inputOpenysConfAppSecret" name="conf.appSecret" placeholder="请输入萤石云appSecret" lan_option="placeholder"/>
+			    </div>
+			  </div>
+			</div>
+	      </div>
+      </form>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" lan_option="text">关闭</button>
+        <button type="button" class="btn btn-primary" id="btnSaveOpenys" lan_option="text">保存</button>
+      </div>
+    </div>
+  </div>
+</div>
+<script src="http://cdn.lfemcp.com/frontjs/user_info.js?v=3.11.0"></script>
+<script type="text/javascript">
+	if(getCookie("isEnglish")){
+		jQuery.extend(jQuery.validator.messages, {
+			required: "This field is required.",
+			remote: "Please fix this field.",
+			email: "Please enter a valid email address.",
+			url: "Please enter a valid URL.",
+			date: "Please enter a valid date.",
+			dateISO: "Please enter a valid date (ISO).",
+			number: "Please enter a valid number.",
+			digits: "Please enter only digits.",
+			creditcard: "Please enter a valid credit card number.",
+			equalTo: "Please enter the same value again.",
+			maxlength: $.validator.format("Please enter no more than {0} characters."),
+			minlength: $.validator.format("Please enter at least {0} characters."),
+			rangelength: $.validator.format("Please enter a value between {0} and {1} characters long."),
+			range: $.validator.format("Please enter a value between {0} and {1}."),
+			max: $.validator.format("Please enter a value less than or equal to {0}."),
+			min: $.validator.format("Please enter a value greater than or equal to {0}.")
+		});
+	}
+</script>
+		<script type="text/javascript">
+	$(function() {
+		jQuery.ajaxSetup( {
+			cache : true
+		});
+		$("#leftmenu_equip").click(function() {
+			loadMainPage(this, 'page/equip.jsp');
+		});
+		$("#leftmenu_dtu").click(function() {
+			loadMainPage(this, 'page/dtu.jsp');
+		});
+		$("#leftmenu_rule").click(function() {
+			loadMainPage(this, 'page/rule.jsp');
+		});
+		$("#leftmenu_style_set").click(function() {
+			loadMainPage(this, 'page/style_set.jsp');
+		});
+		$("#leftmenu_style_list").click(function() {
+			loadMainPage(this, 'page/style.jsp');
+		});
+		$("#leftmenu_user").click(function() {
+			loadMainPage(this, 'page/user.jsp');
+		});
+		$("#leftmenu_admin").click(function() {
+			loadMainPage(this, 'page/user_admin.jsp');
+		});
+		$("#leftmenu_operations").click(function() {
+			loadMainPage(this, 'page/user_operations.jsp');
+		});
+		$("#leftmenu_feedback").click(function() {
+			loadMainPage(this, 'page/feedback.jsp');
+		});
+		$("#leftmenu_app_version").click(function() {
+			loadMainPage(this, 'page/app_version.jsp');
+		});
+		$("#leftmenu_role").click(function() {
+			loadMainPage(this, 'page/role.jsp');
+		});
+		$("#leftmenu_pushconf").click(function() {
+			loadMainPage(this, 'page/pushconf.jsp');
+		});
+		$("#leftmenu_article").click(function() {
+			loadMainPage(this, 'help/article.jsp');
+		});
+		$("#leftmenu_product").click(function() {
+			loadMainPage(this, 'pay/product.jsp');
+		});
+		$("#leftmenu_card").click(function() {
+			loadMainPage(this, 'pay/card.jsp');
+		});
+		$("#leftmenu_order").click(function() {
+			loadMainPage(this, 'pay/order.jsp');
+		});
+		$("#leftmenu_dictionaries").click(function() {
+			loadMainPage(this, 'page/dictionary.jsp');
+		});
+		$("#leftmenu_msg").click(function() {
+			loadMainPage(this, 'msg/msg.jsp');
+		});
+		$("#leftmenu_pmsn").click(function() {
+            loadMainPage(this, 'page/permission.jsp');
+        });
+		var currentPage = $.cookie('currentPage');
+		if (currentPage && currentPage != 'null') {
+			$("#" + currentPage).trigger("click");
+		} else {
+			$(".sidebar ul li:first a").trigger("click");
+		}
+
+	});
+</script>
+	</body>
+</html>

@@ -1,0 +1,61 @@
+ 
+<svg version='1.1'
+    xmlns='http://www.w3.org/2000/svg'
+    xmlns:xlink='http://www.w3.org/1999/xlink'		preserveAspectRatio="none"
+    x='0px'
+    y='0px'
+    width='133.803px'
+    height='50.001px'
+    viewBox='0 0 133.803 50.001'
+    xmlns:agg='http://www.example.com'
+    xml:space='preserve'>
+<agg:params>
+	<agg:param  type="C" name="Color" classes="boundary" description="Color" cssAttributes="fill"></agg:param>
+	<agg:param  type="C" name="strokeColor" classes="contours,dashed,thick" description="Stroke Color" cssAttributes="stroke"></agg:param>
+</agg:params>
+
+<style type="text/css" >
+<![CDATA[
+
+	.contours,.dashed,.thick{
+		stroke-linecap:round;
+		stroke-linejoin:round;
+		stroke: #000000;
+		fill:none;
+	}
+	
+	.contours,dashed {
+		stroke-width:0.5;
+	}
+	
+	.thick {
+		stroke-width:1.5;
+	}
+	
+	.boundary {
+		fill:   #A1BFE2;
+		stroke:none;
+	}
+	
+	.dashed {
+		stroke-dasharray:1.5,1.5;
+	}
+]]>
+</style>
+ <g id='boundary'
+     class='boundary'>
+  <path d='M130.356,39.417c1.745-4.665,2.378-9.283,2.393-14.223c0.015-4.93-0.591-9.552-2.308-14.237   c-1.359-3.725-4.49-9.723-9.591-9.739c-23.949-0.072-47.89-0.144-71.84-0.215C41.008,8.958,33.003,16.915,25,24.87   c-5.99-0.018-11.97-0.036-17.959-0.054c-2.551-0.008-4.129,2.988-4.825,4.846C1.338,32,1.031,34.308,1.024,36.779   c-0.007,2.46,0.286,4.78,1.148,7.113c0.685,1.873,2.245,4.867,4.796,4.875c5.989,0.018,11.97,0.036,17.96,0.054   c31.93,0.096,63.859,0.192,95.779,0.288C125.808,49.123,128.975,43.143,130.356,39.417z' />
+ </g>
+ <g id='contours'
+     class='contours'>
+  <line x1='24.998'
+      y1='24.874'
+      x2='24.926'
+      y2='48.819' />
+  <line x1='1.02'
+      y1='36.776'
+      x2='24.962'
+      y2='36.848' />
+  <path d='M7.041,24.82c5.986,0.018,11.973,0.036,17.958,0.054C33.003,16.918,41.01,8.96,49.015,1.002   c23.944,0.072,47.888,0.144,71.832,0.215c5.104,0.016,8.233,6.011,9.6,9.744c1.711,4.676,2.315,9.304,2.3,14.237   c-0.015,4.933-0.646,9.557-2.385,14.222c-1.389,3.725-4.554,9.702-9.658,9.687c-37.91-0.114-75.823-0.228-113.735-0.341   c-2.551-0.008-4.116-3.005-4.799-4.872c-0.855-2.338-1.157-4.651-1.149-7.118c0.007-2.469,0.323-4.779,1.192-7.112   C2.906,27.8,4.488,24.813,7.041,24.82z' />
+ </g>
+</svg>

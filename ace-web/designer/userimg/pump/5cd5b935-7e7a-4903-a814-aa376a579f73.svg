@@ -1,0 +1,136 @@
+ 
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none"  xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	   viewBox="0 0 202 54" xmlns:agg="http://www.example.com">
+	 
+<agg:params>
+	<agg:param type="C" name="color" description="Color" cssAttributes="fill" classes="color"/>
+	<agg:param type="F" name="saturation" description="Saturation" min="0" max="1" cssAttributes="opacity" classes="color"/>
+</agg:params>
+
+<style type="text/css" >
+   <![CDATA[
+
+	.stroke,.thin,.thick{
+		stroke-linecap:butt;
+		stroke-linejoin:round;
+		stroke: black;
+		fill:none;
+		opacity:0.5;
+	}
+
+	.stroke{stroke-width:0.5;}
+
+	.thin {stroke-width:0.25;}
+
+	.thick {stroke-width:0.75;}
+	
+	.color {
+		fill:#3664BF;
+		opacity:0.2;
+	}
+
+      ]]>
+</style>
+	 
+<defs>
+	<linearGradient id="cyl" gradientUnits="userSpaceOnUse">
+		<stop  offset="0" style="stop-color:#616161"/>
+		<stop  offset="0.0134" style="stop-color:#676767"/>
+		<stop  offset="0.0824" style="stop-color:#949494"/>
+		<stop  offset="0.1517" style="stop-color:#BABABA"/>
+		<stop  offset="0.2205" style="stop-color:#D7D7D7"/>
+		<stop  offset="0.2885" style="stop-color:#EBEBEB"/>
+		<stop  offset="0.3554" style="stop-color:#F8F8F8"/>
+		<stop  offset="0.42" style="stop-color:#FCFCFC"/>
+		<stop  offset="0.546" style="stop-color:#F8F8F8"/>
+		<stop  offset="0.6766" style="stop-color:#EBEBEB"/>
+		<stop  offset="0.8093" style="stop-color:#D7D7D7"/>
+		<stop  offset="0.9426" style="stop-color:#BABABA"/>
+		<stop  offset="1" style="stop-color:#ABABAB"/>
+	</linearGradient>
+	
+	<linearGradient id="cyl_1" xlink:href="#cyl" x1="73.1655" y1="22.1987" x2="73.1655" y2="31.6664"/>
+	<linearGradient id="cyl_2" xlink:href="#cyl" x1="92.8657" y1="17.8047" x2="92.8657" y2="36.0555"/>
+	<linearGradient id="cyl_3" xlink:href="#cyl" x1="123.3848" y1="0.8335" x2="123.3848" y2="53.0024"/>
+	
+	<linearGradient id="cyl_4" xlink:href="#cyl" x1="898.6338" y1="-741.6592" x2="926.2402" y2="-741.6592" gradientTransform="matrix(0 1 1 0 874.9844 -885.6367)"/>
+	<linearGradient id="cyl_5" xlink:href="#cyl" x1="890.8936" y1="-713.8315" x2="933.9795" y2="-713.8315" gradientTransform="matrix(0 1 1 0 874.9844 -885.6367)"/>
+	<linearGradient id="cyl_6" xlink:href="#cyl" x1="888.7354" y1="-681.6733" x2="936.1585" y2="-681.6733" gradientTransform="matrix(0 1 1 0 874.9844 -885.6367)"/>
+	<linearGradient id="cyl_7" xlink:href="#cyl" x1="99.167" y1="14.2349" x2="108.1916" y2="14.2349"/>
+	<linearGradient id="cyl_8" xlink:href="#cyl" x1="7.4478" y1="17.8047" x2="7.4478" y2="36.0555"/>
+	<linearGradient id="cyl_9" xlink:href="#cyl" x1="16.1382" y1="10.9854" x2="16.1382" y2="42.8656"/>
+	<linearGradient id="cyl_10" xlink:href="#cyl" x1="66.689" y1="10.9854" x2="66.689" y2="42.8656"/>
+	<linearGradient id="cyl_11" xlink:href="#cyl" x1="41.4136" y1="13.8359" x2="41.4136" y2="16.8147"/>
+	<linearGradient id="cyl_12" xlink:href="#cyl" x1="41.4126" y1="37.0566" x2="41.4126" y2="40.0364"/>
+	<linearGradient id="cyl_13" xlink:href="#cyl" x1="95.8335" y1="6.5107" x2="111.508" y2="6.5107"/>
+	
+	<path id="boundary" d="M190.134,3.021c-1.502,0-3.006,0-4.509,0c0,0.094,0,0.898,0,2.236h-42.228l-6.715,6.079v1.661
+		h-6.715V1h-13.164l-0.003,16.862h-8.609c0-0.001,0-0.001,0-0.002V8.418h3.312V4.604H95.808v3.813h3.303v9.442h0.04
+		c0,0.001,0,0.001,0,0.002H68.933l-0.002-6.775h-4.482v2.758H18.38v-2.758h-4.482v6.775H1.001V36.01h12.897v6.776h4.482v-2.757
+		h46.069v2.757h4.482l0.002-6.776h47.868l0.003,16.863h13.164v-12.27h6.715v1.677l6.715,6.063h42.228c0,1.348,0,2.159,0,2.253
+		c1.503,0,3.007,0,4.509,0c5.995,0,10.865-4.831,10.865-10.77c0-8.691,0-17.362,0-26.034C200.999,7.83,196.131,3.021,190.134,3.021z
+		 M64.449,16.808v5.422H18.38v-5.422H64.449z M18.38,37.066v-5.424h46.069v5.424H18.38z M127.952,50.859h-9.131V31.643h9.131V50.859z
+		 M127.952,22.229h-9.131V3.015h9.131V22.229z"/>
+</defs>
+	 
+<g id="cyl">
+	<rect x="18.38" y="22.229" fill="url(#cyl_1)"  />
+	<rect x="68.932" y="17.863" fill="url(#cyl_2)"  />
+	<path fill="url(#cyl_3)" d="M116.803,1v51.873h13.164V1H116.803z M127.951,50.859h-9.131V3.014h9.131V50.859z"/>
+	<rect x="129.969" y="12.997" fill="url(#cyl_4)"  />
+	<path fill="url(#cyl_5)" d="M185.624,48.343h-42.228l-6.715-6.063v-1.677V12.997v-1.661l6.715-6.079h42.228
+		C185.624,19.62,185.624,33.964,185.624,48.343z"/>
+	<path fill="url(#cyl_6)" d="M190.133,50.596c-1.502,0-3.006,0-4.509,0c0-0.745,0-46.829,0-47.576
+		c1.503,0,3.007,0,4.509,0c5.997,0,10.865,4.81,10.865,10.772c0,8.672,0,17.343,0,26.034
+		C200.998,45.765,196.128,50.596,190.133,50.596z"/>
+	<path fill="url(#cyl_7)" d="M108.19,8.42v9.44c0,1.21-2.021,2.19-4.521,2.19c-2.49,0-4.52-0.98-4.52-2.19h-0.04V8.42H108.19z"
+			/>
+	<rect x="1" y="17.863" fill="url(#cyl_8)"  />
+	<rect x="13.897" y="11.087" fill="url(#cyl_9)"  />
+	<rect x="64.448" y="11.087" fill="url(#cyl_10)"  />
+	<rect x="18.38" y="13.845" fill="url(#cyl_11)"  />
+	<rect x="18.38" y="37.066" fill="url(#cyl_12)"  />
+	<rect x="95.807" y="4.604" fill="url(#cyl_13)"  />
+</g>
+
+<g id="ribs" opacity="0.3">
+	<polyline points="185.624,45.54 147.309,45.54 144.507,47.188 145.072,47.188 185.624,47.188 	"/>
+	<polyline points="185.624,40.868 147.309,40.868 144.507,42.52 145.072,42.52 185.624,42.52 	"/>
+	<polyline points="185.624,33.884 147.309,33.884 144.507,35.53 145.072,35.53 185.624,35.53 	"/>
+	<polyline points="185.624,25.637 147.309,25.637 144.507,27.286 145.072,27.286 185.624,27.286 	"/>
+	<polyline points="185.624,17.392 147.309,17.392 144.507,19.041 145.072,19.041 185.624,19.041 	"/>
+	<polyline points="185.624,10.401 147.309,10.401 144.507,12.052 145.072,12.052 185.624,12.052 	"/>
+	<polyline points="185.624,6.509 147.309,6.509 144.507,8.159 145.072,8.159 185.624,8.159 	"/>
+</g>
+
+<use xlink:href="#boundary" class="color"/>
+
+<g class="stroke">
+	<use xlink:href="#boundary"/>
+	<path d="M185.62,48.36c0,1.35,0,2.159,0,2.26
+		c1.51,0,3.01,0,4.51,0c6,0,10.87-4.83,10.87-10.78c0-8.689,0-17.37,0-26.04c0-5.97-4.87-10.78-10.87-10.78c-1.5,0-3,0-4.51,0
+		c0,0.09,0,0.9,0,2.24h-42.23l-6.71,6.08V13h-6.71V1H116.8v16.86h-8.609V8.42h3.31V4.6H95.81v3.82h3.3v9.44H68.93v-6.77h-4.48v2.76
+		H18.38v-2.76H13.9v6.77H1v18.15h12.9v6.78h4.48v-2.76h46.07v2.76h4.48v-6.78h47.87v16.86h13.17V40.62h6.71v1.68l6.71,6.061H185.62z
+		"/>
+	<rect x="18.38" y="16.81"  />
+	<rect x="18.38" y="31.64"  />
+	<rect x="118.82" y="31.64"  />
+	<rect x="118.82" y="3.01"  />
+	<line x1="185.62" y1="5.26" x2="185.62" y2="48.34"/>
+	<line x1="136.68" y1="13" x2="136.68" y2="40.6"/>
+	<line x1="129.97" y1="13" x2="129.97" y2="40.6"/>
+	<line x1="116.8" y1="17.86" x2="116.8" y2="36.01"/>
+	<line x1="68.93" y1="17.86" x2="68.93" y2="36.01"/>
+	<line x1="64.45" y1="13.85" x2="64.45" y2="16.81"/>
+	<line x1="64.45" y1="22.23" x2="64.45" y2="31.64"/>
+	<line x1="64.45" y1="37.07" x2="64.45" y2="40.03"/>
+	<line x1="99.11" y1="8.42" x2="108.19" y2="8.42"/>
+	<line x1="13.9" y1="17.86" x2="13.9" y2="36.01"/>
+	<line x1="18.38" y1="13.85" x2="18.38" y2="16.81"/>
+	<line x1="18.38" y1="22.23" x2="18.38" y2="31.64"/>
+	<line x1="18.38" y1="37.07" x2="18.38" y2="40.03"/>
+	<line x1="118.82" y1="22.23" x2="118.82" y2="31.64"/>
+	<line x1="127.95" y1="22.23" x2="127.95" y2="31.64"/>
+	<path d="M108.19,17.86c0,1.21-2.021,2.19-4.521,2.19c-2.49,0-4.52-0.98-4.52-2.19"/>
+</g>
+</svg>

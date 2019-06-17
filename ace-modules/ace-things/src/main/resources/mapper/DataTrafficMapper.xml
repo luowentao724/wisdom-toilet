@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.github.wxiaoqi.security.things.mapper.DataTrafficMapper">
+
+	<!-- 可根据自己的需求，是否要使用 -->
+    <resultMap type="com.github.wxiaoqi.security.things.entity.DataTraffic" id="dataTrafficMap">
+        <result property="id" column="id"/>
+        <result property="dtuId" column="dtu_id"/>
+        <result property="openTime" column="open_time"/>
+        <result property="closeTime" column="close_time"/>
+        <result property="readBytes" column="read_bytes"/>
+        <result property="writtenBytes" column="written_bytes"/>
+        <result property="readMessages" column="read_messages"/>
+        <result property="writtenMessages" column="written_messages"/>
+    </resultMap>
+
+</mapper>

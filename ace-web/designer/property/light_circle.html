@@ -1,0 +1,288 @@
+
+<form id="lightCircleForm">
+    <input type="hidden" name="ele.id"/>
+    <input type="hidden" name="ele.signalName"/>
+    <table class="property-table" style="width:100%;height:auto;"
+         cellpadding="0" cellspacing="0" border="1">
+        <thead>
+            <tr>
+                <th width="100" align="right">名称</th>
+                <th width="130">值</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td align="right">元件类型:</td>
+                <td><input type="text" class="easyui-textbox" value="圆形指示灯" disabled="disabled"></td>
+            </tr>
+            <tr class="property-type">
+                <td>
+                    <span class="datagrid-row-collapse">&nbsp;</span>
+                    <span>位置</span>
+                </td>
+                <td></td>
+            </tr>
+            <tr>
+                <td align="right">X轴坐标:</td>
+                <td><input id="eleX" type="text" class="easyui-numberspinner" data-options="min:0" required="required"/></td>
+            </tr>
+            <tr>
+                <td align="right">Y轴坐标:</td>
+                <td><input id="eleY" type="text" class="easyui-numberspinner" data-options="min:0" required="required"/></td>
+            </tr>
+            <tr>
+                <td align="right">半径:</td>
+                <td><input id="eleWidth" type="text" class="easyui-numberspinner" data-options="min:0" required="required"/></td>
+            </tr>
+            <tr>
+                <td align="right">位置锁定:</td>
+                <td><input id="elePosLock" style="height: 22px; width: 104px;"/></td>
+            </tr>
+            <tr class="property-type">
+                <td>
+                    <span class="datagrid-row-collapse">&nbsp;</span>
+                    <span>变量</span>
+                </td>
+                <td></td>
+            </tr>
+            <tr>
+                <td align="right">绑定:</td>
+                <td>
+                  <a href="javascript:void(0);" id="btnDataSelect" class="btn-defult">
+                     <span class="icon icon-db">&nbsp;</span>选择
+                  </a>
+                </td>
+            </tr>
+            <tr>
+                <td align="right">数据名称:</td>
+                <td>
+                    <input id="eleSignalName" type="text" class="disabled-input" disabled="disabled">
+                </td>
+            </tr>
+            <tr>
+                <td align="right">判断条件:</td>
+                <td>
+                    <div class="formula-group">
+                      <select id="eleContentSelect">
+                        <option value="!=">≠</option>
+                        <option value="==">=</option>
+                        <option value="&gt;">&gt;</option>
+                        <option value="&lt;">&lt;</option>
+                        <option value="&gt;=">&gt;=</option>
+                        <option value="&lt;=">&lt;=</option>
+                      </select>
+                      <input id="eleContentInput" type="number">
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td align="right">为假时颜色:</td>
+                <td><input type="text" id="eleFalseAlter" class="input_cxcolor" readonly/></td>
+            </tr>
+            <tr>
+                <td align="right">为真时颜色:</td>
+                <td><input type="text" id="eleTrueAlter" class="input_cxcolor" readonly/></td>
+            </tr>
+            <tr class="property-type">
+                <td>
+                    <span class="datagrid-row-collapse">&nbsp;</span>
+                    <span>样式</span>
+                </td>
+                <td></td>
+            </tr>
+            <tr>
+                <td align="right">边线颜色:</td>
+                <td><input type="text" id="eleStroke" class="input_cxcolor" readonly/></td>
+            </tr>
+            <tr>
+                <td align="right">线型:</td>
+                <td>
+                    <input type="text" id="eleStrokeDasharray"/>
+                    <ul id="dasharrayOption" class="line-group">
+                        <li value="0"><div class="line line-option-1">&nbsp;</div></li>
+                        <li value="3,3"><div class="line line-option-7">&nbsp;</div></li>
+                        <li value="8,8"><div class="line line-option-8">&nbsp;</div></li>
+                        <li value="16,8,3,3,3,8"><div class="line line-option-9">&nbsp;</div></li>
+                    </ul>
+                </td>
+            </tr>
+            <tr>
+                <td align="right">粗细:</td>
+                <td>
+                    <input id="eleStrokeWidth" type="text" />
+                    <ul id="widthOption" class="line-group">
+                        <li value="0"><div class="line-option-0">隐藏边线</div></li>
+                        <li value="1"><div class="line line-option-1">&nbsp;</div></li>
+                        <li value="2"><div class="line line-option-2">&nbsp;</div></li>
+                        <li value="3"><div class="line line-option-3">&nbsp;</div></li>
+                        <li value="4"><div class="line line-option-4">&nbsp;</div></li>
+                        <li value="6"><div class="line line-option-5">&nbsp;</div></li>
+                        <li value="8"><div class="line line-option-6">&nbsp;</div></li>
+                    </ul>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    </form>
+    <script type="text/javascript">
+    $(function(){
+        $.parser.parse('#lightCircleForm');
+        //初始化线型、线宽下拉列表。
+        var setdasharray = function(value){
+            d3.select("svg > g.active > circle.light-circle")
+            .style("stroke-dasharray",function(d){
+                if(d.strokeDasharray!=value){
+                    savePropertyUndo();
+                }
+                d.strokeDasharray=value;
+                return d.strokeDasharray;
+            });
+        }
+        var setwidth = function(value){
+            d3.select("svg > g.active > circle.light-circle")
+            .style("stroke-width",function(d){
+                if(d.strokeWidth!=value){
+                    savePropertyUndo();
+                }
+                d.strokeWidth=value;
+                return d.strokeWidth;
+            });
+        }
+        initStrokeSelect(setdasharray,setwidth);
+    
+        //位置
+        $("#eleX").parent().find("input.textbox-text").change(function(){
+            var d = d3.select("svg > g.active").data()[0];
+            if(d.id== $("#lightCircleForm input[name='ele.id']").val()){
+                var value = $(this).val();
+                if(value=='' || value<0){
+                    value = 0;
+                }
+                //保存撤销信息
+                if(d.x!=parseInt(value)){
+                    saveMoveUndo();
+                }
+                d.x=parseInt(value);
+                d3.select("svg > g.active > circle.light-circle").attr("cx",d.x);
+                d3.select("svg > g.active > text.light-circle").attr("x",d.x);
+                moveCirclePoint(d3.select("svg > g.active"));
+            }
+        });
+        $("#eleY").parent().find("input.textbox-text").change(function(){
+            var d = d3.select("svg > g.active").data()[0];
+            if(d.id== $("#lightCircleForm input[name='ele.id']").val()){
+                var value = $(this).val();
+                if(value=='' || value<0){
+                    value = 0;
+                }
+                //保存撤销信息
+                if(d.y!=parseInt(value)){
+                    saveMoveUndo();
+                }
+                d.y=parseInt(value);
+                d3.select("svg > g.active > circle.light-circle").attr("cy",d.y);
+                d3.select("svg > g.active > text.light-circle").attr("y",d.y);
+                moveCirclePoint(d3.select("svg > g.active"));
+            }
+        });
+        $("#eleWidth").parent().find("input.textbox-text").change(function(){
+            var d = d3.select("svg > g.active").data()[0];
+            if(d.id== $("#lightCircleForm input[name='ele.id']").val()){
+                var value = $(this).val();
+                if(value=='' || value<0){
+                    value = 0;
+                }
+                //保存撤销信息
+                if(d.width!=parseInt(value)){
+                    saveMoveUndo();
+                }
+                d.width=parseInt(value);
+                d3.select("svg > g.active > circle.light-circle").attr("r",d.width);
+                moveCirclePoint(d3.select("svg > g.active"));
+            }
+        });
+        $("#elePosLock").switchbutton({
+            checked: false,
+            onText:"开启",
+            offText:"关闭",
+            onChange: function(checked){
+                var d = d3.select("svg > g.active").data()[0];
+                d.posLock = checked;
+                if(checked){
+                    numberDisable();
+                    d3.select("svg > g.active").classed("lock",true);
+                }else{
+                    numberEnable();
+                    d3.select("svg > g.active").classed("lock",false);
+                }
+            }
+        });
+        //绑定变量
+        $("#btnDataSelect").click(function(){
+            querySignal(1,true);
+            $('#signalListDialog').dialog("open");
+        });
+    
+        //判断条件-关系运算符号
+        $("#eleContentSelect").change(function(){
+            var d = d3.select("svg > g.active").data()[0];
+            var formula = "X"+$("#eleContentSelect").val()+$("#eleContentInput").val();
+            if(d.content!=formula){
+                savePropertyUndo();
+            }
+            d.content=formula;
+        });
+        //判断条件-值
+        $("#eleContentInput").change(function(){
+            var d = d3.select("svg > g.active").data()[0];
+            var formula = "X"+$("#eleContentSelect").val()+$("#eleContentInput").val();
+            if(d.id== $("#lightCircleForm input[name='ele.id']").val()){
+                if(d.content!=formula){
+                    savePropertyUndo();
+                }
+                d.content=formula;
+            }
+        });
+        
+        $("#eleTrueAlter").change(function(){
+            d3.select("svg > g.active > circle.light-circle")
+            .style("fill",function(d){
+                if(d.trueAlter!=$("#eleTrueAlter").val()){
+                    savePropertyUndo();
+                }
+                d.trueAlter=$("#eleTrueAlter").val();
+                return d.trueAlter;
+            });
+        });
+        
+        $("#eleFalseAlter").change(function(){
+            d3.select("svg > g.active > text.light-circle")
+            .style("fill",function(d){
+                if(d.falseAlter!=$("#eleFalseAlter").val()){
+                    savePropertyUndo();
+                }
+                d.falseAlter=$("#eleFalseAlter").val();
+                return d.falseAlter;
+            });
+        });
+    
+        //边线颜色
+        $("#eleStroke").change(function(){
+            d3.select("svg > g.active > circle.light-circle")
+            .style("stroke",function(d){
+                if(d.stroke!=$("#eleStroke").val()){
+                    savePropertyUndo();
+                }
+                d.stroke=$("#eleStroke").val();
+                return d.stroke;
+            });
+        });
+        
+        //数值输入框右侧加1、减1功能触发对应的修改事件。
+        $("#eleX,#eleY,#eleWidth").parent().find("span.textbox-addon").click(function(){
+            $(this).parent().find("input.textbox-text").change();
+        });
+        //触发修改以后关闭页面提示“未保存”
+        $("#lightCircleForm input,#lightCircleForm select").change(bindBeforeunload);
+    });
+    </script>

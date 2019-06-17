@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.github.wxiaoqi.security.things.mapper.BumpVfRuninfoHistoryMapper">
+
+	<!-- 可根据自己的需求，是否要使用 -->
+    <resultMap type="com.github.wxiaoqi.security.things.entity.BumpVfRuninfoHistory" id="bumpVfRuninfoHistoryMap">
+        <result property="id" column="id"/>
+        <result property="dtuId" column="dtu_id"/>
+        <result property="vfDeviceCode" column="vf_device_code"/>
+        <result property="runSpeed" column="run_speed"/>
+        <result property="settingSpeed" column="setting_speed"/>
+        <result property="busVoltage" column="bus_voltage"/>
+        <result property="outputVoltage" column="output_voltage"/>
+        <result property="runRev" column="run_rev"/>
+        <result property="outputPower" column="output_power"/>
+        <result property="outputElectric" column="output_electric"/>
+        <result property="outputTorque" column="output_torque"/>
+        <result property="vfTemperature" column="vf_temperature"/>
+        <result property="vfHumidity" column="vf_humidity"/>
+        <result property="todayRuntime" column="today_runtime"/>
+        <result property="accuRuntime" column="accu_runtime"/>
+        <result property="gatherTime" column="gather_time"/>
+        <result property="createTime" column="create_time"/>
+    </resultMap>
+
+
+    <!-- 查询变频器历史曲线 -->
+    <select id="searchBumpVfRuninfoHistoryCurve" resultMap="bumpVfRuninfoHistoryMap" parameterType="map">
+        SELECT
+        bus_voltage,
+        output_voltage,
+        output_power,
+        vf_temperature,
+        vf_humidity,
+        output_electric,
+        gather_time
+        FROM
+        bump_vf_runinfo_history
+        WHERE 1 = 1
+        <!-- 变频器id -->
+        <if test="cm.id != null and cm.id != ''">
+            AND id = #{cm.id}
+        </if>
+        <!-- 子站id -->
+        <if test="cm.vfDeviceCode != null and cm.vfDeviceCode != ''">
+            AND vf_device_code = #{cm.vfDeviceCode}
+        </if>
+        <if test="cm.dtuId != null and cm.dtuId != ''">
+            AND dtu_id = #{cm.dtuId}
+        </if>
+        <!-- 采集时间 -->
+        <if test="cm.gatherTime != null and cm.gatherTime != ''">
+            AND DATE_FORMAT(gather_time,'%Y-%m-%d') <![CDATA[ = ]]> DATE_FORMAT(#{cm.gatherTime},'%Y-%m-%d')
+        </if>
+        ORDER BY gather_time ASC
+    </select>
+
+</mapper>

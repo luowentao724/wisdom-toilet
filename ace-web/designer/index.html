@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+  <head>
+	<title>真创组态编辑器</title>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="renderer" content="webkit">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href="common/css/bootstrap.min.css" rel="stylesheet">
+    <link href="common/css/font-awesome.min.css" rel="stylesheet">
+    <link href="easyui/themes/bootstrap/easyui.css" rel="stylesheet" type="text/css" />
+	<link href="easyui/themes/icon.css" rel="stylesheet" type="text/css" />
+    <link href="common/css/jquery.cxcolor.css" rel="stylesheet" type="text/css" />
+    <link href="common/css/designer.css?v=3.11.2" rel="stylesheet" type="text/css" />    
+    <script src="common/js/jquery-1.11.1.min.js"></script>
+    <script src="d3/d3.v3.js"></script>
+    <script src="easyui/jquery.easyui.min.js"></script>
+    <script src="easyui/easyui-lang-zh_CN.js"></script>
+    <script src="common/js/jquery.cxcolor.js"></script>
+    <script src="common/js/bootstrap.min.js"></script>
+    <script src="common/js/bootstrap-paginator.js"></script>
+	<script src="common/js/baidu-count.js"></script>
+	<script type="text/javascript">
+		var initCDN = '';
+	</script>
+  </head>
+  <body id="designerLayout" class="easyui-layout">
+  	<div data-options="region:'north',border:false" class="top-bg" style="height:40px;">
+  	  <div class="top-body clearfix">
+  	  	<div class="top-title">
+  	  		<span id="ruleName"></span>
+  	  	</div>
+  	  	<div class="top-menu clearfix">
+  	  	  <ul class="clearfix">
+  	  		<li><a href="javascript:void(0);" id="btnEleSelect"><span class="fa fa-mouse-pointer">&nbsp;</span>选择</a></li>
+  	  		<li><a href="javascript:void(0);" id="btnEleSave"><span class="fa fa-save">&nbsp;</span>保存</a></li>
+	       	<li><a href="javascript:void(0);" id="btnEleRemove"><span class="fa fa-trash">&nbsp;</span>删除</a></li>
+	       	<li><a href="javascript:void(0);" id="btnEleCopy"><span class="fa fa-copy">&nbsp;</span>复制</a></li>
+	       	<li><a href="javascript:void(0);" id="btnElePaste"><span class="fa fa-paste">&nbsp;</span>粘贴</a></li>
+	       	<li><a href="javascript:void(0);" id="btnEleImport"><span class="fa fa-upload">&nbsp;</span>导入</a></li>
+	       	<li><a href="javascript:void(0);" id="btnEleExport"><span class="fa fa-download">&nbsp;</span>导出</a></li>
+	       	<li class="dropdown">
+	       		<a href="javascript:void(0);" id="btnAlignMenu"  class="dropdown-toggle" data-toggle="dropdown">
+		       		<span class="menu-top-left">&nbsp;</span> 对齐<span class="caret"></span>
+		       	</a>
+		       	<ul class="dropdown-menu top-dropdown-menu" aria-labelledby="btnAlignMenu">
+		       		<div class="log-arrow-up"></div>
+				    <li><a href="javascript:void(0);" id="btnEleAlignLeft"><span class="menu-top-left">&nbsp;</span> 左对齐</a></li>
+				    <li><a href="javascript:void(0);" id="btnEleAlignRight"><span class="menu-top-right">&nbsp;</span> 右对齐</a></li>
+				    <li><a href="javascript:void(0);" id="btnEleAlignUp"><span class="menu-top-up">&nbsp;</span> 上对齐</a></li>
+				    <li><a href="javascript:void(0);" id="btnEleAlignDown"><span class="menu-top-down">&nbsp;</span> 下对齐</a></li>
+				    <li><a href="javascript:void(0);" id="btnEleAlignHCenter"><span class="menu-top-hcenter">&nbsp;</span>水平居中</a></li>
+				    <li><a href="javascript:void(0);" id="btnEleAlignVCenter"><span class="menu-top-vcenter">&nbsp;</span>垂直居中</a></li>
+				</ul>
+	       	</li>
+	       	<li class="dropdown">
+	       		<a href="javascript:void(0);" id="btnLayerMenu"  class="dropdown-toggle" data-toggle="dropdown">
+	       			<span class="menu-move-up">&nbsp;</span> 移层<span class="caret"></span>
+	       		</a>
+	       		<ul class="dropdown-menu top-dropdown-menu" aria-labelledby="btnLayerMenu">
+	       			<div class="log-arrow-up"></div>
+				    <li><a href="javascript:void(0);" id="btnEleUp"><span class="menu-move-up">&nbsp;</span> 置于顶层</a></li>
+				    <li><a href="javascript:void(0);" id="btnEleDown"><span class="menu-move-down">&nbsp;</span> 置于底层</a></li>
+				</ul>
+	       	</li>
+	       	<li><a href="javascript:void(0);" id="btnEleUndo" class="disabled"><span class="fa fa-reply">&nbsp;</span>撤销</a></li>
+	       	<li><a href="javascript:void(0);" id="btnEleRedo" class="disabled"><span class="fa fa-share">&nbsp;</span>恢复</a></li>
+	       	<li><a href="javascript:void(0);" id="btnConProperty"><span class="fa fa-wrench">&nbsp;</span>页面属性</a></li>
+	  	  </ul>
+	  	</div>
+  	  </div>
+  	  <input type="hidden" id="ruleId" value="3933"/>
+  	  <input type="hidden" id="conId" value="4995"/>
+  	  <input type="hidden" id="activePanel" />
+  	</div>
+    <div id="leftmenu" data-options="region:'west',split:true" title="工具栏" style="width:200px;">
+      <div class="easyui-tabs" style="width:100%;height:600px;" data-options="selected:1">
+	      <div title="基本形状" class="left-menu" iconcls="fa fa-bookmark-o fa-lg"  data-options="collapsible:true">
+	       	<ul>
+	       		<li>
+	       			<div id="btnShapeLine">
+	       				<span class="icon-shape icon-shape-line">&nbsp;</span>
+	       				<span class="nav">直线</span>
+	       			</div>
+	       		</li>
+	       		<li>
+	       			<div id="btnShapeRect">
+	       				<span class="icon-shape icon-shape-rect">&nbsp;</span>
+	       				<span class="nav">矩形</span>
+	       			</div>
+	       		</li>
+	       		<li>
+	       			<div id="btnShapeCircle">
+	       				<span class="icon-shape icon-shape-circle">&nbsp;</span>
+	       				<span class="nav">圆形</span>
+	       			</div>
+	       		</li>
+	       		<li>
+	       			<div id="btnShapeEllipse">
+	       				<span class="icon-shape icon-shape-ellipse">&nbsp;</span>
+	       				<span class="nav">椭圆</span>
+	       			</div>
+	       		</li>
+	       		<li>
+	       			<div id="btnShapeTriangle">
+	       				<span class="icon-shape icon-shape-triangle">&nbsp;</span>
+	       				<span class="nav">三角</span>
+	       			</div>
+	       		</li>
+	       		<li>
+	       			<div id="btnShapeText">
+	       				<span class="icon-shape icon-shape-text">&nbsp;</span>
+	       				<span class="nav">文本</span>
+	       			</div>
+	       		</li>
+	       		<li>
+	       			<div id="btnShapeImage">
+	        			<span class="icon-shape icon-shape-image">&nbsp;</span>
+	        			<span class="nav">图片</span>
+	       			</div>
+	       		</li>
+	       	</ul>
+	      </div>
+	      <div title="常用控件" class="left-menu"  iconcls="fa fa-dashboard fa-lg"  data-options="collapsible:true">
+	       	<ul>
+	       		<li>
+	       			<div id="btnDataText">
+	        			<span class="icon-shape icon-shape-data-text">&nbsp;</span>
+	        			<span class="nav">数显框</span>
+	       			</div>
+	       		</li>
+	       		<li>
+	       			<div id="btnLightRect">
+	        			<span class="icon-shape icon-shape-data-rect">&nbsp;</span>
+	        			<span class="nav">矩形指示灯</span>
+	       			</div>
+	       		</li>
+	       		<li>
+	       			<div id="btnLightCircle">
+	        			<span class="icon-shape icon-shape-data-circle">&nbsp;</span>
+	        			<span class="nav">圆形指示灯</span>
+	       			</div>
+	       		</li>
+	       		<li>
+	       			<div id="btnLightImage">
+	        			<span class="icon icon-light">&nbsp;</span>
+	        			<span class="nav">图片指示灯</span>
+	       			</div>
+	       		</li>
+	       		<li>
+	       			<div id="btnFillRect">
+	        			<span class="icon icon-fillrect">&nbsp;</span>
+	        			<span class="nav">填充控件</span>
+	       			</div>
+	       		</li>
+	       		<li>
+	       			<div id="btnDashboard">
+	        			<span class="icon icon-dashboard">&nbsp;</span>
+	        			<span class="nav">仪表盘</span>
+	       			</div>
+	       		</li>
+	       		<li>
+	       			<div id="btnLineChart">
+	        			<span class="icon icon-linechart">&nbsp;</span>
+	        			<span class="nav">曲线图</span>
+	       			</div>
+	       		</li>
+	       		<li>
+	       			<div id="btnScrollBar">
+	        			<span class="icon icon-scrollbar">&nbsp;</span>
+	        			<span class="nav">流动条</span>
+	       			</div>
+	       		</li>
+	       		<li>
+	       			<div id="btnControlText">
+	        			<span class="icon icon-switch">&nbsp;</span>
+	        			<span class="nav">控制按钮</span>
+	       			</div>
+	       		</li>
+	       		<li>
+	       			<div id="btnVideo">
+	        			<span class="icon icon-video">&nbsp;</span>
+	        			<span class="nav">视频窗口</span>
+	       			</div>
+	       		</li>
+	       		<li>
+	       			<div id="btnShapeLink">
+	        			<span class="icon icon-link">&nbsp;</span>
+	        			<span class="nav">超链接</span>
+	       			</div>
+	       		</li>
+	       		<li>
+	       			<div id="btnOpenPage">
+	        			<span class="icon icon-open-page">&nbsp;</span>
+	        			<span class="nav">页面跳转</span>
+	       			</div>
+	       		</li>
+	       		<li>
+	       			<div id="btnTimer">
+	        			<span class="icon icon-timer">&nbsp;</span>
+	        			<span class="nav">系统时间</span>
+	       			</div>
+	       		</li>
+	       	</ul>
+	      </div>
+      </div>
+    </div>
+    <div id="propertyPanel" data-options="region:'east',split:true"  title="属性栏" style="width:250px;overflow-x:hidden;">
+    </div>
+    <div id="myCanvas" data-options="region:'center'">
+      <div class="designer-dg"><svg class="designer-container"></svg></div>
+    </div>
+    <div id="rightmenu" class="easyui-menu" style="width:120px;">
+	    <div id="menuEleCopy" data-options="iconCls:'icon icon-ele-copy'">复制</div>
+	    <div id="menuEleCopyToPage" data-options="iconCls:'icon icon-ele-copy'">复制到</div>
+	    <div id="menuElePaste" data-options="iconCls:'icon icon-ele-paste'">粘贴</div>
+	    <div id="menuEleRemove" data-options="iconCls:'icon icon-ele-remove'">删除</div>
+	    <div class="menu-sep"></div>
+	    <div id="menuEleUp" data-options="iconCls:'icon icon-up-layer'">置于顶层</div>
+	    <div id="menuEleDown" data-options="iconCls:'icon icon-down-layer'">置于底层</div>
+	    <div class="menu-sep"></div>
+	    <div id="menuEleAlignLeft" data-options="iconCls:'icon icon-align-left'">左对齐</div>
+	    <div id="menuEleAlignRight" data-options="iconCls:'icon icon-align-right'">右对齐</div>
+	    <div id="menuEleAlignTop" data-options="iconCls:'icon icon-align-top'">上对齐</div>
+	    <div id="menuEleAlignBottom" data-options="iconCls:'icon icon-align-bottom'">下对齐</div>
+	    <div id="menuEleAlignHCenter" data-options="iconCls:'icon icon-align-hcenter'">水平居中</div>
+	    <div id="menuEleAlignVCenter" data-options="iconCls:'icon icon-align-vcenter'">垂直居中</div>
+	    <div class="menu-sep"></div>
+	    <div id="menuEleSave" data-options="iconCls:'icon icon-ele-save'">保存</div>
+	</div>
+	<div id="importEleDialog" class="dialog_bg dialog-import">
+		<input id="jsonFile" type="file" accept=".edjs"/>
+	</div>
+	<div id="copyToPageDialog" class="dialog_bg">
+		<table border="0" cellpadding="0" cellspacing="0" class="m_table">
+			<tr>
+				<td width="30%" nowrap class="m_tabtit">
+					<span>选择页面：</span>
+				</td>
+				<td width="60%" nowrap>
+					<select id="selectCon" class="defult-select">
+					</select>
+				</td>
+			</tr>
+		</table>
+	</div>
+    
+<div id="containerDialog" class="dialog_bg">
+<form id="containerForm">
+	<table border="0" cellpadding="0" cellspacing="0" class="m_table">
+		<tbody>
+			<tr>
+				<td width="30%" nowrap class="m_tabtit">页面标题:</td>
+				<td width="60%" nowrap>
+					<input type="text" name="con.conTitle"/>
+				</td>
+			</tr>
+			<tr>
+				<td width="30%" nowrap class="m_tabtit">宽×高:</td>
+				<td width="60%" nowrap>
+					<select id="commonWH" class="defult-select">
+						<option value="800*600">800×600</option>
+						<option value="960*600">960×600</option>
+						<option value="1024*600">1024×600</option>
+						<option value="1024*768">1024×768</option>
+						<option value="1280*768">1280×768</option>
+						<option value="1360*768">1360×768</option>
+						<option value="1280*1024">1280×1024</option>
+						<option value="1920*1080">1920×1080</option>
+						<option value="">自定义</option>
+					</select>
+				</td>
+			</tr>
+			<tr>
+				<td width="30%" nowrap class="m_tabtit">宽:</td>
+				<td width="60%" nowrap>
+					<input type="text" name="con.width" readonly="readonly"/>
+				</td>
+			</tr>
+			<tr>
+				<td width="30%" nowrap class="m_tabtit">高:</td>
+				<td>
+					<input type="text" name="con.height" readonly="readonly"/>
+				</td>
+			</tr>
+			<tr>
+				<td width="30%" nowrap class="m_tabtit">背景色:</td>
+				<td>
+					<input type="text" id="conBgColor" name="con.bgColor" class="input_cxcolor"  readonly="readonly"/>
+				</td>
+			</tr>
+			<tr>
+				<td width="30%" nowrap class="m_tabtit">背景图:</td>
+				<td>
+					<input type="file" name="con.bgImage" class="con-bgimage" accept=".jpg,.png"/>
+					<input type="checkbox" id="clearImg"><label for="clearImg">清除</label>
+				</td>
+			</tr>
+			<tr>
+				<td width="30%" nowrap class="m_tabtit">网格显隐:</td>
+				<td>
+					 <label for="bgShow1">隐藏网格</label><input type="radio" name="con.bgShow" id="bgShow1" value="true">
+					 <label for="bgShow0">显示网格</label><input type="radio" name="con.bgShow" id="bgShow0" value="false">
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</form>
+</div>
+    
+
+<input type="hidden" id="roleType" value="01"/>
+<div id="databaseDialog" class="database">
+	<div class="database-menu">
+    	<ul id="dbMenu" class="easyui-tree"></ul>
+    </div>
+    <div class="database-wapper">
+    	<div id="imgGroup" class="img-group"></div>
+    </div>
+    <div class="clear"></div>
+</div>
+<!-- <div id="dlgToolbar" style="padding:2px 0">
+    <table cellpadding="0" cellspacing="0" style="width:100%">
+        <tr>
+            <td style="padding-left:2px">
+                <a id="btnUploadImage" href="javascript:void(0)" class="easyui-linkbutton" data-options="iconCls:'icon-add',plain:true">上传</a>
+                <a id="btnRemoveImage" href="javascript:void(0)" class="easyui-linkbutton" data-options="iconCls:'icon-remove',plain:true">删除</a>
+                
+            </td>
+        </tr>
+    </table>
+</div> -->
+<div id="dlgButtons">
+    <a href="javascript:void(0)" class="easyui-linkbutton" data-options="iconCls:'icon-ok'" onclick="setImage()">确定</a>
+    <a href="javascript:void(0)" class="easyui-linkbutton" data-options="iconCls:'icon-cancel'" onclick="javascript:$('#databaseDialog').dialog('close');">取消</a>
+</div>
+<div id="addEleDialog" class="dialog_bg">
+	<table border="0" cellpadding="0" cellspacing="0" class="m_table">
+		<tr>
+			<td width="30%" nowrap class="m_tabtit">
+				<span>图片：</span>
+			</td>
+			<td width="60%" nowrap>
+				<input name="ele.href" type="file" accept="image/*"/>
+			</td>
+		</tr>
+	</table>
+</div>
+<div id="uploadImagesDialog" class="dialog_bg" style="display: none;">
+	<table border="0" cellpadding="0" cellspacing="0" class="m_table">
+		<tr>
+			<td width="30%" nowrap class="m_tabtit">
+				<span>图片：</span>
+			</td>
+			<td width="60%" nowrap>
+				<input id="image" type="file" multiple accept="image/*"/>
+			</td>
+		</tr>
+	</table>
+</div>
+    
+<div id="signalListDialog" class="list-wrap">
+    <div class="form-horizontal list-search">
+		<div class="form-group">
+			<div class="col-sm-4">
+				<div class="input-group">
+					<input type="text" id="querySignalParam" class="form-control" placeholder="数据名称">
+			       	<a href="javascript:void(0)" id="removeSignalQuery" class="input-group-addon"><span class="glyphicon glyphicon-remove"></span></a>
+		      	</div>
+			</div>
+	      	<div class="col-sm-1">
+	      		<button id="submitSignalSearch" class="btn btn-default">
+	      			<span class="glyphicon glyphicon-search"></span>
+	      			搜索
+	      		</button>
+	      	</div>
+	    </div>
+    </div>
+	<table class="table table-condensed table-hover list-border">
+	  <thead class="list-head">
+	  		<tr>
+	  			<th width="5%">#</th>
+	   			<th width="25%">名称</th>
+    			<th width="5%">从站</th>
+    			<th width="15%">功能码</th>
+    			<th width="10%">寄存器地址</th>
+    			<th width="12%">数据类型</th>
+    			<th width="13%">单位</th>
+	  		</tr>
+	  </thead>
+	  <tbody class="signal_load_list">
+	  		
+	  </tbody>
+	</table>
+	<div class="list-footer clearfix">
+		<div class="pull-right">
+			<ul id="signalPageRight"></ul>
+		</div>
+		<div class="pull-right total">
+			<span>共有<span id="signalTotalCount">0</span>条，每页显示：10条</span>
+		</div>
+	</div>
+</div>
+<div id="commandListDialog" class="list-wrap">
+    <div class="form-horizontal list-search">
+		<div class="form-group">
+			<div class="col-sm-4">
+				<div class="input-group">
+					<input type="text" id="queryCommandParam" class="form-control" placeholder="数据名称">
+			       	<a href="javascript:void(0)" id="removeCommandQuery" class="input-group-addon"><span class="glyphicon glyphicon-remove"></span></a>
+		      	</div>
+			</div>
+	      	<div class="col-sm-1">
+	      		<button id="submitCommandSearch" class="btn btn-default">
+	      			<span class="glyphicon glyphicon-search"></span>
+	      			搜索
+	      		</button>
+	      	</div>
+	    </div>
+    </div>
+	<table class="table table-condensed table-hover list-border">
+	  <thead class="list-head">
+	  		<tr>
+	  			<th width="5%">#</th>
+	   			<th width="20%">名称</th>
+    			<th width="5%">从站</th>
+    			<th width="15%">命令类型</th>
+    			<th width="10%">寄存器地址</th>
+    			<th width="15%">数据类型</th>
+    			<th width="15%">单位</th>
+	  		</tr>
+	  </thead>
+	  <tbody class="command_load_list">
+	  		
+	  </tbody>
+	</table>
+	<div class="list-footer clearfix">
+		<div class="pull-right">
+			<ul id="commandPageRight"></ul>
+		</div>
+		<div class="pull-right total">
+			<span>共有<span id="commandTotalCount">0</span>条，每页显示：10条</span>
+		</div>
+	</div>
+</div>
+    <script src="min/designer.min.js?v=3.11.11"></script>
+    
+    </body>
+</html>

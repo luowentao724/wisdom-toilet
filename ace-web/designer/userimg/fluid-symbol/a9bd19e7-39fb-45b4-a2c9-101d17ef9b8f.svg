@@ -1,0 +1,46 @@
+ 
+<svg version="1.1" id="_x30_" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none"   xmlns:agg="http://www.example.com" x="0px" y="0px"
+	   viewBox="0 0 51.307 51.307" enable-background="new 0 0 51.307 51.307" xml:space="preserve">
+
+<agg:params>
+        <agg:param name="color" description="Color" type="C" cssAttributes="fill" classes="color"/>
+        <agg:param name="strokeColor" description="Stroke Color" type="C" cssAttributes="stroke" classes="color,stroked"/>
+</agg:params>
+
+<style type="text/css" >
+   <![CDATA[
+
+	.color,.stroked{
+		stroke-width:1;
+		stroke-linecap:round;
+		stroke-linejoin:round;
+		stroke: #000000;
+	}
+	
+	.color {
+		fill:   #A1BFE2;
+
+	}
+	
+	.stroked {
+		fill:none;
+	}
+
+      ]]>
+</style>
+
+<polygon class="color" points="4.48,15.426 4.48,38.298 45.654,30.652 45.654,15.426"/>
+
+<g class="stroked">
+	<line x1="9.062" y1="15.426" x2="9.062" y2="27.058"/>
+	<line x1="13.579" y1="18.954" x2="13.579" y2="30.652"/>
+	<line x1="18.226" y1="15.426" x2="18.226" y2="27.058"/>
+	<line x1="22.808" y1="18.954" x2="22.808" y2="30.652"/>
+	<line x1="27.325" y1="15.426" x2="27.325" y2="27.058"/>
+	<line x1="31.907" y1="18.954" x2="31.907" y2="30.652"/>
+	<line x1="36.555" y1="15.426" x2="36.555" y2="27.058"/>
+	<line x1="41.137" y1="18.954" x2="41.137" y2="30.652"/>
+	<line x1="45.654" y1="30.652" x2="4.48" y2="30.652"/>
+</g>
+
+</svg>

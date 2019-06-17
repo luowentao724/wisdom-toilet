@@ -1,0 +1,435 @@
+
+
+<form id="dataLineChartForm">
+    <input type="hidden" name="ele.id"/>
+    <input type="hidden" name="ele.signalName"/>
+    <table class="property-table" style="width:100%;height:auto;"
+         cellpadding="0" cellspacing="0" border="1">
+        <thead>
+            <tr>
+                <th width="100" align="right">名称</th>
+                <th width="130">值</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td align="right">元件类型:</td>
+                <td><input type="text" class="easyui-textbox" value="曲线图" disabled="disabled"></td>
+            </tr>
+            <tr class="property-type">
+                <td>
+                    <span class="datagrid-row-collapse">&nbsp;</span>
+                    <span>位置</span>
+                </td>
+                <td></td>
+            </tr>
+            <tr>
+                <td align="right">X轴坐标:</td>
+                <td><input id="eleX" type="text" class="easyui-numberspinner" data-options="min:0" required="required"/></td>
+            </tr>
+            <tr>
+                <td align="right">Y轴坐标:</td>
+                <td><input id="eleY" type="text" class="easyui-numberspinner" data-options="min:0" required="required"/></td>
+            </tr>
+            <tr>
+                <td align="right">宽:</td>
+                <td><input id="eleWidth" type="text" class="easyui-numberspinner" data-options="min:0" required="required"/></td>
+            </tr>
+            <tr>
+                <td align="right">高:</td>
+                <td><input id="eleHeight" type="text" class="easyui-numberspinner" data-options="min:0" required="required"/></td>
+            </tr>
+            <tr>
+                <td align="right">位置锁定:</td>
+                <td><input id="elePosLock" style="height: 22px; width: 104px;"/></td>
+            </tr>
+            <tr class="property-type">
+                <td>
+                    <span class="datagrid-row-collapse">&nbsp;</span>
+                    <span>坐标轴</span>
+                </td>
+                <td></td>
+            </tr>
+            <tr>
+                <td align="right">绑定变量:</td>
+                <td>
+                  <a href="javascript:void(0);" id="btnDataSelect" class="btn-defult">
+                     <span class="icon icon-db">&nbsp;</span>选择
+                  </a>
+                </td>
+            </tr>
+            <tr>
+                <td align="right">数据名称:</td>
+                <td>
+                    <input id="eleSignalName" type="text" class="disabled-input" disabled="disabled">
+                </td>
+            </tr>
+            <tr>
+                <td align="right">X轴长度:</td>
+                <td>
+                    <select id="eleRadius" class="defult-input">
+                        <option value="15">15分钟</option>
+                        <option value="30">30分钟</option>
+                        <option value="60">1小时</option>
+                        <option value="180">3小时</option>
+                        <option value="360">6小时</option>
+                        <option value="720">12小时</option>
+                        <option value="1440">24小时</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td align="right">Y轴量程:</td>
+                <td>
+                    <span>固定</span><input type="radio" name="ele.falseAlter" id="falseAlterfixed" value="fixed">
+                    <span>自适应</span><input type="radio" name="ele.falseAlter" id="falseAlterAuto" value="auto">
+                </td>
+            </tr>
+            <tr class="yaxis-fixed">
+                <td align="right">Y轴下限:</td>
+                <td>
+                    <input id="eleContentMinY" type="number" class="defult-input"/>
+                </td>
+            </tr>
+            <tr class="yaxis-fixed">
+                <td align="right">Y轴上限:</td>
+                <td>
+                    <input id="eleContentMaxY" type="number" class="defult-input"/>
+                </td>
+            </tr>
+            <tr>
+                <td align="right">曲线颜色:</td>
+                <td><input type="text" id="eleStroke" class="input_cxcolor" readonly/></td>
+            </tr>
+            <tr>
+                <td align="right">坐标颜色:</td>
+                <td><input type="text" id="eleTrueAlter" class="input_cxcolor" readonly/></td>
+            </tr>
+            <tr>
+                <td align="right">文本颜色:</td>
+                <td><input type="text" id="eleColor" class="input_cxcolor" readonly/></td>
+            </tr>
+            <tr>
+                <td align="right">字体:</td>
+                <td>
+                    <select id="eleFontFamily" class="defult-input">
+                        <option value="宋体">宋体</option>
+                        <option value="黑体">黑体</option>
+                        <option value="微软雅黑">微软雅黑</option>
+                        <option value="华文细黑">华文细黑</option>
+                        
+                        <option value="Helvetica, sans-serif">Helvetica</option>
+                        <option value="Arial, sans-serif">Arial</option>
+                        <option value="'Lucida Grande', sans-serif">Lucida Grande</option>
+                        <option value="Verdana,sans-serif">Verdana</option>
+                        <option value="Tahoma, sans-serif">Tahoma</option>
+                        <option value="'Trebuchet MS', sans-serif">Trebuchet MS</option>
+                        
+                        <option value="Georgia, serif">Georgia</option>
+                        <option value="Times, serif">Times</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td align="right">字体大小:</td>
+                <td>
+                    <select id="eleFontSize" class="defult-input">
+                        <option value="9px">9</option>
+                        <option value="10px">10</option>
+                        <option value="12px">12</option>
+                        <option value="14px">14</option>
+                        <option value="16px">16</option>
+                        <option value="18px">18</option>
+                        <option value="22px">22</option>
+                        <option value="26px">26</option>
+                        <option value="32px">32</option>
+                        <option value="48px">48</option>
+                    </select>
+                </td>
+            </tr>
+            <tr class="property-type">
+                <td>
+                    <span class="datagrid-row-collapse">&nbsp;</span>
+                    <span>背景</span>
+                </td>
+                <td></td>
+            </tr>
+            <tr>
+                <td align="right">显隐:</td>
+                <td>
+                     <span>显示</span><input type="radio" name="ele.showBg" id="showBg1" value="1">
+                     <span>隐藏</span><input type="radio" name="ele.showBg" id="showBg0" value="0">
+                </td>
+            </tr>
+            <tr>
+                <td align="right">背景颜色:</td>
+                <td><input type="text" id="eleFill" class="input_cxcolor" readonly/></td>
+            </tr>
+            <tr>
+                <td align="right">左侧内边距:</td>
+                <td><input id="elePadding"  type="text" class="easyui-numberspinner" data-options="min:0" required="required"/></td>
+            </tr>
+        </tbody>
+    </table>
+    </form>
+    <script type="text/javascript">
+    $(function(){
+        $.parser.parse('#dataLineChartForm');
+    
+        //位置
+        $("#eleX").parent().find("input.textbox-text").change(function(){
+            var d = d3.select("svg > g.active").data()[0];
+            if(d.id== $("#dataLineChartForm input[name='ele.id']").val()){
+                //设置值
+                var value = $(this).val();
+                if(value=='' || value<0){
+                    value = 0;
+                }
+                //保存撤销信息
+                if(d.x!=parseInt(value)){
+                    saveMoveUndo();
+                }
+                d.x=parseInt(value);
+                //修改元件位置
+                d3.select("svg > g.active > rect.line-chart").attr("x",d.x);
+                d3.select("svg > g.active > svg.line-chart").attr("x",d.x);
+                moveRectPoint(d3.select("svg > g.active"));
+            }
+        });
+        $("#eleY").parent().find("input.textbox-text").change(function(){
+            var d = d3.select("svg > g.active").data()[0];
+            if(d.id== $("#dataLineChartForm input[name='ele.id']").val()){
+                //设置值
+                var value = $(this).val();
+                if(value=='' || value<0){
+                    value = 0;
+                }
+                //保存撤销信息
+                if(d.y!=parseInt(value)){
+                    saveMoveUndo();
+                }
+                d.y=parseInt(value);
+                //修改元件位置
+                d3.select("svg > g.active > rect.line-chart").attr("y",d.y);
+                d3.select("svg > g.active > svg.line-chart").attr("y",d.y);
+                moveRectPoint(d3.select("svg > g.active"));
+            }
+        });
+        $("#eleWidth").parent().find("input.textbox-text").change(function(){
+            var d = d3.select("svg > g.active").data()[0];
+            if(d.id== $("#dataLineChartForm input[name='ele.id']").val()){
+                //设置值
+                var value = $(this).val();
+                if(value=='' || value<0){
+                    value = 0;
+                }
+                //保存撤销信息
+                if(d.width!=parseInt(value)){
+                    saveMoveUndo();
+                }
+                d.width=parseInt(value);
+                //修改元件位置
+                d3.select("svg > g.active > rect.line-chart").attr("width",d.width);
+                d3.select("svg > g.active > svg.line-chart").attr("width",d.width);
+                moveRectPoint(d3.select("svg > g.active"));
+            }
+        });
+        
+        $("#eleHeight").parent().find("input.textbox-text").change(function(){
+            var d = d3.select("svg > g.active").data()[0];
+            if(d.id== $("#dataLineChartForm input[name='ele.id']").val()){
+                //设置值
+                var value = $(this).val();
+                if(value=='' || value<0){
+                    value = 0;
+                }
+                //保存撤销信息
+                if(d.height!=parseInt(value)){
+                    saveMoveUndo();
+                }
+                d.height=parseInt(value);
+                //修改元件位置
+                d3.select("svg > g.active > rect.line-chart").attr("height",d.height);
+                d3.select("svg > g.active > svg.line-chart").attr("height",d.height);
+                moveRectPoint(d3.select("svg > g.active"));
+            }
+        });
+    
+        $("#elePosLock").switchbutton({
+            checked: false,
+            onText:"开启",
+            offText:"关闭",
+            onChange: function(checked){
+                var d = d3.select("svg > g.active").data()[0];
+                d.posLock = checked;
+                if(checked){
+                    numberDisable();
+                    d3.select("svg > g.active").classed("lock",true);
+                }else{
+                    numberEnable();
+                    d3.select("svg > g.active").classed("lock",false);
+                }
+            }
+        });
+    
+        //坐标轴
+        $("#btnDataSelect").click(function(){
+            querySignal(1,true);
+            $('#signalListDialog').dialog("open");
+        });
+    
+        //X轴长度
+        $("#eleRadius").change(function(){
+            var d = d3.select("svg > g.active").data()[0];
+            if(d.radius!=$("#eleRadius").val()){
+                savePropertyUndo();
+            }
+            d.radius=$("#eleRadius").val();
+            bindLineData(d3.select("svg > g.active"));
+            renderChartLine(d3.select("svg > g.active"));
+        });
+    
+        //Y轴量程类型
+        $("#dataLineChartForm input[name='ele.falseAlter']").click(function(){
+            var d = d3.select("svg > g.active").data()[0];
+            if(d.falseAlter != $(this).val()){
+                savePropertyUndo();
+            }
+            d.falseAlter = $(this).val();
+            if(d.falseAlter=='fixed'){
+                $("#dataLineChartForm tr.yaxis-fixed").show();
+            }else{
+                $("#dataLineChartForm tr.yaxis-fixed").hide();
+            }
+        });
+        //Y轴量程开始值
+        $("#eleContentMinY").change(function(){
+            var d = d3.select("svg > g.active").data()[0];
+            if(d.id== $("#dataLineChartForm input[name='ele.id']").val()){
+                var array = calcLineCharYRange(d);
+                var value = $(this).val();
+                if(value && value!='' && value != array[1]){
+                    if(d.content != (value+","+array[0])){
+                        savePropertyUndo();
+                    }
+                    d.content = value+","+array[0];
+                    bindLineData(d3.select("svg > g.active"));
+                    renderChartLine(d3.select("svg > g.active"));
+                }
+            }
+        });
+        //Y轴量程结束值
+        $("#eleContentMaxY").change(function(){
+            var d = d3.select("svg > g.active").data()[0];
+            if(d.id== $("#dataLineChartForm input[name='ele.id']").val()){
+                var array = calcLineCharYRange(d);
+                var value = $(this).val();
+                if(value && value!='' && value != array[0]){
+                    if(d.content != (array[1]+","+value)){
+                        savePropertyUndo();
+                    }
+                    d.content = array[1]+","+value;
+                    bindLineData(d3.select("svg > g.active"));
+                    renderChartLine(d3.select("svg > g.active"));
+                }
+            }
+        });
+        //坐标轴样式
+        $("#eleStroke").change(function(){
+            var d = d3.select("svg > g.active").data()[0];
+            if(d.stroke!=$("#eleStroke").val()){
+                savePropertyUndo();
+            }
+            d.stroke=$("#eleStroke").val();
+            d3.select("svg > g.active > svg.line-chart > g > path.line").style("stroke",d.stroke);
+        });
+        $("#eleTrueAlter").change(function(){
+            var d = d3.select("svg > g.active").data()[0];
+            if(d.trueAlter!=$("#eleTrueAlter").val()){
+                savePropertyUndo();
+            }
+            d.trueAlter=$("#eleTrueAlter").val();
+            d3.selectAll("svg > g.active > svg.line-chart > g > g.axis path").style("stroke",d.trueAlter);
+            d3.selectAll("svg > g.active > svg.line-chart > g > g.axis line").style("stroke",d.trueAlter);
+        });
+        $("#eleColor").change(function(){
+            var d = d3.select("svg > g.active").data()[0];
+            if(d.color!=$("#eleColor").val()){
+                savePropertyUndo();
+            }
+            d.color=$("#eleColor").val();
+            d3.selectAll("svg > g.active > svg.line-chart > g > g.axis text").style("fill",d.color);
+        });
+        $("#eleFontFamily").change(function(){
+            d3.select("svg > g.active > svg.line-chart > g")
+            .style("font-family",function(d){
+                if(d.fontFamily!=$("#eleFontFamily").val()){
+                    savePropertyUndo();
+                }
+                d.fontFamily=$("#eleFontFamily").val();
+                return d.fontFamily;
+            });
+        });
+        $("#eleFontSize").change(function(){
+            d3.select("svg > g.active > svg.line-chart > g")
+            .style("font-size",function(d){
+                if(d.fontSize!=$("#eleFontSize").val()){
+                    savePropertyUndo();
+                }
+                d.fontSize=$("#eleFontSize").val();
+                return d.fontSize;
+            });
+            renderChartLine(d3.select("svg > g.active"));
+        });
+    
+        //背景
+        $("#dataLineChartForm input[name='ele.showBg']").click(function(){
+             var showBg = $(this).val();
+            d3.select("svg > g.active > rect.line-chart")
+            .style("opacity",function(d){
+                if(d.showBg!=showBg){
+                    savePropertyUndo();
+                }
+                d.showBg=showBg;
+                return d.showBg;
+            });
+        });
+        $("#eleFill").change(function(){
+            d3.select("svg > g.active > rect.line-chart")
+            .style("fill",function(d){
+                if(d.fill!=$("#eleFill").val()){
+                    savePropertyUndo();
+                }
+                d.fill=$("#eleFill").val();
+                return d.fill;
+            })
+            .style("stroke",function(d){
+                return d.fill;
+            });
+        });
+        $("#elePadding").parent().find("input.textbox-text").change(function(){
+            var d = d3.select("svg > g.active").data()[0];
+            if(d.id== $("#dataLineChartForm input[name='ele.id']").val()){
+                //设置值
+                var value = $(this).val();
+                if(value=='' || value<0){
+                    value = 0;
+                }
+                if(d.padding!=parseInt(value)){
+                    savePropertyUndo();
+                }
+                d.padding=parseInt(value);
+                d3.select("svg > g.active > svg.line-chart > g").attr("transform","translate("+d.padding+",30)");
+                renderChartLine(d3.select("svg > g.active"));
+            }
+        });
+    
+        //数值输入框右侧加1、减1功能触发对应的修改事件。
+        $("#eleX,#eleY,#eleWidth,#eleHeight,#elePadding").parent().find("span.textbox-addon").click(function(){
+            $(this).parent().find("input.textbox-text").change();
+        });
+    
+        //触发修改以后关闭页面提示“未保存”
+        $("#dataLineChartForm input,#dataLineChartForm select").change(bindBeforeunload);
+    });
+    </script>

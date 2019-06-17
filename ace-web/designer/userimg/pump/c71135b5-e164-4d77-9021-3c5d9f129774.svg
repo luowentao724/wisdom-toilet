@@ -1,0 +1,18 @@
+ 
+
+<svg xmlns:agg="http://www.example.com" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" width="0.9942in" height="1.0750in" viewBox="0 0 923 998">
+
+<path style="fill:#366;stroke:#000;stroke-width:2" d="M699,710 l-477,0 0,196 477,0 0,-196z" />
+<path style="fill:#cff;stroke:#000;stroke-width:2" d="M320,793 l92,25 97,0 94,-25 83,-49 70,-68 48,-85 25,-92 0,-98 -25,-92 -48,-85 -68,-68 -85,-49 -94,-25 -97,0 0,-34 -320,0 1,451 25,92 49,85 68,68 85,49z" />
+<path style="fill:#699;stroke:#000;stroke-width:2" d="M288,905 l0,-412 21,21 0,391 -21,0z" />
+<path style="fill:#699;stroke:#000;stroke-width:2" d="M635,905 l0,-412 -23,21 0,391 23,0z" />
+<path style="fill:#699;stroke:#000;stroke-width:2" d="M635,493 l-347,0 21,21 303,0 23,-21z" />
+<path style="fill:#699;stroke:#000;stroke-width:2" d="M548,905 l-66,-131 -43,0 -65,131 174,0z" />
+<path style="fill:#9cc;stroke:#000;stroke-width:2" d="M420,552 l26,5 29,0 28,-5 24,-15 21,-21 13,-24 8,-27 0,-28 -8,-29 -13,-24 -21,-21 -24,-13 -28,-7 -29,0 -26,7 -24,13 -22,21 -14,24 -8,29 0,28 8,27 14,24 22,21 24,15z" />
+<circle style="fill:#9cc;stroke:#000;stroke-width:2" cx="461" cy="775" r="87" />
+<path style="fill:#9cc;stroke:#000;stroke-width:2" d="M424,28 l-338,0 0,20 338,0 0,-20z" />
+<path style="fill:#9cc;stroke:#000;stroke-width:2" d="M895,905 l-867,0 0,65 867,0 0,-65z" />
+<circle style="fill:none;stroke:#000;stroke-width:2" cx="461" cy="450" r="5" />
+<circle style="fill:none;stroke:#000;stroke-width:2" cx="460" cy="775" r="21" />
+
+</svg>

@@ -1,0 +1,83 @@
+ 
+<svg version='1.1'
+    xmlns='http://www.w3.org/2000/svg'
+    xmlns:xlink='http://www.w3.org/1999/xlink'		preserveAspectRatio="none"
+    x='0px'
+    y='0px'
+    width='64.965px'
+    height='73.943px'
+    viewBox='0 0 64.965 73.943'
+    xmlns:agg='http://www.example.com'
+    xml:space='preserve'>
+<agg:params>
+	<agg:param  type="C" name="Color" classes="boundary" description="Color" cssAttributes="fill"></agg:param>
+	<agg:param  type="C" name="strokeColor" classes="contours,dashed,thick" description="Stroke Color" cssAttributes="stroke"></agg:param>
+</agg:params>
+
+<style type="text/css" >
+<![CDATA[
+
+	.contours,.dashed,.thick{
+		stroke-linecap:round;
+		stroke-linejoin:round;
+		stroke: #000000;
+		fill:none;
+	}
+	
+	.contours,dashed {
+		stroke-width:0.5;
+	}
+	
+	.thick {
+		stroke-width:1.5;
+	}
+	
+	.boundary {
+		fill:   #A1BFE2;
+		stroke:none;
+	}
+	
+	.dashed {
+		stroke-dasharray:1.5,1.5;
+	}
+]]>
+</style>
+ <g id='boundary'
+     class='boundary'>
+  <path d='M54.933,66.899c-6.301-9.05-10.141-19.351-11.45-29.93c-1.51-12.051,0.27-24.49,5.46-35.91h-35.91   c9.75,21.46,7.47,46.479-5.99,65.84H54.933z' />
+ </g>
+ <g id='contours'
+     class='contours'>
+  <line x1='30.987'
+      y1='36.972'
+      x2='39.967'
+      y2='42.956' />
+  <line x1='30.987'
+      y1='36.972'
+      x2='22.009'
+      y2='42.956' />
+  <line x1='30.987'
+      y1='36.972'
+      x2='34.461'
+      y2='47.188' />
+  <polyline points='1.056,66.901 1.056,72.888 60.917,72.888 60.917,66.901  ' />
+  <line x1='27.515'
+      y1='47.188'
+      x2='30.987'
+      y2='36.972' />
+  <line x1='13.029'
+      y1='1.056'
+      x2='48.946'
+      y2='1.056' />
+  <line x1='30.987'
+      y1='36.972'
+      x2='63.909'
+      y2='36.972' />
+  <path d='M7.043,66.901C20.505,47.543,22.78,22.523,13.029,1.056' />
+  <path d='M54.931,66.901C41.47,47.543,39.195,22.523,48.946,1.056' />
+  <line x1='7.043'
+      y1='66.901'
+      x2='54.931'
+      y2='66.901' />
+ </g>
+</svg>

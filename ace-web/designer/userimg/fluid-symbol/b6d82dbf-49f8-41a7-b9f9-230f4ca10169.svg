@@ -1,0 +1,62 @@
+ 
+<svg version='1.1'
+    xmlns='http://www.w3.org/2000/svg'
+    xmlns:xlink='http://www.w3.org/1999/xlink'		preserveAspectRatio="none"
+    x='0px'
+    y='0px'
+    width='95.655px'
+    height='44.015px'
+    viewBox='0 0 95.655 44.015'
+    xmlns:agg='http://www.example.com'
+    xml:space='preserve'>
+<agg:params>
+	<agg:param  type="C" name="Color" classes="boundary" description="Color" cssAttributes="fill"></agg:param>
+	<agg:param  type="C" name="strokeColor" classes="contours,dashed,thick" description="Stroke Color" cssAttributes="stroke"></agg:param>
+</agg:params>
+
+<style type="text/css" >
+<![CDATA[
+
+	.contours,.dashed,.thick{
+		stroke-linecap:round;
+		stroke-linejoin:round;
+		stroke: #000000;
+		fill:none;
+	}
+	
+	.contours,dashed {
+		stroke-width:0.5;
+	}
+	
+	.thick {
+		stroke-width:1.5;
+	}
+	
+	.boundary {
+		fill:   #A1BFE2;
+		stroke:none;
+	}
+	
+	.dashed {
+		stroke-dasharray:1.5,1.5;
+	}
+]]>
+</style>
+ <g id='boundary'
+     class='boundary'>
+  <path d='M47.825,36.975c-3.319-1.99-9.569-5.99-13.97-5.99c-3.37,0-6.979,2.26-6.979,5.99   c0,3.729,3.609,5.979,6.979,5.979C38.256,42.954,44.506,38.954,47.825,36.975z' />
+  <path d='M68.775,36.975c0-3.73-3.609-5.99-6.979-5.99c-4.4,0-10.641,4-13.971,5.99c3.33,1.979,9.57,5.979,13.971,5.979   C65.166,42.954,68.775,40.704,68.775,36.975z' />
+  <polygon points='8.916,13.024 8.916,25.004 86.735,25.004 86.735,13.024 86.735,1.055 8.916,1.055  ' />
+ </g>
+ <g id='contours'
+     class='contours'>
+  <polyline points='1.056,13.027 14.903,13.027 20.391,18.678 31.366,7.377 42.34,18.678 53.313,7.377 64.288,18.678    75.264,7.377 80.749,13.027 94.6,13.027  ' />
+  <path d='M47.827,36.972c3.324,1.986,9.569,5.987,13.968,5.987c3.37,0,6.982-2.254,6.982-5.987   c0-3.73-3.612-5.986-6.982-5.986C57.396,30.985,51.151,34.986,47.827,36.972z' />
+  <rect x='8.917'
+      y='1.056'
+      fill='none'
+      width='77.818'
+      height='23.945' />
+  <path d='M33.859,30.985c4.396,0,10.642,4.001,13.968,5.986c-3.326,1.986-9.571,5.987-13.968,5.987   c-3.372,0-6.984-2.254-6.984-5.987C26.875,33.241,30.49,30.985,33.859,30.985z' />
+ </g>
+</svg>

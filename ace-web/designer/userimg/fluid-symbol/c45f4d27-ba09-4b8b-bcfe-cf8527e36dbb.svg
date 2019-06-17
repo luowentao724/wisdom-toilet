@@ -1,0 +1,46 @@
+ 
+<svg version="1.1" id="_x30_" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none"   xmlns:agg="http://www.example.com" x="0px" y="0px"
+	   viewBox="0 0 51.307 51.307" enable-background="new 0 0 51.307 51.307" xml:space="preserve">
+
+
+<agg:params>
+        <agg:param name="color" description="Color" type="C" cssAttributes="fill" classes="color"/>
+        <agg:param name="strokeColor" description="Stroke Color" type="C" cssAttributes="stroke" classes="color,stroked"/>
+</agg:params>
+
+<style type="text/css" >
+   <![CDATA[
+
+	.color,.stroked{
+		stroke-width:1;
+		stroke-linecap:round;
+		stroke-linejoin:round;
+		stroke: #000000;
+	}
+	
+	.color {
+		fill:   #A1BFE2;
+
+	}
+	
+	.stroked {
+		fill:none;
+	}
+
+      ]]>
+</style>
+
+<path class="color" d="M13.236,35.876
+	c1.697,0,3.394,0,5.09,0c2.268,1.403,4.535,2.807,6.803,4.211c2.268-1.404,4.536-2.808,6.803-4.211c1.713,0,3.426,0,5.14,0
+	c0,1.405,1.139,2.545,2.545,2.545c1.405,0,2.545-1.14,2.545-2.545c0-8.242,0-16.484,0-24.726c-11.339,0-22.677,0-34.016,0
+	c0,8.242,0,16.484,0,24.726c0,1.405,1.14,2.545,2.545,2.545C12.096,38.421,13.236,37.281,13.236,35.876z"/>
+<line class="stroked" x1="25.129" y1="22.216" x2="25.129" y2="11.15"/>
+<line class="stroked" x1="19.598" y1="22.216" x2="30.708" y2="22.216"/>
+<polygon class="color" points="32.372,22.216 30.708,21.824 30.708,22.656 "/>
+<polyline class="color" points="35.358,16.242 37.071,16.242 37.071,29.854 30.219,29.854 "/>
+<line class="stroked" x1="37.071" y1="35.876" x2="37.071" y2="34.554"/>
+<line class="stroked" x1="13.236" y1="35.876" x2="13.236" y2="34.554"/>
+<polyline class="stroked" points="14.948,16.242	13.236,16.242 13.236,29.854 20.039,29.854 "/>
+<polygon class="stroked" points="17.885,22.216 19.598,22.656 19.598,22.313 19.598,22.216 19.598,22.167 19.598,21.824 "/>
+
+</svg>

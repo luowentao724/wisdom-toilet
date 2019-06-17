@@ -1,0 +1,60 @@
+ 
+<svg version='1.1'
+    xmlns='http://www.w3.org/2000/svg'
+    xmlns:xlink='http://www.w3.org/1999/xlink'		preserveAspectRatio="none"
+    x='0px'
+    y='0px'
+    width='55.985px'
+    height='49.999px'
+    viewBox='0 0 55.985 49.999'
+    xmlns:agg='http://www.example.com'
+    xml:space='preserve'>
+<agg:params>
+	<agg:param  type="C" name="Color" classes="boundary" description="Color" cssAttributes="fill"></agg:param>
+	<agg:param  type="C" name="strokeColor" classes="contours,dashed,thick" description="Stroke Color" cssAttributes="stroke"></agg:param>
+</agg:params>
+
+<style type="text/css" >
+<![CDATA[
+
+	.contours,.dashed,.thick{
+		stroke-linecap:round;
+		stroke-linejoin:round;
+		stroke: #000000;
+		fill:none;
+	}
+	
+	.contours,dashed {
+		stroke-width:0.5;
+	}
+	
+	.thick {
+		stroke-width:1.5;
+	}
+	
+	.boundary {
+		fill:   #A1BFE2;
+		stroke:none;
+	}
+	
+	.dashed {
+		stroke-dasharray:1.5,1.5;
+	}
+]]>
+</style>
+ <g id='boundary'
+     class='boundary'>
+  <path d='M25.004,1.055c-7.16,0-13.58,3.14-17.96,8.109c-3.73,4.221-5.99,9.76-5.99,15.83c0,6.08,2.26,11.62,5.99,15.84   c4.38,4.971,10.8,8.11,17.96,8.11c8.859,0,16.59-4.81,20.729-11.97c2.04-3.521,3.21-7.61,3.21-11.98c0-4.359-1.17-8.45-3.21-11.97   C41.604,5.864,33.863,1.055,25.004,1.055z' />
+ </g>
+ <g id='contours'
+     class='contours'>
+  <polyline points='54.93,13.027 25,13.027 25,21.008 32.981,21.008 32.981,28.991 25,28.991 25,36.973 54.93,36.973     ' />
+  <line x1='7.042'
+      y1='1.056'
+      x2='7.042'
+      y2='48.943' />
+  <circle cx='25'
+      cy='25'
+      r='23.944' />
+ </g>
+</svg>
